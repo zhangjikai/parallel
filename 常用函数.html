@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>MPI · parallel</title>
+        <title>常用函数 · parallel</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -75,10 +75,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="mpi-helloworld.html" />
     
-    
-    <link rel="prev" href="./" />
+    <link rel="prev" href="基础函数.html" />
     
 
     </head>
@@ -131,7 +129,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="mpi.html">
+        <li class="chapter " data-level="1.2" data-path="mpi.html">
             
                 <a href="mpi.html">
             
@@ -177,7 +175,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="常用函数.html">
+        <li class="chapter active" data-level="1.2.3" data-path="常用函数.html">
             
                 <a href="常用函数.html">
             
@@ -227,7 +225,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >MPI</a>
+        <a href="." >常用函数</a>
     </h1>
 </div>
 
@@ -245,13 +243,28 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;"><a name="mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;" class="plugin-anchor" href="#mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>MPI &#x5B66;&#x4E60;&#x8BB0;&#x5F55;</h1>
+                                <h1 id="&#x5E38;&#x7528;&#x51FD;&#x6570;"><a name="&#x5E38;&#x7528;&#x51FD;&#x6570;" class="plugin-anchor" href="#&#x5E38;&#x7528;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x7528;&#x51FD;&#x6570;</h1>
 <ul>
-<li>MPI &#x5E76;&#x884C;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;</li>
-<li><a href="http://mpitutorial.com/tutorials/mpi-hello-world/" target="_blank">MPI Tutorial  </a></li>
-<li><a href="https://computing.llnl.gov/tutorials/mpi/" target="_blank">Message Passing Interface</a></li>
+<li><code>double MPI_Wtime(void)</code><ul>
+<li>&#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x65F6;&#x95F4;</li>
 </ul>
-<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#"></a></p><li><a href="#mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;">1. MPI &#x5B66;&#x4E60;&#x8BB0;&#x5F55;</a></li></ul></div><a href="#mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;" id="goTop"><i class="fa fa-arrow-up"></i></a>
+</li>
+</ul>
+<ul>
+<li><code>int MPI_Get_processor_name(char *name, int *result_len)</code><ul>
+<li><code>name</code> - &#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x6240;&#x5728;&#x673A;&#x5668;&#x7684;&#x540D;&#x5B57;</li>
+<li><code>result_len</code> - &#x8FD4;&#x56DE;&#x540D;&#x5B57;&#x7684;&#x957F;&#x5EA6;</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><code>int MPI_Get_version(int *version, int *subversion)</code><ul>
+<li><code>version</code> - MPI &#x4E3B;&#x7248;&#x672C;&#x53F7;</li>
+<li><code>subversion</code> - MPI &#x6B21;&#x7248;&#x672C;&#x53F7;</li>
+</ul>
+</li>
+</ul>
+<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#"></a></p><li><a href="#&#x5E38;&#x7528;&#x51FD;&#x6570;">1. &#x5E38;&#x7528;&#x51FD;&#x6570;</a></li></ul></div><a href="#&#x5E38;&#x7528;&#x51FD;&#x6570;" id="goTop"><i class="fa fa-arrow-up"></i></a>
                                 
                                 </section>
                             
@@ -294,14 +307,10 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 前言">
+                <a href="基础函数.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 基础函数">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="mpi-helloworld.html" class="navigation navigation-next " aria-label="Next page: MPI-HelloWorld">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -310,7 +319,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"MPI","level":"1.2","depth":1,"next":{"title":"MPI-HelloWorld","level":"1.2.1","depth":2,"path":"mpi-helloworld.md","ref":"mpi-helloworld.md","articles":[]},"previous":{"title":"前言","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","search-plus","simple-page-toc","baidu","sitemap","github","duoshuo","anchors","anchor-navigation-ex","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/zhangjikai/parallel"},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"zhangjkblog","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false},"sitemap":{"hostname":"http://parallel.zhangjikai.com"},"prism-themes":{},"expandable-chapters-small":{},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"anchorjs":{"placement":"left"},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"parallel","language":"zh-hans","links":{"sidebar":{"Home":"http://zhangjikai.com"}},"gitbook":"3.2.2","description":"并行计算"},"file":{"path":"mpi.md","mtime":"2017-01-12T13:17:35.598Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-14T12:55:04.829Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"常用函数","level":"1.2.3","depth":2,"previous":{"title":"基础函数","level":"1.2.2","depth":2,"path":"基础函数.md","ref":"基础函数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","search-plus","simple-page-toc","baidu","sitemap","github","duoshuo","anchors","anchor-navigation-ex","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/zhangjikai/parallel"},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"zhangjkblog","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false},"sitemap":{"hostname":"http://parallel.zhangjikai.com"},"prism-themes":{},"expandable-chapters-small":{},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"anchorjs":{"placement":"left"},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"parallel","language":"zh-hans","links":{"sidebar":{"Home":"http://zhangjikai.com"}},"gitbook":"3.2.2","description":"并行计算"},"file":{"path":"常用函数.md","mtime":"2017-01-14T12:53:45.490Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-14T12:55:04.829Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

@@ -75,6 +75,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="常用函数.html" />
+    
     
     <link rel="prev" href="mpi-helloworld.html" />
     
@@ -175,6 +177,21 @@
             
         </li>
     
+        <li class="chapter " data-level="1.2.3" data-path="常用函数.html">
+            
+                <a href="常用函数.html">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    常用函数
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -234,12 +251,14 @@
 <li><a href="#6&#x4E2A;&#x57FA;&#x672C;&#x51FD;&#x6570;">6&#x4E2A;&#x57FA;&#x672C;&#x51FD;&#x6570;</a></li>
 <li><a href="#&#x4FE1;&#x606F;&#x4F20;&#x9012;">&#x4FE1;&#x606F;&#x4F20;&#x9012;</a><ul>
 <li><a href="#&#x9884;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x7C7B;&#x578B;">&#x9884;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x7C7B;&#x578B;</a></li>
+<li><a href="#&#x4EFB;&#x610F;&#x6E90;&#x548C;&#x4EFB;&#x610F;&#x6807;&#x8BC6;">&#x4EFB;&#x610F;&#x6E90;&#x548C;&#x4EFB;&#x610F;&#x6807;&#x8BC6;</a></li>
 </ul>
 </li>
 <li><a href="#&#x793A;&#x4F8B;">&#x793A;&#x4F8B;</a><ul>
 <li><a href="#&#x7EBF;&#x7A0B;&#x4F9D;&#x6B21;&#x4F20;&#x53C2;">&#x7EBF;&#x7A0B;&#x4F9D;&#x6B21;&#x4F20;&#x53C2;</a></li>
 <li><a href="#&#x4F7F;&#x7528;-mpi_byte">&#x4F7F;&#x7528; <code>MPI_BYTE</code></a></li>
 <li><a href="#&#x83B7;&#x5F97;&#x63A5;&#x53D7;&#x4FE1;&#x606F;&#x7684;&#x957F;&#x5EA6;">&#x83B7;&#x5F97;&#x63A5;&#x53D7;&#x4FE1;&#x606F;&#x7684;&#x957F;&#x5EA6;</a></li>
+<li><a href="#&#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x6E90;&#x548C;&#x4EFB;&#x610F;&#x6807;&#x8BC6;">&#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x6E90;&#x548C;&#x4EFB;&#x610F;&#x6807;&#x8BC6;</a></li>
 </ul>
 </li>
 </ul>
@@ -377,6 +396,8 @@
 <li>&#x53D1;&#x9001;&#x65B9;&#x548C;&#x63A5;&#x53D7;&#x65B9;&#x7684;&#x7C7B;&#x578B;&#x8981;&#x5339;&#x914D;</li>
 </ol>
 <p><code>MPI_BYTE</code> &#x548C; <code>MPI_PACKED</code> &#x53EF;&#x4EE5;&#x548C;&#x4EFB;&#x610F;&#x4EE5;&#x5B57;&#x8282;&#x4E3A;&#x5355;&#x4F4D;&#x7684;&#x5B58;&#x50A8;&#x76F8;&#x5339;&#x914D;&#x3002; <code>MPI_BYTE</code> &#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x4E0D;&#x52A0;&#x4FEE;&#x6539;&#x7684;&#x4F20;&#x9001;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x503C;&#x3002;</p>
+<h3 id="&#x4EFB;&#x610F;&#x6E90;&#x548C;&#x4EFB;&#x610F;&#x6807;&#x8BC6;"><a name="&#x4EFB;&#x610F;&#x6E90;&#x548C;&#x4EFB;&#x610F;&#x6807;&#x8BC6;" class="plugin-anchor" href="#&#x4EFB;&#x610F;&#x6E90;&#x548C;&#x4EFB;&#x610F;&#x6807;&#x8BC6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EFB;&#x610F;&#x6E90;&#x548C;&#x4EFB;&#x610F;&#x6807;&#x8BC6;</h3>
+<p>&#x5728;&#x6D88;&#x606F;&#x4F20;&#x9012;&#x65F6;&#xFF0C;&#x53D1;&#x9001;&#x64CD;&#x4F5C;&#x5FC5;&#x987B;&#x660E;&#x786E;&#x6307;&#x5B9A;&#x53D1;&#x9001;&#x5BF9;&#x8C61;&#x7684;&#x8FDB;&#x7A0B;&#x6807;&#x53F7;&#x548C;&#x6D88;&#x606F;&#x6807;&#x8BC6;&#xFF0C;&#x4F46;&#x662F;&#x63A5;&#x6536;&#x6D88;&#x606F;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F7F;&#x7528; <code>MPI_ANY_SOURCE</code> &#x548C; <code>MPI_ANY_TAG</code> &#x6765;&#x63A5;&#x53D7;&#x4EFB;&#x610F;&#x8FDB;&#x7A0B;&#x53D1;&#x9001;&#x7ED9;&#x672C;&#x8FDB;&#x7A0B;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x901A;&#x914D;&#x7B26;&#x3002;<code>MPI_ANY_SOURCE</code> &#x548C; <code>MPI_ANY_TAG</code> &#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x6216;&#x8005;&#x5206;&#x522B;&#x5355;&#x72EC;&#x4F7F;&#x7528;&#x3002;</p>
 <h2 id="&#x793A;&#x4F8B;"><a name="&#x793A;&#x4F8B;" class="plugin-anchor" href="#&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h2>
 <h3 id="&#x7EBF;&#x7A0B;&#x4F9D;&#x6B21;&#x4F20;&#x53C2;"><a name="&#x7EBF;&#x7A0B;&#x4F9D;&#x6B21;&#x4F20;&#x53C2;" class="plugin-anchor" href="#&#x7EBF;&#x7A0B;&#x4F9D;&#x6B21;&#x4F20;&#x53C2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EBF;&#x7A0B;&#x4F9D;&#x6B21;&#x4F20;&#x53C2;</h3>
 <pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
@@ -542,7 +563,39 @@ rank 3 receive from 2: 6
     <span class="token function">MPI_Finalize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#"></a></p><li><a href="#&#x57FA;&#x672C;&#x51FD;&#x6570;">1. &#x57FA;&#x672C;&#x51FD;&#x6570;</a></li><ul><li><a href="#6&#x4E2A;&#x57FA;&#x672C;&#x51FD;&#x6570;">1.1. 6&#x4E2A;&#x57FA;&#x672C;&#x51FD;&#x6570;</a></li><li><a href="#&#x4FE1;&#x606F;&#x4F20;&#x9012;">1.2. &#x4FE1;&#x606F;&#x4F20;&#x9012;</a></li><ul><li><a href="#&#x9884;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x7C7B;&#x578B;">1.2.1. &#x9884;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x7C7B;&#x578B;</a></li></ul><li><a href="#&#x793A;&#x4F8B;">1.3. &#x793A;&#x4F8B;</a></li><ul><li><a href="#&#x7EBF;&#x7A0B;&#x4F9D;&#x6B21;&#x4F20;&#x53C2;">1.3.1. &#x7EBF;&#x7A0B;&#x4F9D;&#x6B21;&#x4F20;&#x53C2;</a></li><li><a href="#&#x4F7F;&#x7528;-mpibyte">1.3.2. &#x4F7F;&#x7528; MPI_BYTE</a></li><li><a href="#&#x83B7;&#x5F97;&#x63A5;&#x53D7;&#x4FE1;&#x606F;&#x7684;&#x957F;&#x5EA6;">1.3.3. &#x83B7;&#x5F97;&#x63A5;&#x53D7;&#x4FE1;&#x606F;&#x7684;&#x957F;&#x5EA6;</a></li></ul></ul></ul></div><a href="#&#x57FA;&#x672C;&#x51FD;&#x6570;" id="goTop"><i class="fa fa-arrow-up"></i></a>
+<h3 id="&#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x6E90;&#x548C;&#x4EFB;&#x610F;&#x6807;&#x8BC6;"><a name="&#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x6E90;&#x548C;&#x4EFB;&#x610F;&#x6807;&#x8BC6;" class="plugin-anchor" href="#&#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x6E90;&#x548C;&#x4EFB;&#x610F;&#x6807;&#x8BC6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x6E90;&#x548C;&#x4EFB;&#x610F;&#x6807;&#x8BC6;</h3>
+<p>&#x7EBF;&#x7A0B; 1 &#x5230; n-1 &#x5411;&#x7EBF;&#x7A0B; 0 &#x53D1;&#x9001;&#x6D88;&#x606F;</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&quot;mpi.h&quot;</span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> rank<span class="token punctuation">,</span> size<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> value <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    MPI_Status status<span class="token punctuation">;</span>
+    <span class="token function">MPI_Init</span><span class="token punctuation">(</span><span class="token constant">NULL</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">MPI_Comm_rank</span><span class="token punctuation">(</span>MPI_COMM_WORLD<span class="token punctuation">,</span> <span class="token operator">&amp;</span>rank<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">MPI_Comm_size</span><span class="token punctuation">(</span>MPI_COMM_WORLD<span class="token punctuation">,</span> <span class="token operator">&amp;</span>size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span>rank <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> size <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">MPI_Recv</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>value<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> MPI_INT<span class="token punctuation">,</span> MPI_ANY_SOURCE<span class="token punctuation">,</span> MPI_ANY_TAG<span class="token punctuation">,</span> MPI_COMM_WORLD<span class="token punctuation">,</span> <span class="token operator">&amp;</span>status<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;receive from process %d and values is %d\n&quot;</span><span class="token punctuation">,</span> status<span class="token punctuation">.</span>MPI_SOURCE<span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        value <span class="token operator">=</span> rank <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token function">MPI_Send</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>value<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> MPI_INT<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> rank<span class="token punctuation">,</span> MPI_COMM_WORLD<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">MPI_Finalize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x793A;&#x4F8B;&#x8F93;&#x51FA;</p>
+<pre class="language-"><code>receive from process 2 and values is 4
+receive from process 3 and values is 6
+receive from process 1 and values is 2
+</code></pre><div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#"></a></p><li><a href="#&#x57FA;&#x672C;&#x51FD;&#x6570;">1. &#x57FA;&#x672C;&#x51FD;&#x6570;</a></li><ul><li><a href="#6&#x4E2A;&#x57FA;&#x672C;&#x51FD;&#x6570;">1.1. 6&#x4E2A;&#x57FA;&#x672C;&#x51FD;&#x6570;</a></li><li><a href="#&#x4FE1;&#x606F;&#x4F20;&#x9012;">1.2. &#x4FE1;&#x606F;&#x4F20;&#x9012;</a></li><ul><li><a href="#&#x9884;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x7C7B;&#x578B;">1.2.1. &#x9884;&#x5B9A;&#x4E49;&#x6570;&#x636E;&#x7C7B;&#x578B;</a></li><li><a href="#&#x4EFB;&#x610F;&#x6E90;&#x548C;&#x4EFB;&#x610F;&#x6807;&#x8BC6;">1.2.2. &#x4EFB;&#x610F;&#x6E90;&#x548C;&#x4EFB;&#x610F;&#x6807;&#x8BC6;</a></li></ul><li><a href="#&#x793A;&#x4F8B;">1.3. &#x793A;&#x4F8B;</a></li><ul><li><a href="#&#x7EBF;&#x7A0B;&#x4F9D;&#x6B21;&#x4F20;&#x53C2;">1.3.1. &#x7EBF;&#x7A0B;&#x4F9D;&#x6B21;&#x4F20;&#x53C2;</a></li><li><a href="#&#x4F7F;&#x7528;-mpibyte">1.3.2. &#x4F7F;&#x7528; MPI_BYTE</a></li><li><a href="#&#x83B7;&#x5F97;&#x63A5;&#x53D7;&#x4FE1;&#x606F;&#x7684;&#x957F;&#x5EA6;">1.3.3. &#x83B7;&#x5F97;&#x63A5;&#x53D7;&#x4FE1;&#x606F;&#x7684;&#x957F;&#x5EA6;</a></li><li><a href="#&#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x6E90;&#x548C;&#x4EFB;&#x610F;&#x6807;&#x8BC6;">1.3.4. &#x4F7F;&#x7528;&#x4EFB;&#x610F;&#x6E90;&#x548C;&#x4EFB;&#x610F;&#x6807;&#x8BC6;</a></li></ul></ul></ul></div><a href="#&#x57FA;&#x672C;&#x51FD;&#x6570;" id="goTop"><i class="fa fa-arrow-up"></i></a>
                                 
                                 </section>
                             
@@ -585,10 +638,14 @@ rank 3 receive from 2: 6
 
             
                 
-                <a href="mpi-helloworld.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: MPI-HelloWorld">
+                <a href="mpi-helloworld.html" class="navigation navigation-prev " aria-label="Previous page: MPI-HelloWorld">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="常用函数.html" class="navigation navigation-next " aria-label="Next page: 常用函数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -597,7 +654,7 @@ rank 3 receive from 2: 6
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"基础函数","level":"1.2.2","depth":2,"previous":{"title":"MPI-HelloWorld","level":"1.2.1","depth":2,"path":"mpi-helloworld.md","ref":"mpi-helloworld.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","search-plus","simple-page-toc","baidu","sitemap","github","duoshuo","anchors","anchor-navigation-ex","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/zhangjikai/parallel"},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"zhangjkblog","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false},"sitemap":{"hostname":"http://parallel.zhangjikai.com"},"prism-themes":{},"expandable-chapters-small":{},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"anchorjs":{"placement":"left"},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"parallel","language":"zh-hans","links":{"sidebar":{"Home":"http://zhangjikai.com"}},"gitbook":"3.2.2","description":"并行计算"},"file":{"path":"基础函数.md","mtime":"2017-01-14T11:14:06.577Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-14T12:27:53.399Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"基础函数","level":"1.2.2","depth":2,"next":{"title":"常用函数","level":"1.2.3","depth":2,"path":"常用函数.md","ref":"常用函数.md","articles":[]},"previous":{"title":"MPI-HelloWorld","level":"1.2.1","depth":2,"path":"mpi-helloworld.md","ref":"mpi-helloworld.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","search-plus","simple-page-toc","baidu","sitemap","github","duoshuo","anchors","anchor-navigation-ex","expandable-chapters-small"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/zhangjikai/parallel"},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"zhangjkblog","theme":"default"},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false},"sitemap":{"hostname":"http://parallel.zhangjikai.com"},"prism-themes":{},"expandable-chapters-small":{},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"anchorjs":{"placement":"left"},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"parallel","language":"zh-hans","links":{"sidebar":{"Home":"http://zhangjikai.com"}},"gitbook":"3.2.2","description":"并行计算"},"file":{"path":"基础函数.md","mtime":"2017-01-14T12:44:56.566Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-14T12:55:04.829Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
