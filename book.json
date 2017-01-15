@@ -2,7 +2,7 @@
     "title" : "parallel",
     "description" : "并行计算",
     "author" : "zhangjikai",
-    "generator": "site",
+    "output.name": "site",
     "language" : "zh-hans",
     "links" : {
         "sidebar" : {
@@ -23,7 +23,8 @@
         "duoshuo",
         "anchors",
         "anchor-navigation-ex",
-        "expandable-chapters-small"
+        "expandable-chapters-small",
+        "katex"
     ],
 
     "pluginsConfig": {
