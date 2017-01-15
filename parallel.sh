@@ -16,3 +16,4 @@ git checkout master
 rsync -av --exclude='_book' --exclude='.git' --exclude='node_modules' -exclude='README.md' /home/zhangjikai/source/git/gitbook/zhangjk/parallel/ /home/zhangjikai/source/git/github/parallel/
 git add -A .
 git commit -m "update"
+git push
