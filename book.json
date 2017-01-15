@@ -1,0 +1,72 @@
+{
+    "title" : "parallel",
+    "description" : "并行计算",
+    "author" : "zhangjikai",
+    "generator": "site",
+    "language" : "zh-hans",
+    "links" : {
+        "sidebar" : {
+            "Home" : "http://zhangjikai.com"
+        }
+    },
+    "gitbook" : "3.2.2",
+    "plugins": [
+        "-highlight",
+        "prism",
+        "prism-themes",
+        "search",
+        "search-plus",
+        "simple-page-toc",
+        "baidu",
+        "sitemap",
+        "github",
+        "duoshuo",
+        "anchors",
+        "anchor-navigation-ex",
+        "expandable-chapters-small"
+    ],
+
+    "pluginsConfig": {
+        "theme-default": {
+            "showLevel": true
+        },
+
+        "prism": {
+             "css": [
+               "prism-themes/themes/prism-ghcolors.css"
+             ]
+         },
+         "sharing": {
+            "weibo": true,
+            "facebook": true,
+            "twitter": true,
+            "google": false,
+            "instapaper": false,
+             "vk": false,
+            "all": [
+                "facebook", "google", "twitter",
+                "weibo", "instapaper"
+            ]
+        },
+        "baidu": {
+            "token" : "ff100361cdce95dd4c8fb96b4009f7bc"
+        },
+        "sitemap": {
+            "hostname": "http://parallel.zhangjikai.com"
+        },
+        "duoshuo": {
+            "short_name": "zhangjkblog",
+            "theme": "default"
+        },
+        "github": {
+            "url": "https://github.com/zhangjikai/parallel"
+        },
+        "anchorjs": {
+            "placement": "left"
+        },
+        "anchor-navigation-ex":{
+            "isRewritePageTitle":false
+        }
+    }
+
+}
