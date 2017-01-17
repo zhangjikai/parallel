@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>常用函数 · parallel</title>
+        <title>非阻塞通信 · parallel</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -79,10 +79,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="编程模式.html" />
     
-    
-    <link rel="prev" href="基础函数.html" />
+    <link rel="prev" href="通信模式.html" />
     
 
     </head>
@@ -181,7 +179,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.3" data-path="常用函数.html">
+        <li class="chapter " data-level="1.2.3" data-path="常用函数.html">
             
                 <a href="常用函数.html">
             
@@ -226,7 +224,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.6" data-path="非阻塞通信.html">
+        <li class="chapter active" data-level="1.2.6" data-path="非阻塞通信.html">
             
                 <a href="非阻塞通信.html">
             
@@ -276,7 +274,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >常用函数</a>
+        <a href="." >非阻塞通信</a>
     </h1>
 </div>
 
@@ -294,43 +292,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5E38;&#x7528;&#x51FD;&#x6570;"><a name="&#x5E38;&#x7528;&#x51FD;&#x6570;" class="plugin-anchor" href="#&#x5E38;&#x7528;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x7528;&#x51FD;&#x6570;</h1>
-<h4 id="&#x83B7;&#x5F97;&#x5F53;&#x524D;&#x65F6;&#x95F4;"><a name="&#x83B7;&#x5F97;&#x5F53;&#x524D;&#x65F6;&#x95F4;" class="plugin-anchor" href="#&#x83B7;&#x5F97;&#x5F53;&#x524D;&#x65F6;&#x95F4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x5F97;&#x5F53;&#x524D;&#x65F6;&#x95F4;</h4>
+                                <h1 id="&#x975E;&#x963B;&#x585E;&#x901A;&#x4FE1;"><a name="&#x975E;&#x963B;&#x585E;&#x901A;&#x4FE1;" class="plugin-anchor" href="#&#x975E;&#x963B;&#x585E;&#x901A;&#x4FE1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x975E;&#x963B;&#x585E;&#x901A;&#x4FE1;</h1>
+<!-- toc -->
 <ul>
-<li><code>double MPI_Wtime(void)</code> </li>
+<li><a href="#&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</a></li>
 </ul>
-<h4 id="&#x83B7;&#x5F97;&#x673A;&#x5668;&#x540D;&#x5B57;"><a name="&#x83B7;&#x5F97;&#x673A;&#x5668;&#x540D;&#x5B57;" class="plugin-anchor" href="#&#x83B7;&#x5F97;&#x673A;&#x5668;&#x540D;&#x5B57;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x5F97;&#x673A;&#x5668;&#x540D;&#x5B57;</h4>
+<!-- tocstop -->
+<h1 id="&#x7B80;&#x4ECB;"><a name="&#x7B80;&#x4ECB;" class="plugin-anchor" href="#&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x4ECB;</h1>
+<p>&#x524D;&#x9762;&#x6240;&#x8BB2;&#x7684; <code>MPI_Send</code> &#x7684;&#x901A;&#x4FE1;&#x6A21;&#x5F0F;&#x4E3A;&#x963B;&#x585E;&#x901A;&#x4FE1;&#x6A21;&#x5F0F;&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x6A21;&#x5F0F;&#x4E0B;&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;&#x963B;&#x585E;&#x901A;&#x4FE1;&#x6B63;&#x786E;&#x8FD4;&#x56DE;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x4E0B;&#x9762;&#x7684;&#x4FE1;&#x606F;&#xFF1A;</p>
 <ul>
-<li><code>int MPI_Get_processor_name(char *name, int *result_len)</code><ul>
-<li><code>name</code> - &#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x6240;&#x5728;&#x673A;&#x5668;&#x7684;&#x540D;&#x5B57;</li>
-<li><code>result_len</code> - &#x8FD4;&#x56DE;&#x540D;&#x5B57;&#x7684;&#x957F;&#x5EA6;</li>
+<li>&#x901A;&#x4FE1;&#x64CD;&#x4F5C;&#x5DF2;&#x6B63;&#x786E;&#x5B8C;&#x6210;&#xFF0C;&#x5373;&#x6D88;&#x606F;&#x5DF2;&#x6210;&#x529F;&#x53D1;&#x51FA;&#x6216;&#x8005;&#x63A5;&#x6536;</li>
+<li>&#x901A;&#x4FE1;&#x5360;&#x7528;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#xFF0C;&#x82E5;&#x662F;&#x53D1;&#x9001;&#x64CD;&#x4F5C;&#xFF0C;&#x5219;&#x8BE5;&#x7F13;&#x51B2;&#x533A;&#x53EF;&#x4EE5;&#x88AB;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;&#x66F4;&#x65B0;&#xFF0C;&#x82E5;&#x662F;&#x63A5;&#x6536;&#x64CD;&#x4F5C;&#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x7F13;&#x51B2;&#x533A;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5DF2;&#x7ECF;&#x5B8C;&#x6574;&#xFF0C;&#x53EF;&#x4EE5;&#x88AB;&#x6B63;&#x786E;&#x4F7F;&#x7528;&#x3002;</li>
 </ul>
-</li>
-</ul>
-<h4 id="&#x83B7;&#x5F97;-mpi-&#x7248;&#x672C;"><a name="&#x83B7;&#x5F97;-mpi-&#x7248;&#x672C;" class="plugin-anchor" href="#&#x83B7;&#x5F97;-mpi-&#x7248;&#x672C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x5F97; MPI &#x7248;&#x672C;</h4>
-<ul>
-<li><code>int MPI_Get_version(int *version, int *subversion)</code><ul>
-<li><code>version</code> - MPI &#x4E3B;&#x7248;&#x672C;&#x53F7;</li>
-<li><code>subversion</code> - MPI &#x6B21;&#x7248;&#x672C;&#x53F7;    </li>
-</ul>
-</li>
-</ul>
-<h4 id="&#x5224;&#x65AD;-mpiinit-&#x662F;&#x5426;&#x6267;&#x884C;&#xFF0C;&#x552F;&#x4E00;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x5728;-mpiinit-&#x4E4B;&#x524D;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x3002;"><a name="&#x5224;&#x65AD;-mpiinit-&#x662F;&#x5426;&#x6267;&#x884C;&#xFF0C;&#x552F;&#x4E00;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x5728;-mpiinit-&#x4E4B;&#x524D;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x3002;" class="plugin-anchor" href="#&#x5224;&#x65AD;-mpiinit-&#x662F;&#x5426;&#x6267;&#x884C;&#xFF0C;&#x552F;&#x4E00;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x5728;-mpiinit-&#x4E4B;&#x524D;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x3002;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5224;&#x65AD; <code>MPI_Init</code> &#x662F;&#x5426;&#x6267;&#x884C;&#xFF0C;&#x552F;&#x4E00;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x5728; <code>MPI_Init</code> &#x4E4B;&#x524D;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x3002;</h4>
-<ul>
-<li><code>int MPI_Initialized(int *flag)</code> - <ul>
-<li><code>flag</code> - &#x662F;&#x5426;&#x5DF2;&#x8C03;&#x7528;</li>
-</ul>
-</li>
-</ul>
-<h4 id="&#x4F7F;&#x901A;&#x4FE1;&#x57DF;-comm-&#x4E2D;&#x7684;&#x6240;&#x6709;&#x8FDB;&#x7A0B;&#x9000;&#x51FA;"><a name="&#x4F7F;&#x901A;&#x4FE1;&#x57DF;-comm-&#x4E2D;&#x7684;&#x6240;&#x6709;&#x8FDB;&#x7A0B;&#x9000;&#x51FA;" class="plugin-anchor" href="#&#x4F7F;&#x901A;&#x4FE1;&#x57DF;-comm-&#x4E2D;&#x7684;&#x6240;&#x6709;&#x8FDB;&#x7A0B;&#x9000;&#x51FA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x901A;&#x4FE1;&#x57DF; <code>Comm</code> &#x4E2D;&#x7684;&#x6240;&#x6709;&#x8FDB;&#x7A0B;&#x9000;&#x51FA;</h4>
-<ul>
-<li><code>int MPI_Abort(MPI_Comm comm, int errorcode)</code><ul>
-<li><code>comm</code> - &#x9000;&#x51FA;&#x8FDB;&#x7A0B;&#x6240;&#x5728;&#x7684;&#x901A;&#x4FE1;&#x57DF;</li>
-<li><code>errorcode</code> - &#x9519;&#x8BEF;&#x7801;</li>
-</ul>
-</li>
-</ul>
-<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#"></a></p><li><a href="#&#x5E38;&#x7528;&#x51FD;&#x6570;">1. &#x5E38;&#x7528;&#x51FD;&#x6570;</a></li></ul></div><a href="#&#x5E38;&#x7528;&#x51FD;&#x6570;" id="goTop"><i class="fa fa-arrow-up"></i></a>
+<p>&#x4E0B;&#x9762;&#x662F;&#x963B;&#x585E;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;&#x7684;&#x793A;&#x610F;&#x56FE;&#xFF1A;</p>
+<p><img src="images/&#x963B;&#x585E;&#x6D88;&#x606F;.png" alt=""></p>
+<p>&#x5728;&#x963B;&#x585E;&#x901A;&#x4FE1;&#x4E2D;&#xFF0C;&#x5BF9;&#x4E8E;&#x63A5;&#x6536;&#x8FDB;&#x7A0B;&#xFF0C;&#x5728;&#x63A5;</p>
+<div id="anchors-navbar"><i class="fa fa-anchor"></i><ul><p><a href="#"></a></p><li><a href="#&#x975E;&#x963B;&#x585E;&#x901A;&#x4FE1;">1. &#x975E;&#x963B;&#x585E;&#x901A;&#x4FE1;</a></li><li><a href="#&#x7B80;&#x4ECB;">2. &#x7B80;&#x4ECB;</a></li></ul></div><a href="#&#x975E;&#x963B;&#x585E;&#x901A;&#x4FE1;" id="goTop"><i class="fa fa-arrow-up"></i></a>
                                 
                                 </section>
                             
@@ -373,14 +350,10 @@
 
             
                 
-                <a href="基础函数.html" class="navigation navigation-prev " aria-label="Previous page: 基础函数">
+                <a href="通信模式.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 通信模式">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="编程模式.html" class="navigation navigation-next " aria-label="Next page: 编程模式">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -389,7 +362,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"常用函数","level":"1.2.3","depth":2,"next":{"title":"编程模式","level":"1.2.4","depth":2,"path":"编程模式.md","ref":"编程模式.md","articles":[]},"previous":{"title":"基础函数","level":"1.2.2","depth":2,"path":"基础函数.md","ref":"基础函数.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","search","search-plus","simple-page-toc","baidu","sitemap","github","duoshuo","anchors","anchor-navigation-ex","expandable-chapters-small","katex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/zhangjikai/parallel"},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"zhangjkblog","theme":"default"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false},"sitemap":{"hostname":"http://parallel.zhangjikai.com"},"prism-themes":{},"expandable-chapters-small":{},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"anchorjs":{"placement":"left"},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"parallel","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"http://zhangjikai.com"}},"gitbook":"3.2.2","description":"并行计算"},"file":{"path":"常用函数.md","mtime":"2017-01-15T02:52:54.718Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-17T06:32:54.155Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"非阻塞通信","level":"1.2.6","depth":2,"previous":{"title":"通信模式","level":"1.2.5","depth":2,"path":"通信模式.md","ref":"通信模式.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","search","search-plus","simple-page-toc","baidu","sitemap","github","duoshuo","anchors","anchor-navigation-ex","expandable-chapters-small","katex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/zhangjikai/parallel"},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"zhangjkblog","theme":"default"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false},"sitemap":{"hostname":"http://parallel.zhangjikai.com"},"prism-themes":{},"expandable-chapters-small":{},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"anchorjs":{"placement":"left"},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"parallel","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"http://zhangjikai.com"}},"gitbook":"3.2.2","description":"并行计算"},"file":{"path":"非阻塞通信.md","mtime":"2017-01-17T03:22:45.709Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-01-17T06:32:54.155Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
