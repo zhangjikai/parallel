@@ -24,7 +24,8 @@
         "anchors",
         "anchor-navigation-ex",
         "expandable-chapters-small",
-        "katex"
+        "katex",
+        "custom-favicon"
     ],
 
     "pluginsConfig": {
@@ -67,7 +68,8 @@
         },
         "anchor-navigation-ex":{
             "isRewritePageTitle":false
-        }
+        },
+        "favicon": "/favicon.ico"
     }
 
 }
