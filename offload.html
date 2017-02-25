@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>MPI · parallel</title>
+        <title>offload · parallel</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -79,10 +79,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="mpi-helloworld.html" />
+    <link rel="next" href="offload-详解.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="mic-helloworld.html" />
     
 
     </head>
@@ -135,7 +135,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="mpi.html">
+        <li class="chapter " data-level="1.2" data-path="mpi.html">
             
                 <a href="mpi.html">
             
@@ -454,7 +454,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="offload.html">
+        <li class="chapter active" data-level="1.5.2" data-path="offload.html">
             
                 <a href="offload.html">
             
@@ -579,7 +579,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >MPI</a>
+        <a href="." >offload</a>
     </h1>
 </div>
 
@@ -597,14 +597,86 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;">MPI &#x5B66;&#x4E60;&#x8BB0;&#x5F55;</a></li></ul></div><a href="#mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;"><a name="mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>MPI &#x5B66;&#x4E60;&#x8BB0;&#x5F55;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#offload-&#x6A21;&#x5F0F;">Offload &#x6A21;&#x5F0F;</a></li><ul><li><a href="#&#x5B9A;&#x4E49;mic&#x4F7F;&#x7528;&#x7684;&#x51FD;&#x6570;&#x548C;&#x53D8;&#x91CF;">&#x5B9A;&#x4E49;MIC&#x4F7F;&#x7528;&#x7684;&#x51FD;&#x6570;&#x548C;&#x53D8;&#x91CF;</a></li><li><a href="#&#x6570;&#x636E;&#x4F20;&#x8F93;">&#x6570;&#x636E;&#x4F20;&#x8F93;</a></li></ul></ul></div><a href="#offload-&#x6A21;&#x5F0F;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="offload-&#x6A21;&#x5F0F;"><a name="offload-&#x6A21;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#offload-&#x6A21;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>Offload &#x6A21;&#x5F0F;</h1>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x5BF9;&#x5E94;&#x4E8E;&#x6211;&#x4EEC;&#x524D;&#x9762;&#x6240;&#x8BF4;&#x7684;&#x975E;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x6A21;&#x578B;&#xFF0C;&#x8FD9;&#x91CC;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;&#x5B83;&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;</p>
+<!-- toc -->
 <ul>
-<li><a href="http://hpclab.cs.tsinghua.edu.cn/~duzh/book/mpi.pdf" target="_blank">&#x9AD8;&#x6027;&#x80FD;&#x8BA1;&#x7B97;&#x4E4B;&#x5E76;&#x884C;&#x7F16;&#x7A0B;&#x6280;&#x672F; &#x2014;&#x2014; MPI&#x5E76;&#x884C;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;</a></li>
-<li><a href="http://mpitutorial.com/tutorials/mpi-hello-world/" target="_blank">MPI Tutorial  </a></li>
-<li><a href="https://computing.llnl.gov/tutorials/mpi/" target="_blank">Message Passing Interface</a></li>
-<li><a href="http://mpi.deino.net/" target="_blank">DeinoMPI</a></li>
+<li><a href="#&#x5B9A;&#x4E49;mic&#x4F7F;&#x7528;&#x7684;&#x51FD;&#x6570;&#x548C;&#x53D8;&#x91CF;">&#x5B9A;&#x4E49;MIC&#x4F7F;&#x7528;&#x7684;&#x51FD;&#x6570;&#x548C;&#x53D8;&#x91CF;</a></li>
+<li><a href="#&#x6570;&#x636E;&#x4F20;&#x8F93;">&#x6570;&#x636E;&#x4F20;&#x8F93;</a></li>
 </ul>
-<p>&#x5927;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x6458;&#x6284;&#x81EA; MPI&#x5E76;&#x884C;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#xFF0C;&#x540C;&#x65F6;&#x589E;&#x52A0;&#x4E86;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x4EE5;&#x53CA;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x4E9B;&#x7406;&#x89E3;&#x3002;&#x53E6;&#x5916;&#x4EE3;&#x7801;&#x5168;&#x90E8;&#x4F7F;&#x7528; c &#x8BED;&#x8A00;&#xFF0C;&#x5927;&#x90E8;&#x5206;&#x5728;&#x539F;&#x4E66;&#x4EE3;&#x7801;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x8FDB;&#x884C;&#x4E86;&#x4FEE;&#x6539;&#xFF0C;&#x4F7F;&#x4EE3;&#x7801;&#x66F4;&#x6613;&#x4E8E;&#x7406;&#x89E3;&#x3002;</p>
+<!-- tocstop -->
+<h2 id="&#x5B9A;&#x4E49;mic&#x4F7F;&#x7528;&#x7684;&#x51FD;&#x6570;&#x548C;&#x53D8;&#x91CF;"><a name="&#x5B9A;&#x4E49;mic&#x4F7F;&#x7528;&#x7684;&#x51FD;&#x6570;&#x548C;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x5B9A;&#x4E49;mic&#x4F7F;&#x7528;&#x7684;&#x51FD;&#x6570;&#x548C;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9A;&#x4E49;MIC&#x4F7F;&#x7528;&#x7684;&#x51FD;&#x6570;&#x548C;&#x53D8;&#x91CF;</h2>
+<p>&#x5982;&#x679C;&#x662F;&#x5C40;&#x90E8;&#x53D8;&#x91CF;, &#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x4E0D;&#x9700;&#x8981;&#x505A;&#x989D;&#x5916;&#x7684;&#x5DE5;&#x4F5C;, &#x5982;&#x679C;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x6216;&#x8005;&#x51FD;&#x6570;, &#x8981;&#x5728;mic&#x4E0A;&#x4F7F;&#x7528;&#x5B83;&#x4EEC;, &#x5219;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x65B9;&#x5F0F;&#x58F0;&#x660E;&#x6216;&#x8005;&#x5B9A;&#x4E49;:</p>
+<pre class="language-"><code class="lang-bash">__declspec<span class="token punctuation">(</span> target <span class="token punctuation">(</span>mic<span class="token punctuation">))</span> function-declaration
+__declspec<span class="token punctuation">(</span> target <span class="token punctuation">(</span>mic<span class="token punctuation">))</span> variable-declaration
+__attribute__ <span class="token variable"><span class="token punctuation">((</span> target <span class="token punctuation">(</span>mic<span class="token punctuation">))</span></span><span class="token punctuation">)</span> function-declaration
+__attribute__ <span class="token variable"><span class="token punctuation">((</span> target <span class="token punctuation">(</span>mic<span class="token punctuation">))</span></span><span class="token punctuation">)</span> variable-declaration
+</code></pre>
+<p>&#x5176;&#x4E2D;<code>__declspec</code>&#x53EF;&#x4EE5;&#x7528;&#x4E8E;windows&#x6216;&#x8005;linux&#x7CFB;&#x7EDF;, &#x800C;<code>_attribute__</code>&#x53EA;&#x80FD;&#x7528;&#x4E8E;linux.<br><!-- more -->
+&#x4E0B;&#x9762;&#x4F7F;&#x7528;&#x793A;&#x4F8B;:</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token macro property">#<span class="token directive keyword">define</span> __ONMIC__ __attribute__((target(mic)))</span>
+
+__ONMIC__ <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+
+__ONMIC__ <span class="token keyword">void</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;n*n is %d\n&quot;</span><span class="token punctuation">,</span> n<span class="token operator">*</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic)</span>
+    <span class="token punctuation">{</span>
+        i <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+        <span class="token function">f</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;i is %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x6570;&#x636E;&#x4F20;&#x8F93;"><a name="&#x6570;&#x636E;&#x4F20;&#x8F93;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x4F20;&#x8F93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x4F20;&#x8F93;</h2>
+<p>&#x867D;&#x7136;&#x5728;host(&#x4E3B;&#x673A;&#x7AEF;, &#x4F8B;&#x5982;CPU)&#x548C;targets(&#x8BBE;&#x5907;&#x7AEF;, &#x4F8B;&#x5982;MIC&#x5361;)&#x7AEF;&#x4F7F;&#x7528;&#x7684;&#x6307;&#x4EE4;&#x96C6;&#x662F;&#x76F8;&#x4F3C;&#x7684;, &#x4F46;&#x662F;&#x5B83;&#x4EEC;&#x5E76;&#x4E0D;&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#x5185;&#x5B58;, &#x8FD9;&#x4E5F;&#x5C31;&#x610F;&#x5473;&#x7740;&#x5728;<code>#pragma</code>&#x4EE3;&#x7801;&#x5757;&#x4E2D;&#x7528;&#x5230;&#x7684;&#x53D8;&#x91CF;&#x5FC5;&#x987B;&#x540C;&#x65F6;&#x5B58;&#x5728;
+&#x4E8E;host&#x548C;target&#x4E0A;, &#x4E3A;&#x4E86;&#x786E;&#x4FDD;&#x8FD9;&#x6837;, pragma&#x4F7F;&#x7528;&#x7279;&#x5B9A;&#x7684;&#x8BF4;&#x660E;&#x7B26;(Specifiers)[<code>in</code>, <code>out</code>, <code>inout</code>]&#x6765;&#x6307;&#x5B9A;&#x5728;host&#x548C;target&#x4E4B;&#x95F4;&#x590D;&#x5236;&#x7684;&#x53D8;&#x91CF;.</p>
+<ul>
+<li>in: &#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x4ECE;host&#x7AEF;&#x590D;&#x5236;&#x5230;target&#x7AEF;(&#x4F5C;&#x4E3A;target&#x7684;&#x8F93;&#x5165;), &#x4F46;&#x662F;&#x4E0D;&#x4ECE;target&#x7AEF;&#x590D;&#x5236;&#x56DE;host&#x7AEF;</li>
+<li>out: &#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x4ECE;target&#x7AEF;&#x590D;&#x5236;&#x56DE;host&#x7AEF;(&#x4F5C;&#x4E3A;target&#x7684;&#x8F93;&#x51FA;), &#x4F46;&#x662F;&#x4E0D;&#x4ECE;host&#x6BB5;&#x590D;&#x5236;&#x5230;target&#x7AEF;</li>
+<li>inout: &#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x5373;&#x4ECE;host&#x7AEF;&#x590D;&#x5236;&#x5230;target&#x7AEF;, &#x4E5F;&#x4ECE;target&#x6BB5;&#x590D;&#x5236;&#x56DE;host&#x7AEF;(&#x5373;&#x662F;&#x8F93;&#x5165;&#x53C8;&#x662F;&#x8F93;&#x51FA;).</li>
+</ul>
+<p>&#x5728;&#x6CA1;&#x6709;&#x663E;&#x793A;&#x7684;&#x8C03;&#x7528;&#x8BF4;&#x660E;&#x7B26;, &#x90A3;&#x4E48;&#x9ED8;&#x8BA4;inout. &#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> inVar <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> outVar <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> inoutVar <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
+
+    <span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic) in(inVar) out(outVar)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;inVar in MIC is %d\n&quot;</span><span class="token punctuation">,</span> inVar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;outVar in MIC is %d\n&quot;</span><span class="token punctuation">,</span> outVar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// &#x8FD9;&#x91CC;&#x7528;&#x5230;&#x4E86;inoutVar, &#x4F46;&#x662F;offload&#x65F6;&#x5E76;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x5B83;&#x7684;&#x8BF4;&#x660E;&#x7B26;, &#x5219;&#x7528;&#x9ED8;&#x8BA4;&#x7684;inout</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;inoutVar in MIC is %d\n&quot;</span><span class="token punctuation">,</span> inoutVar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        inVar <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+        outVar <span class="token operator">=</span> <span class="token number">200</span><span class="token punctuation">;</span>
+        inoutVar <span class="token operator">=</span> <span class="token number">300</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;inVar in CPU is %d\n&quot;</span><span class="token punctuation">,</span> inVar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;outVar in CPU is %d\n&quot;</span><span class="token punctuation">,</span> outVar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;inoutVar in CPU is %d\n&quot;</span><span class="token punctuation">,</span> inoutVar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E3A;:</p>
+<pre class="language-"><code class="lang-bash">inVar <span class="token keyword">in</span> CPU is 10
+outVar <span class="token keyword">in</span> CPU is 200
+inoutVar <span class="token keyword">in</span> CPU is 300
+inVar <span class="token keyword">in</span> MIC is 10
+outVar <span class="token keyword">in</span> MIC is 0
+inoutVar <span class="token keyword">in</span> MIC is 30
+</code></pre>
+<p>&#x4ECE;&#x4E0A;&#x9762;&#x53EF;&#x4EE5;&#x770B;&#x51FA;inVar&#x7684;&#x503C;&#x4F20;&#x5230;&#x4E86;MIC&#x4E0A;, &#x4F46;&#x662F;&#x5728;MIC&#x4E0A;&#x4FEE;&#x6539;&#x540E;&#x5E76;&#x6CA1;&#x6709;&#x4F20;&#x56DE;CPU, CPU&#x4E2D;outVar&#x7684;&#x6CA1;&#x6709;&#x4F20;&#x9012;&#x5230;MIC&#x4E0A;, &#x4F46;&#x662F;MIC&#x4E0A;outVar&#x7684;&#x503C;&#x5374;&#x662F;&#x4F20;&#x56DE;&#x5230;&#x4E86;CPU&#x4E0A;,&#x800C;inoutVar&#x7684;&#x503C;&#x5373;&#x4F20;&#x9012;&#x5230;&#x4E86;MIC,&#x4E5F;&#x4ECE;MIC&#x4E0A;&#x4F20;&#x4E86;&#x56DE;&#x6765;. &#x540C;&#x65F6;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x770B;&#x5230;, &#x5148;&#x6253;&#x5370;&#x7684;&#x662F;in CPU, &#x53C8;&#x6253;&#x5370;&#x7684;in MIC, &#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x5728;target&#x7AEF;(&#x6BD4;&#x5982;MIC&#x5361;)&#x8F93;&#x51FA;&#x65F6;, &#x56E0;&#x4E3A;PCI-E&#x8BBE;&#x5907;(MIC&#x5361;&#x662F;&#x63D2;&#x5728;PCI-E&#x63D2;&#x69FD;&#x4E0A;&#x7684;) &#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#x663E;&#x793A;&#x5668;, &#x6240;&#x4EE5;&#x5FC5;&#x987B;&#x7ECF;&#x8FC7;CPU&#x4E2D;&#x8F6C;. &#x867D;&#x7136;&#x5404;&#x5BB6;&#x5382;&#x5546;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x4E0D;&#x5C3D;&#x76F8;&#x540C;, &#x4F46;&#x603B;&#x514D;&#x4E0D;&#x4E86;&#x4F7F;&#x7528;&#x5361;&#x4E0A;&#x7684;&#x5185;&#x5B58;&#x8FDB;&#x884C;&#x7F13;&#x51B2;, &#x4E4B;&#x540E;&#x4EA4;&#x6362;&#x5230;host&#x7AEF;&#x5185;&#x5B58;&#x4E2D;, &#x518D;&#x8FDB;&#x884C;&#x8F93;&#x51FA;, &#x8FD9;&#x6837;&#x5C31;&#x4F1A;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x5EF6;&#x8FDF;, &#x56E0;&#x6B64;&#x4E00;&#x822C;target&#x4E0A;&#x7684;&#x8F93;&#x51FA;&#x8981;&#x6162;&#x4E8E;host&#x7AEF;&#x7684;&#x8F93;&#x51FA;.</p>
 
                                 
                                 </section>
@@ -648,12 +720,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 前言">
+                <a href="mic-helloworld.html" class="navigation navigation-prev " aria-label="Previous page: HelloWorld">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="mpi-helloworld.html" class="navigation navigation-next " aria-label="Next page: MPI-HelloWorld">
+                <a href="offload-详解.html" class="navigation navigation-next " aria-label="Next page: in / out / inout 详细用法">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -664,7 +736,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"MPI","level":"1.2","depth":1,"next":{"title":"MPI-HelloWorld","level":"1.2.1","depth":2,"path":"mpi-helloworld.md","ref":"mpi-helloworld.md","articles":[]},"previous":{"title":"前言","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","search","search-plus","simple-page-toc","baidu","sitemap","github","duoshuo","anchors","anchor-navigation-ex","expandable-chapters-small","katex","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"github":{"url":"https://github.com/zhangjikai/parallel"},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"zhangjkblog","theme":"default"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false},"favicon":"/favicon.ico","sitemap":{"hostname":"http://parallel.zhangjikai.com"},"prism-themes":{},"custom-favicon":{},"expandable-chapters-small":{},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"anchorjs":{"placement":"left"},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"parallel","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"http://zhangjikai.com"}},"gitbook":"3.2.2","description":"并行计算"},"file":{"path":"mpi.md","mtime":"2017-02-11T08:35:00.128Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-25T12:22:58.742Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"offload","level":"1.5.2","depth":2,"next":{"title":"in / out / inout 详细用法","level":"1.5.3","depth":2,"path":"offload-详解.md","ref":"offload-详解.md","articles":[]},"previous":{"title":"HelloWorld","level":"1.5.1","depth":2,"path":"mic-helloworld.md","ref":"mic-helloworld.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","search","search-plus","simple-page-toc","baidu","sitemap","github","duoshuo","anchors","anchor-navigation-ex","expandable-chapters-small","katex","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"github":{"url":"https://github.com/zhangjikai/parallel"},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"zhangjkblog","theme":"default"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false},"favicon":"/favicon.ico","sitemap":{"hostname":"http://parallel.zhangjikai.com"},"prism-themes":{},"custom-favicon":{},"expandable-chapters-small":{},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"anchorjs":{"placement":"left"},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"parallel","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"http://zhangjikai.com"}},"gitbook":"3.2.2","description":"并行计算"},"file":{"path":"offload.md","mtime":"2017-02-25T12:14:16.303Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-25T12:22:58.742Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

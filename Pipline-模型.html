@@ -1,0 +1,1033 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>流水线模型 · parallel</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="zhangjikai">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mic.html" />
+    
+    
+    <link rel="prev" href="Pthreads-使用.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://zhangjikai.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="mpi.html">
+            
+                <a href="mpi.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    MPI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="mpi-helloworld.html">
+            
+                <a href="mpi-helloworld.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    MPI-HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="基础函数.html">
+            
+                <a href="基础函数.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    基础函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="通信类别.html">
+            
+                <a href="通信类别.html">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    通信类别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="通信模式.html">
+            
+                <a href="通信模式.html">
+            
+                    
+                        <b>1.2.4.</b>
+                    
+                    通信模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="编程模式.html">
+            
+                <a href="编程模式.html">
+            
+                    
+                        <b>1.2.5.</b>
+                    
+                    编程模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="非阻塞通信.html">
+            
+                <a href="非阻塞通信.html">
+            
+                    
+                        <b>1.2.6.</b>
+                    
+                    非阻塞通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="重复非阻塞通信.html">
+            
+                <a href="重复非阻塞通信.html">
+            
+                    
+                        <b>1.2.7.</b>
+                    
+                    重复非阻塞通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="组通信.html">
+            
+                <a href="组通信.html">
+            
+                    
+                        <b>1.2.8.</b>
+                    
+                    组通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="数据处理.html">
+            
+                <a href="数据处理.html">
+            
+                    
+                        <b>1.2.9.</b>
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="openmp.html">
+            
+                <a href="openmp.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    OpenMP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="openmp-基本使用.html">
+            
+                <a href="openmp-基本使用.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    OpenMP 基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="编译制导指令.html">
+            
+                <a href="编译制导指令.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    编译制导指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="运行环境交互.html">
+            
+                <a href="运行环境交互.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    运行环境交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="更多指令和子句.html">
+            
+                <a href="更多指令和子句.html">
+            
+                    
+                        <b>1.3.4.</b>
+                    
+                    更多指令和子句
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="pthread.html">
+            
+                <a href="pthread.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    Pthreads
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="Pthreads-使用.html">
+            
+                <a href="Pthreads-使用.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.2" data-path="Pipline-模型.html">
+            
+                <a href="Pipline-模型.html">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    流水线模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="mic.html">
+            
+                <a href="mic.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    MIC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="mic-helloworld.html">
+            
+                <a href="mic-helloworld.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="offload.html">
+            
+                <a href="offload.html">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    offload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="offload-详解.html">
+            
+                <a href="offload-详解.html">
+            
+                    
+                        <b>1.5.3.</b>
+                    
+                    in / out / inout 详细用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="offload-other.html">
+            
+                <a href="offload-other.html">
+            
+                    
+                        <b>1.5.4.</b>
+                    
+                    offload 其他函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="mic-共享虚拟内存模式.html">
+            
+                <a href="mic-共享虚拟内存模式.html">
+            
+                    
+                        <b>1.5.5.</b>
+                    
+                    共享虚拟内存模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="mic-异步计算和传输.html">
+            
+                <a href="mic-异步计算和传输.html">
+            
+                    
+                        <b>1.5.6.</b>
+                    
+                    异步计算和传输
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="mic-向量化.html">
+            
+                <a href="mic-向量化.html">
+            
+                    
+                        <b>1.5.7.</b>
+                    
+                    向量化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >流水线模型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x6D41;&#x6C34;&#x7EBF;&#x6A21;&#x578B;">&#x6D41;&#x6C34;&#x7EBF;&#x6A21;&#x578B;</a></li><ul><li><a href="#&#x524D;&#x8A00;">&#x524D;&#x8A00;</a></li><li><a href="#&#x6A21;&#x578B;&#x8BF4;&#x660E;">&#x6A21;&#x578B;&#x8BF4;&#x660E;</a></li><li><a href="#&#x5B9E;&#x73B0;">&#x5B9E;&#x73B0;</a></li><ul><li><a href="#&#x6267;&#x884C;&#x6D41;&#x7A0B;">&#x6267;&#x884C;&#x6D41;&#x7A0B;</a></li><li><a href="#&#x7EBF;&#x7A0B;&#x7B49;&#x5F85;&#x548C;&#x5524;&#x9192;">&#x7EBF;&#x7A0B;&#x7B49;&#x5F85;&#x548C;&#x5524;&#x9192;</a></li><li><a href="#&#x6570;&#x636E;&#x7F13;&#x51B2;&#x533A;">&#x6570;&#x636E;&#x7F13;&#x51B2;&#x533A;</a></li></ul><li><a href="#&#x5B8C;&#x6574;&#x4EE3;&#x7801;">&#x5B8C;&#x6574;&#x4EE3;&#x7801;</a></li><li><a href="#&#x53C2;&#x8003;">&#x53C2;&#x8003;</a></li></ul></ul></div><a href="#&#x6D41;&#x6C34;&#x7EBF;&#x6A21;&#x578B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6D41;&#x6C34;&#x7EBF;&#x6A21;&#x578B;"><a name="&#x6D41;&#x6C34;&#x7EBF;&#x6A21;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x6D41;&#x6C34;&#x7EBF;&#x6A21;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D41;&#x6C34;&#x7EBF;&#x6A21;&#x578B;</h1>
+<!-- toc -->
+<ul>
+<li><a href="#&#x524D;&#x8A00;">&#x524D;&#x8A00;</a></li>
+<li><a href="#&#x6A21;&#x578B;&#x8BF4;&#x660E;">&#x6A21;&#x578B;&#x8BF4;&#x660E;</a></li>
+<li><a href="#&#x5B9E;&#x73B0;">&#x5B9E;&#x73B0;</a><ul>
+<li><a href="#&#x6267;&#x884C;&#x6D41;&#x7A0B;">&#x6267;&#x884C;&#x6D41;&#x7A0B;</a></li>
+<li><a href="#&#x7EBF;&#x7A0B;&#x7B49;&#x5F85;&#x548C;&#x5524;&#x9192;">&#x7EBF;&#x7A0B;&#x7B49;&#x5F85;&#x548C;&#x5524;&#x9192;</a></li>
+<li><a href="#&#x6570;&#x636E;&#x7F13;&#x51B2;&#x533A;">&#x6570;&#x636E;&#x7F13;&#x51B2;&#x533A;</a></li>
+</ul>
+</li>
+<li><a href="#&#x5B8C;&#x6574;&#x4EE3;&#x7801;">&#x5B8C;&#x6574;&#x4EE3;&#x7801;</a></li>
+<li><a href="#&#x53C2;&#x8003;">&#x53C2;&#x8003;</a></li>
+</ul>
+<!-- tocstop -->
+<h2 id="&#x524D;&#x8A00;"><a name="&#x524D;&#x8A00;" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x8A00;</h2>
+<p>Pthreads &#x6709;&#x51E0;&#x79CD;&#x5DE5;&#x4F5C;&#x6A21;&#x578B;&#xFF0C;&#x4F8B;&#x5982; Boss/Workder Model&#x3001;Pileline Model(Assembly Line)&#x3001;Background Task Model&#x3001;Interface/Implementation Model&#xFF0C;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x53EF;&#x4EE5;&#x53C2;&#x8003; <a href="http://homes.di.unimi.it/~boccignone/GiuseppeBoccignone_webpage/MatDidatSOD2009_files/pthread-Tutorial.pdf" target="_blank">pthread Tutorial</a>&#xFF0C;&#x8FD9;&#x91CC;&#x7ED9;&#x51FA;&#x4E00;&#x4E2A;&#x6D41;&#x6C34;&#x7EBF;&#x6A21;&#x578B;(Pipeline Model)&#x7684;&#x7B80;&#x5355;&#x793A;&#x4F8B;&#x3002;&#x5728;&#x8BE5;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x4E3B;&#x7EBF;&#x7A0B;&#x5F00;&#x542F;&#x4E86;&#x4E24;&#x4E2A;&#x5B50;&#x7EBF;&#x7A0B;&#xFF0C;&#x4E00;&#x4E2A;&#x5B50;&#x7EBF;&#x7A0B;&#x7528;&#x6765;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#xFF0C;&#x4E00;&#x4E2A;&#x5B50;&#x7EBF;&#x7A0B;&#x7528;&#x4E8E;&#x5C06;&#x7ED3;&#x679C;&#x5199;&#x5165;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x4E3B;&#x7EBF;&#x7A0B;&#x81EA;&#x8EAB;&#x7528;&#x6765;&#x8BA1;&#x7B97;&#x3002;
+<!-- more --></p>
+<h2 id="&#x6A21;&#x578B;&#x8BF4;&#x660E;"><a name="&#x6A21;&#x578B;&#x8BF4;&#x660E;" class="anchor-navigation-ex-anchor" href="#&#x6A21;&#x578B;&#x8BF4;&#x660E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6A21;&#x578B;&#x8BF4;&#x660E;</h2>
+<p>&#x5F88;&#x591A;&#x65F6;&#x5019;&#xFF0C;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x51E0;&#x4E2A;&#x9636;&#x6BB5;&#xFF0C;&#x6BD4;&#x5982;&#x8BF4;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x3001;&#x8BA1;&#x7B97;&#x3001;&#x5C06;&#x7ED3;&#x679C;&#x5199;&#x5165;&#x6587;&#x4EF6;&#xFF0C;&#x5F53;&#x7136;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x4F9D;&#x6B21;&#x6267;&#x884C;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x4E2A;&#x66F4;&#x597D;&#x7684;&#x9009;&#x62E9;&#x662F;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x5904;&#x7406;&#x4E00;&#x4E2A;&#x9636;&#x6BB5;&#xFF0C;&#x56E0;&#x4E3A;&#x5BF9;&#x4E8E;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x6765;&#x8BF4;&#xFF0C;&#x786C;&#x76D8;&#x7684;&#x8BFB;&#x5199;&#x901F;&#x7387;&#x662F;&#x4E00;&#x5B9A;&#x7684;(IO&#x5F88;&#x591A;&#x65F6;&#x5019;&#x4F1A;&#x6210;&#x4E3A;&#x6027;&#x80FD;&#x7684;&#x74F6;&#x9888;)&#xFF0C;&#x5373;&#x4F7F;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x8BFB;&#x5199;&#x901F;&#x7387;&#x4E5F;&#x4E0D;&#x4F1A;&#x53D8;&#x5FEB;(IO&#x64CD;&#x4F5C;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;&#x5E76;&#x884C;)&#x3002;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x6765;&#x5904;&#x7406;IO&#xFF0C;&#x53E6;&#x5916;&#x7684;&#x7EBF;&#x7A0B;&#x5168;&#x90E8;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x4E0A;&#xFF0C;&#x5982;&#x679C;&#x8BA1;&#x7B97;&#x91CF;&#x8F83;&#x5927;&#xFF0C;IO&#x7684;&#x8017;&#x65F6;&#x662F;&#x53EF;&#x4EE5;&#x63A9;&#x76D6;&#x8FC7;&#x53BB;&#x7684;&#x3002;&#x6BD4;&#x5982;&#x8BFB;&#x53D6;&#x4E00;&#x4E2A; 2G &#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x3002;&#x4F7F;&#x7528;&#x6D41;&#x6C34;&#x7EBF;&#x6A21;&#x578B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x505A;&#xFF0C;&#x7528;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E13;&#x95E8;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5176;&#x6210;&#x4E3A;IO&#x7EBF;&#x7A0B;&#x3002;IO&#x7EBF;&#x7A0B;&#x4E00;&#x6B21;&#x8BFB;&#x53D6; 50M &#x6570;&#x636E;&#xFF0C;&#x4E4B;&#x540E;&#x4EA4;&#x7ED9;&#x8BA1;&#x7B97;&#x7EBF;&#x7A0B;&#x6765;&#x5904;&#x7406;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#xFF0C;&#x5728;&#x8BA1;&#x7B97;&#x7EBF;&#x7A0B;&#x5904;&#x7406;&#x6570;&#x636E;&#x7684;&#x540C;&#x65F6;&#xFF0C;IO&#x7EBF;&#x7A0B;&#x518D;&#x53BB;&#x8BFB;&#x6587;&#x4EF6;&#xFF0C;&#x5047;&#x8BBE;&#x5904;&#x7406; 50M &#x6570;&#x636E;&#x7684;&#x65F6;&#x95F4;&#x5927;&#x4E8E;&#x8BFB;&#x53D6;50M&#x6570;&#x636E;&#x7684;&#x65F6;&#x95F4;&#xFF0C; &#x5F53;&#x8BA1;&#x7B97;&#x7EBF;&#x7A0B;&#x5904;&#x7406;&#x5B8C;&#x4E0A;&#x4E00;&#x4EFD;&#x6570;&#x636E;&#x4E4B;&#x540E;&#xFF0C;&#x8981;&#x5904;&#x7406;&#x7684;&#x4E0B;&#x4E00;&#x4EFD;&#x6570;&#x636E;&#x8BFB;&#x53D6;&#x5B8C;&#x6BD5;&#xFF0C;&#x90A3;&#x4E48;&#x8BA1;&#x7B97;&#x7EBF;&#x7A0B;&#x53C8;&#x53EF;&#x4EE5;&#x7D27;&#x63A5;&#x7740;&#x5904;&#x7406;&#x8FD9;&#x90E8;&#x5206;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x6837;&#x5FAA;&#x73AF;&#x64CD;&#x4F5C;&#xFF0C;&#x9664;&#x4E86;&#x7B2C;&#x4E00;&#x6B21;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019;&#x8BA1;&#x7B97;&#x7EBF;&#x7A0B;&#x5904;&#x4E8E;&#x7A7A;&#x95F2;&#x72B6;&#x6001;&#xFF0C;&#x5176;&#x4F59;&#x8BFB;&#x53D6;&#x7684;&#x65F6;&#x5019;&#x8BA1;&#x7B97;&#x7EBF;&#x7A0B;&#x90FD;&#x5728;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x63A9;&#x76D6;&#x6389;&#x4E86;IO&#x7684;&#x65F6;&#x95F4;</p>
+<h2 id="&#x5B9E;&#x73B0;"><a name="&#x5B9E;&#x73B0;" class="anchor-navigation-ex-anchor" href="#&#x5B9E;&#x73B0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9E;&#x73B0;</h2>
+<h3 id="&#x6267;&#x884C;&#x6D41;&#x7A0B;"><a name="&#x6267;&#x884C;&#x6D41;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x6267;&#x884C;&#x6D41;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6267;&#x884C;&#x6D41;&#x7A0B;</h3>
+<p>&#x4E3B;&#x7EBF;&#x7A0B;&#x5728;&#x7A0B;&#x5E8F;&#x5F00;&#x59CB;&#x65F6;&#x521B;&#x5EFA;&#x4E24;&#x4E2A;&#x5B50;&#x7EBF;&#x7A0B;&#xFF0C;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x8BFB;&#xFF0C;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5199;&#xFF0C;&#x8BFB;&#x7EBF;&#x7A0B;&#x6BCF;&#x6B21;&#x53EA;&#x8BFB;&#x53D6;&#x4E00;&#x90E8;&#x5206;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C;&#x5199;&#x7EBF;&#x7A0B;&#x5C06;&#x8FD9;&#x90E8;&#x5206;&#x6570;&#x636E;&#x5904;&#x7406;&#x5B8C;&#x4E4B;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x3002;&#x521B;&#x5EFA;&#x5B8C;&#x7EBF;&#x7A0B;&#x4E4B;&#x540E;&#xFF0C;&#x4E3B;&#x7EBF;&#x7A0B;&#x548C;&#x5199;&#x7EBF;&#x7A0B;&#x5C31;&#x5904;&#x4E8E;&#x7B49;&#x5F85;&#x72B6;&#x6001;&#xFF0C;&#x800C;&#x8BFB;&#x7EBF;&#x7A0B;&#x5C31;&#x5F00;&#x59CB;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#xFF0C;&#x5F53;&#x8BFB;&#x7EBF;&#x7A0B;&#x8BFB;&#x53D6;&#x5B8C;&#x7B2C;&#x4E00;&#x90E8;&#x5206;&#x6570;&#x636E;&#x4E4B;&#x540E;&#xFF0C;&#x8BFB;&#x7EBF;&#x7A0B;&#x8FDB;&#x5165;&#x963B;&#x585E;&#x72B6;&#x6001;&#xFF0C;&#x4E3B;&#x7EBF;&#x7A0B;&#x5F00;&#x59CB;&#x8BA1;&#x7B97;&#xFF0C;&#x4E3B;&#x7EBF;&#x7A0B;&#x8BA1;&#x7B97;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x5199;&#x7EBF;&#x7A0B;&#x5F00;&#x59CB;&#x5199;&#x5165;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#xFF0C;&#x540C;&#x65F6;&#x8BFB;&#x7EBF;&#x7A0B;&#x5F00;&#x59CB;&#x4E0B;&#x4E00;&#x90E8;&#x5206;&#x6570;&#x636E;&#x7684;&#x8BFB;&#x53D6;&#x3002;&#x6309;&#x7167;&#x8FD9;&#x4E2A;&#x6D41;&#x7A0B;&#x5FAA;&#x73AF;&#x53D6;&#x7B97;&#x5B58;&#xFF0C;&#x76F4;&#x5230;&#x7A0B;&#x5E8F;&#x7ED3;&#x675F;&#x3002;</p>
+<h3 id="&#x7EBF;&#x7A0B;&#x7B49;&#x5F85;&#x548C;&#x5524;&#x9192;"><a name="&#x7EBF;&#x7A0B;&#x7B49;&#x5F85;&#x548C;&#x5524;&#x9192;" class="anchor-navigation-ex-anchor" href="#&#x7EBF;&#x7A0B;&#x7B49;&#x5F85;&#x548C;&#x5524;&#x9192;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7EBF;&#x7A0B;&#x7B49;&#x5F85;&#x548C;&#x5524;&#x9192;</h3>
+<p>&#x5728;&#x6267;&#x884C;&#x4E2D;&#xFF0C;3&#x4E2A;&#x7EBF;&#x7A0B;&#x90FD;&#x4F1A;&#x8FDB;&#x884C;&#x7B49;&#x5F85;&#x64CD;&#x4F5C;&#xFF0C;&#x5E76;&#x4E14;&#x5904;&#x7406;&#x5B8C;&#x81EA;&#x5DF1;&#x7684;&#x4EFB;&#x52A1;&#x4E4B;&#x540E;&#xFF0C;&#x8FD8;&#x8981;&#x518D;&#x6B21;&#x8FDB;&#x5165;&#x7B49;&#x5F85;&#x72B6;&#x6001;&#x3002;&#x8FD9;&#x91CC;&#x4F7F;&#x7528;&#x6761;&#x4EF6;&#x53D8;&#x91CF;&#x6765;&#x63A7;&#x5236;&#x7EBF;&#x7A0B;&#x7684;&#x6302;&#x8D77;&#x548C;&#x5524;&#x9192;&#xFF0C;&#x4F7F;&#x7528;while&#x5FAA;&#x73AF;&#x63A7;&#x5236;&#x7EBF;&#x7A0B;&#x7684;&#x72B6;&#x6001;&#x7684;&#x591A;&#x6B21;&#x5207;&#x6362;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x793A;&#x4F8B;&#x4EE3;&#x7801;</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">pthread_mutex_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>read_lock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>read_count <span class="token operator">==</span> <span class="token number">0</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">pthread_cond_wait</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>read_cond<span class="token punctuation">,</span> <span class="token operator">&amp;</span>read_lock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    read_count<span class="token operator">--</span><span class="token punctuation">;</span>
+    <span class="token function">pthread_mutex_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>read_lock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;while&#x5FAA;&#x73AF;&#x4F1A;&#x4E00;&#x76F4;&#x6267;&#x884C;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8FD8;&#x8981;&#x52A0;&#x4E00;&#x4E2A;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x8DF3;&#x51FA; while &#x5FAA;&#x73AF;&#x7684;&#x5224;&#x65AD;&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;&#x4EFB;&#x52A1;&#x7ED3;&#x675F;&#x540E;&#x53EF;&#x4EE5;&#x7EC8;&#x6B62;&#x7EBF;&#x7A0B;, &#x5982;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">pthread_mutex_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>read_lock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>read_count <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>read_shutdown <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">pthread_cond_wait</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>read_cond<span class="token punctuation">,</span> <span class="token operator">&amp;</span>read_lock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>read_shutdown<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    read_flag <span class="token operator">=</span>  <span class="token number">1</span> <span class="token operator">-</span> read_flag<span class="token punctuation">;</span>      
+    <span class="token function">pthread_mutex_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>read_lock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x770B;&#x5230;&#x5728;&#x5224;&#x65AD;&#x7EBF;&#x7A0B;&#x662F;&#x5426;&#x6302;&#x8D77;&#x7684; while &#x5FAA;&#x73AF;&#x4E2D;&#x4E5F;&#x52A0;&#x5165;&#x4E86;<code>!read_shutdown</code>&#x7684;&#x5224;&#x65AD;&#xFF0C;&#x5373;&#x5982;&#x679C;&#x9A6C;&#x4E0A;&#x5C31;&#x8981;&#x8DF3;&#x51FA;while&#x5FAA;&#x73AF;&#xFF0C;&#x6807;&#x660E;&#x7EBF;&#x7A0B;&#x5DF2;&#x7ECF;&#x6267;&#x884C;&#x5B8C;&#x4E86;&#x5B83;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x5219;&#x65E0;&#x9700;&#x518D;&#x8FDB;&#x884C;&#x6302;&#x8D77;&#x64CD;&#x4F5C;&#x3002;&#x5524;&#x9192;&#x8BE5;&#x7EBF;&#x7A0B;&#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-c"><span class="token function">pthread_mutex_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>read_lock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>loop_index <span class="token operator">==</span> loop_nums <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    read_shutdown <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+read_count <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token function">pthread_cond_signal</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>read_cond<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">pthread_mutex_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>read_lock<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x5206;&#x6790;&#x4E00;&#x4E0B;&#x6761;&#x4EF6;&#x53D8;&#x91CF;&#xFF0C;&#x9996;&#x5148;&#x8BFB;&#x7EBF;&#x7A0B;&#x548C;&#x5199;&#x7EBF;&#x7A0B;&#x90FD;&#x8981;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;&#x53D8;&#x91CF;&#xFF0C;&#x6682;&#x79F0;&#x4E3A; <code>read_cond</code> &#x548C; <code>write_cond</code>, &#x4E3B;&#x7EBF;&#x7A0B;&#x7528;<code>read_cond</code>&#x6765;&#x544A;&#x8BC9;&#x8BFB;&#x7EBF;&#x7A0B;&#x81EA;&#x5DF1;&#x5DF2;&#x7ECF;&#x5F00;&#x59CB;&#x8BA1;&#x7B97;&#xFF0C;&#x8BFB;&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x8BFB;&#x53D6;&#x4E0B;&#x4E00;&#x90E8;&#x5206;&#x6570;&#x636E;&#x4E86;&#xFF0C;&#x7528;<code>write_cond</code>&#x544A;&#x8BC9;&#x5199;&#x7EBF;&#x7A0B;&#xFF0C;&#x8BA1;&#x7B97;&#x5DF2;&#x7ECF;&#x5B8C;&#x6BD5;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x7ED3;&#x679C;&#x5199;&#x5165;&#x6587;&#x4EF6;&#x4E86; &#x3002;&#x800C;&#x4E3B;&#x7EBF;&#x7A0B;&#x9700;&#x8981;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;&#x53D8;&#x91CF;&#xFF0C;&#x6682;&#x79F0;&#x4E3A; <code>cal_cond</code> &#x548C; <code>cal_cond2</code> , &#x8BFB;&#x7EBF;&#x7A0B;&#x4F7F;&#x7528; <code>cal_cond</code> &#x544A;&#x8BC9;&#x4E3B;&#x7EBF;&#x7A0B;&#x81EA;&#x5DF1;&#x5DF2;&#x7ECF;&#x8BFB;&#x5B8C;&#x8FD9;&#x90E8;&#x5206;&#x6570;&#x636E;&#x4E86;&#xFF0C;&#x4E3B;&#x7EBF;&#x7A0B;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x8BA1;&#x7B97;&#x4E86;&#x3002;&#x800C;&#x5199;&#x7EBF;&#x7A0B;&#x7528; <code>cal_cond2</code> &#x544A;&#x8BC9;&#x4E3B;&#x7EBF;&#x7A0B;&#x81EA;&#x5DF1;&#x5DF2;&#x7ECF;&#x5199;&#x5B8C;&#x4E86;&#x4E0A;&#x6B21;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#xFF0C;&#x53EF;&#x4EE5;&#x518D;&#x6B21;&#x5206;&#x914D;&#x5199;&#x5165;&#x7684;&#x4EFB;&#x52A1;&#x4E86;&#x3002;&#x5982;&#x679C;&#x8BFB;&#x7EBF;&#x7A0B;&#x6CA1;&#x6709;&#x8BFB;&#x5B8C;&#x6216;&#x8005;&#x5199;&#x7EBF;&#x7A0B;&#x6CA1;&#x6709;&#x5199;&#x5B8C;&#xFF0C;&#x4E3B;&#x7EBF;&#x7A0B;&#x90FD;&#x8981;&#x8FDB;&#x5165;&#x7B49;&#x5F85;&#x72B6;&#x6001;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x6BCF;&#x4E2A;&#x6761;&#x4EF6;&#x53D8;&#x91CF;&#x90FD;&#x4F1A;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;&#x4EE5;&#x53CA;&#x4E00;&#x4E2A;&#x4E92;&#x65A5;&#x9501;&#xFF0C;&#x4E0B;&#x9762;&#x5206;&#x6790;&#x4E00;&#x4E0B;&#x5404;&#x4E2A;&#x6761;&#x4EF6;&#x7684;&#x521D;&#x59CB;&#x503C;&#xFF0C;&#x7A0B;&#x5E8F;&#x5F00;&#x59CB;&#x65F6;&#x8BFB;&#x7EBF;&#x7A0B;&#x5F00;&#x59CB;&#x5DE5;&#x4F5C;&#xFF0C;&#x4E3B;&#x7EBF;&#x7A0B;&#x8981;&#x7B49;&#x5F85;&#x8BFB;&#x7EBF;&#x7A0B;&#x8BFB;&#x5B8C;&#x624D;&#x80FD;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#xFF0C;&#x6240;&#x4EE5; <code>read_cond</code> &#x5BF9;&#x5E94;&#x7684;&#x6761;&#x4EF6;&#x4E3A; true&#xFF0C; <code>cal_cond</code> &#x5BF9;&#x5E94;&#x7684;&#x6761;&#x4EF6;&#x7684;&#x4E3A; false&#xFF0C;&#x5199;&#x7EBF;&#x7A0B;&#x5FC5;&#x987B;&#x8981;&#x7B49;&#x5F85;&#x4E3B;&#x7EBF;&#x7A0B;&#x8BA1;&#x7B97;&#x5B8C;&#x624D;&#x53EF;&#x4EE5;&#x5199;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x7684;&#x65F6;&#x5019;&#x5199;&#x7EBF;&#x7A0B;&#x80AF;&#x5B9A;&#x662F;&#x7A7A;&#x95F2;&#x7684;&#xFF0C; &#x6240;&#x4EE5; <code>write_cond</code> &#x5BF9;&#x5E94;&#x7684;&#x6761;&#x4EF6;&#x4E3A; false&#xFF0C;<code>cal_cond2</code> &#x5BF9;&#x5E94;&#x7684;&#x7684;&#x6761;&#x4EF6;&#x4E3A; ture&#x3002;</p>
+<h3 id="&#x6570;&#x636E;&#x7F13;&#x51B2;&#x533A;"><a name="&#x6570;&#x636E;&#x7F13;&#x51B2;&#x533A;" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x7F13;&#x51B2;&#x533A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x7F13;&#x51B2;&#x533A;</h3>
+<p>&#x5F53;&#x8BFB;&#x7EBF;&#x7A0B;&#x8BFB;&#x5B8C;&#x6570;&#x636E;&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x5B58;&#x5230;&#x4E00;&#x4E2A;&#x7F13;&#x51B2;&#x533A;&#x4E2D;(&#x6BD4;&#x5982;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;)&#xFF0C;&#x4E3B;&#x7EBF;&#x7A0B;&#x5F00;&#x59CB;&#x8BA1;&#x7B97;&#xFF0C;&#x6B64;&#x65F6;&#x8BFB;&#x7EBF;&#x7A0B;&#x53C8;&#x53BB;&#x8FDB;&#x884C;&#x8BFB;&#x53D6;&#x64CD;&#x4F5C;&#x3002;&#x5982;&#x679C;&#x8BFB;&#x7EBF;&#x7A0B;&#x8FD8;&#x662F;&#x5C06;&#x6570;&#x636E;&#x8BFB;&#x5230;&#x4E0A;&#x4E00;&#x6B21;&#x8BFB;&#x53D6;&#x7684;&#x7F13;&#x51B2;&#x533A;&#x4E2D;&#xFF08;&#x8FD9;&#x4E2A;&#x7F13;&#x51B2;&#x533A;&#x6B64;&#x65F6;&#x6B63;&#x5728;&#x88AB;&#x4E3B;&#x7EBF;&#x7A0B;&#x4F7F;&#x7528;&#xFF09;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x6570;&#x636E;&#x7ADE;&#x4E89;&#x3002;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x60C5;&#x51B5;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E24;&#x4E2A;&#x7F13;&#x51B2;&#x533A;&#xFF0C;&#x8BFB;&#x7EBF;&#x7A0B;&#x586B;&#x6EE1;&#x4E00;&#x4E2A;&#x4E4B;&#x540E;&#x518D;&#x53BB;&#x586B;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#xFF0C;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x8BE5;&#x4F7F;&#x7528;&#x54EA;&#x4E2A;&#x7F13;&#x51B2;&#x533A;&#xFF0C;&#x5373;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x5F62;&#x5F0F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">int</span> read_buffer_a<span class="token punctuation">[</span>BUFFER_SIZE<span class="token punctuation">]</span><span class="token punctuation">,</span> read_buffer_b<span class="token punctuation">[</span>BUFFER_SIZE<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> read_flag<span class="token punctuation">;</span>
+
+<span class="token keyword">if</span><span class="token punctuation">(</span>read_flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> BUFFER_SIZE<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">fscanf</span><span class="token punctuation">(</span>read_arg<span class="token operator">-&gt;</span>fp<span class="token punctuation">,</span> <span class="token string">&quot;%d&quot;</span><span class="token punctuation">,</span> read_buffer_a<span class="token operator">+</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>          
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> BUFFER_SIZE<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">fscanf</span><span class="token punctuation">(</span>read_arg<span class="token operator">-&gt;</span>fp<span class="token punctuation">,</span> <span class="token string">&quot;%d&quot;</span><span class="token punctuation">,</span> read_buffer_b <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+read_flag <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">-</span>read_flag<span class="token punctuation">;</span>
+</code></pre>
+<h2 id="&#x5B8C;&#x6574;&#x4EE3;&#x7801;"><a name="&#x5B8C;&#x6574;&#x4EE3;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x5B8C;&#x6574;&#x4EE3;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B8C;&#x6574;&#x4EE3;&#x7801;</h2>
+<p>&#x4E0B;&#x9762;&#x662F;&#x5B8C;&#x6574;&#x7684;&#x4EE3;&#x7801;, <a href="https://github.com/zhangjikai/Pthreads-Pipeline-Demo" target="_blank">&#x8FD9;&#x91CC;</a>&#x662F;github&#x5730;&#x5740;&#xFF0C;&#x53EF;&#x4EE5;&#x4E0B;&#x8F7D;&#x4E0B;&#x6765;&#x8FD0;&#x884C;&#x4E00;&#x4E0B;&#x3002;</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;unistd.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdint.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;pthread.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdarg.h&gt;</span></span>
+
+
+<span class="token macro property">#<span class="token directive keyword">define</span> BUFFER_SIZE 10</span>
+uint32_t microseconds <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// &#x7EBF;&#x7A0B;&#x4FE1;&#x606F;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> _thread_info<span class="token punctuation">{</span>
+    pthread_t thread_id<span class="token punctuation">;</span>
+    pthread_mutex_t lock<span class="token punctuation">;</span>
+    pthread_cond_t cond<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> run_flag<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> buffer_flag<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> shutdown<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> thread_info<span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// &#x7EBF;&#x7A0B;&#x51FD;&#x6570;&#x53C2;&#x6570;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> _thread_arg <span class="token punctuation">{</span>
+    FILE <span class="token operator">*</span>fp<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> thread_arg<span class="token punctuation">;</span>
+
+
+thread_info input_info<span class="token punctuation">,</span> output_info<span class="token punctuation">,</span> cal_input_info<span class="token punctuation">,</span> cal_output_info<span class="token punctuation">;</span>
+<span class="token keyword">int</span> read_buffer_a<span class="token punctuation">[</span>BUFFER_SIZE<span class="token punctuation">]</span><span class="token punctuation">,</span> read_buffer_b<span class="token punctuation">[</span>BUFFER_SIZE<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> write_buffer_a<span class="token punctuation">[</span>BUFFER_SIZE<span class="token punctuation">]</span><span class="token punctuation">,</span> write_buffer_b<span class="token punctuation">[</span>BUFFER_SIZE<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+
+<span class="token keyword">void</span> <span class="token function">init_resources</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    va_list arg_ptr <span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    <span class="token function">va_start</span><span class="token punctuation">(</span>arg_ptr<span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    thread_info <span class="token operator">*</span> tmp_info <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       tmp_info <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>arg_ptr<span class="token punctuation">,</span> thread_info <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token function">pthread_mutex_init</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>tmp_info<span class="token operator">-&gt;</span>lock<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token function">pthread_cond_init</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>tmp_info<span class="token operator">-&gt;</span>cond<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">va_end</span><span class="token punctuation">(</span>arg_ptr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">free_resources</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    va_list arg_ptr<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    <span class="token function">va_start</span><span class="token punctuation">(</span>arg_ptr<span class="token punctuation">,</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    thread_info <span class="token operator">*</span> tmp_info <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        tmp_info <span class="token operator">=</span> <span class="token function">va_arg</span><span class="token punctuation">(</span>arg_ptr<span class="token punctuation">,</span> thread_info <span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">pthread_mutex_destroy</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>tmp_info<span class="token operator">-&gt;</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">pthread_cond_destroy</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>tmp_info<span class="token operator">-&gt;</span>cond<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">va_end</span><span class="token punctuation">(</span>arg_ptr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token operator">*</span> <span class="token function">input_task</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    thread_arg <span class="token operator">*</span> input_arg <span class="token operator">=</span> <span class="token punctuation">(</span>thread_arg <span class="token operator">*</span><span class="token punctuation">)</span> args<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">pthread_mutex_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>input_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>input_info<span class="token punctuation">.</span>run_flag <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>input_info<span class="token punctuation">.</span>shutdown<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">pthread_cond_wait</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>input_info<span class="token punctuation">.</span>cond<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span><span class="token punctuation">(</span>input_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>input_info<span class="token punctuation">.</span>shutdown<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        input_info<span class="token punctuation">.</span>run_flag <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        input_info<span class="token punctuation">.</span>buffer_flag <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">-</span> input_info<span class="token punctuation">.</span>buffer_flag<span class="token punctuation">;</span>
+        <span class="token function">pthread_mutex_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>input_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span><span class="token punctuation">(</span>input_info<span class="token punctuation">.</span>buffer_flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> BUFFER_SIZE<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">fscanf</span><span class="token punctuation">(</span>input_arg<span class="token operator">-&gt;</span>fp<span class="token punctuation">,</span> <span class="token string">&quot;%d&quot;</span><span class="token punctuation">,</span> read_buffer_a <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> BUFFER_SIZE<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">fscanf</span><span class="token punctuation">(</span>input_arg<span class="token operator">-&gt;</span>fp<span class="token punctuation">,</span> <span class="token string">&quot;%d&quot;</span><span class="token punctuation">,</span> read_buffer_b <span class="token operator">+</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">pthread_mutex_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_input_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cal_input_info<span class="token punctuation">.</span>run_flag <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token function">pthread_cond_signal</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_input_info<span class="token punctuation">.</span>cond<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">pthread_mutex_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_input_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">return</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token operator">*</span> <span class="token function">output_task</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span> args<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    thread_arg <span class="token operator">*</span> output_arg <span class="token operator">=</span> <span class="token punctuation">(</span>thread_arg <span class="token operator">*</span><span class="token punctuation">)</span> args<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">pthread_mutex_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>output_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>output_info<span class="token punctuation">.</span>run_flag <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>output_info<span class="token punctuation">.</span>shutdown<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">pthread_cond_wait</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>output_info<span class="token punctuation">.</span>cond<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span><span class="token punctuation">(</span>output_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>output_info<span class="token punctuation">.</span>shutdown<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        output_info<span class="token punctuation">.</span>run_flag <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        output_info<span class="token punctuation">.</span>buffer_flag <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">-</span> output_info<span class="token punctuation">.</span>buffer_flag<span class="token punctuation">;</span>
+        <span class="token function">pthread_mutex_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>output_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span><span class="token punctuation">(</span>output_info<span class="token punctuation">.</span>buffer_flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> BUFFER_SIZE<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">fprintf</span><span class="token punctuation">(</span>output_arg<span class="token operator">-&gt;</span>fp<span class="token punctuation">,</span> <span class="token string">&quot;%d\n&quot;</span><span class="token punctuation">,</span> write_buffer_a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">usleep</span><span class="token punctuation">(</span>microseconds<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> BUFFER_SIZE<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">fprintf</span><span class="token punctuation">(</span>output_arg<span class="token operator">-&gt;</span>fp<span class="token punctuation">,</span> <span class="token string">&quot;%d\n&quot;</span><span class="token punctuation">,</span> write_buffer_b<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">usleep</span><span class="token punctuation">(</span>microseconds<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">pthread_mutex_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_output_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        cal_output_info<span class="token punctuation">.</span>run_flag <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token function">pthread_cond_signal</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_output_info<span class="token punctuation">.</span>cond<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">pthread_mutex_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_output_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    FILE <span class="token operator">*</span>fp_input<span class="token punctuation">,</span> <span class="token operator">*</span>fp_output<span class="token punctuation">;</span>
+    <span class="token keyword">char</span> <span class="token operator">*</span>input_name <span class="token operator">=</span> <span class="token string">&quot;input.txt&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">char</span> <span class="token operator">*</span>output_name <span class="token operator">=</span> <span class="token string">&quot;output.txt&quot;</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> total_nums <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> loop_nums <span class="token operator">=</span> total_nums <span class="token operator">/</span> BUFFER_SIZE<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> loop_index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    thread_arg input_arg<span class="token punctuation">,</span> output_arg<span class="token punctuation">;</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>fp_input <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span>input_name<span class="token punctuation">,</span> <span class="token string">&quot;r&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;can&apos;t load input file\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>fp_output <span class="token operator">=</span> <span class="token function">fopen</span><span class="token punctuation">(</span>output_name<span class="token punctuation">,</span> <span class="token string">&quot;w+&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;can&apos;t load output file\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">exit</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    input_arg<span class="token punctuation">.</span>fp <span class="token operator">=</span> fp_input<span class="token punctuation">;</span>
+    output_arg<span class="token punctuation">.</span>fp <span class="token operator">=</span> fp_output<span class="token punctuation">;</span>
+
+    <span class="token function">init_resources</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>input_info<span class="token punctuation">,</span> <span class="token operator">&amp;</span>output_info<span class="token punctuation">,</span> <span class="token operator">&amp;</span>cal_input_info<span class="token punctuation">,</span> <span class="token operator">&amp;</span>cal_output_info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    input_info<span class="token punctuation">.</span>buffer_flag <span class="token operator">=</span> output_info<span class="token punctuation">.</span>buffer_flag <span class="token operator">=</span> cal_input_info<span class="token punctuation">.</span>buffer_flag <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    input_info<span class="token punctuation">.</span>run_flag <span class="token operator">=</span> cal_output_info<span class="token punctuation">.</span>run_flag <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    output_info<span class="token punctuation">.</span>run_flag <span class="token operator">=</span> cal_input_info<span class="token punctuation">.</span>run_flag <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    input_info<span class="token punctuation">.</span>shutdown <span class="token operator">=</span> output_info<span class="token punctuation">.</span>shutdown <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token function">pthread_create</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>input_info<span class="token punctuation">.</span>thread_id<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> input_task<span class="token punctuation">,</span> <span class="token operator">&amp;</span>input_arg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">pthread_create</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>output_info<span class="token punctuation">.</span>thread_id<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">,</span> output_task<span class="token punctuation">,</span> <span class="token operator">&amp;</span>output_arg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">pthread_mutex_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_input_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>cal_input_info<span class="token punctuation">.</span>run_flag <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">pthread_cond_wait</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_input_info<span class="token punctuation">.</span>cond<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_input_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        cal_input_info<span class="token punctuation">.</span>buffer_flag <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">-</span> cal_input_info<span class="token punctuation">.</span>buffer_flag<span class="token punctuation">;</span>
+        cal_input_info<span class="token punctuation">.</span>run_flag <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token function">pthread_mutex_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_input_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">pthread_mutex_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>input_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>loop_index <span class="token operator">==</span> loop_nums <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            input_info<span class="token punctuation">.</span>shutdown <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        input_info<span class="token punctuation">.</span>run_flag <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token function">pthread_cond_signal</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>input_info<span class="token punctuation">.</span>cond<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">pthread_mutex_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>input_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment" spellcheck="true">// &#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;OpenMp</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>cal_input_info<span class="token punctuation">.</span>buffer_flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> BUFFER_SIZE<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                write_buffer_a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> read_buffer_a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> BUFFER_SIZE<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                write_buffer_b<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> read_buffer_b<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">pthread_mutex_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_output_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>cal_output_info<span class="token punctuation">.</span>run_flag <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">pthread_cond_wait</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_output_info<span class="token punctuation">.</span>cond<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_output_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        cal_output_info<span class="token punctuation">.</span>run_flag <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token function">pthread_mutex_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_output_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">pthread_mutex_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>output_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        output_info<span class="token punctuation">.</span>run_flag <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token function">pthread_cond_signal</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>output_info<span class="token punctuation">.</span>cond<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">pthread_mutex_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>output_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">if</span><span class="token punctuation">(</span>loop_index <span class="token operator">==</span> loop_nums <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        loop_index<span class="token operator">++</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+    <span class="token function">pthread_mutex_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_output_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>cal_output_info<span class="token punctuation">.</span>run_flag <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">pthread_cond_wait</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_output_info<span class="token punctuation">.</span>cond<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_output_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    cal_output_info<span class="token punctuation">.</span>run_flag <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token function">pthread_mutex_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>cal_output_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">pthread_mutex_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>output_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    output_info<span class="token punctuation">.</span>run_flag <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    output_info<span class="token punctuation">.</span>shutdown <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token function">pthread_cond_signal</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>output_info<span class="token punctuation">.</span>cond<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">pthread_mutex_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token punctuation">(</span>output_info<span class="token punctuation">.</span>lock<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token function">pthread_join</span><span class="token punctuation">(</span>input_info<span class="token punctuation">.</span>thread_id<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">pthread_join</span><span class="token punctuation">(</span>output_info<span class="token punctuation">.</span>thread_id<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">free_resources</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>input_info<span class="token punctuation">,</span> <span class="token operator">&amp;</span>output_info<span class="token punctuation">,</span> <span class="token operator">&amp;</span>cal_input_info<span class="token punctuation">,</span> <span class="token operator">&amp;</span>cal_output_info<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">fclose</span><span class="token punctuation">(</span>fp_input<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">fclose</span><span class="token punctuation">(</span>fp_output<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;</h2>
+<p>&#x672C;&#x6587;&#x4E3B;&#x8981;&#x53C2;&#x8003;&#x4E86;&#x8FD9;&#x4E2A;<a href="https://github.com/mbrossard/threadpool" target="_blank">Pthreads&#x7EBF;&#x7A0B;&#x6C60;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Pthreads-使用.html" class="navigation navigation-prev " aria-label="Previous page: 语法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mic.html" class="navigation navigation-next " aria-label="Next page: MIC">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"流水线模型","level":"1.4.2","depth":2,"next":{"title":"MIC","level":"1.5","depth":1,"path":"mic.md","ref":"mic.md","articles":[{"title":"HelloWorld","level":"1.5.1","depth":2,"path":"mic-helloworld.md","ref":"mic-helloworld.md","articles":[]},{"title":"offload","level":"1.5.2","depth":2,"path":"offload.md","ref":"offload.md","articles":[]},{"title":"in / out / inout 详细用法","level":"1.5.3","depth":2,"path":"offload-详解.md","ref":"offload-详解.md","articles":[]},{"title":"offload 其他函数","level":"1.5.4","depth":2,"path":"offload-other.md","ref":"offload-other.md","articles":[]},{"title":"共享虚拟内存模式","level":"1.5.5","depth":2,"path":"mic-共享虚拟内存模式.md","ref":"mic-共享虚拟内存模式.md","articles":[]},{"title":"异步计算和传输","level":"1.5.6","depth":2,"path":"mic-异步计算和传输.md","ref":"mic-异步计算和传输.md","articles":[]},{"title":"向量化","level":"1.5.7","depth":2,"path":"mic-向量化.md","ref":"mic-向量化.md","articles":[]}]},"previous":{"title":"语法","level":"1.4.1","depth":2,"path":"Pthreads-使用.md","ref":"Pthreads-使用.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","search","search-plus","simple-page-toc","baidu","sitemap","github","duoshuo","anchors","anchor-navigation-ex","expandable-chapters-small","katex","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"github":{"url":"https://github.com/zhangjikai/parallel"},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"zhangjkblog","theme":"default"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false},"favicon":"/favicon.ico","sitemap":{"hostname":"http://parallel.zhangjikai.com"},"prism-themes":{},"custom-favicon":{},"expandable-chapters-small":{},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"anchorjs":{"placement":"left"},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"parallel","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"http://zhangjikai.com"}},"gitbook":"3.2.2","description":"并行计算"},"file":{"path":"Pipline-模型.md","mtime":"2017-02-25T11:26:59.823Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-25T12:22:58.742Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-baidu/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-duoshuo/duoshuo.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

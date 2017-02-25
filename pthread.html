@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>MPI · parallel</title>
+        <title>Pthreads · parallel</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -79,10 +79,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="mpi-helloworld.html" />
+    <link rel="next" href="Pthreads-使用.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="更多指令和子句.html" />
     
 
     </head>
@@ -135,7 +135,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="mpi.html">
+        <li class="chapter " data-level="1.2" data-path="mpi.html">
             
                 <a href="mpi.html">
             
@@ -372,7 +372,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="pthread.html">
+        <li class="chapter active" data-level="1.4" data-path="pthread.html">
             
                 <a href="pthread.html">
             
@@ -579,7 +579,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >MPI</a>
+        <a href="." >Pthreads</a>
     </h1>
 </div>
 
@@ -597,14 +597,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;">MPI &#x5B66;&#x4E60;&#x8BB0;&#x5F55;</a></li></ul></div><a href="#mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;"><a name="mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>MPI &#x5B66;&#x4E60;&#x8BB0;&#x5F55;</h1>
-<ul>
-<li><a href="http://hpclab.cs.tsinghua.edu.cn/~duzh/book/mpi.pdf" target="_blank">&#x9AD8;&#x6027;&#x80FD;&#x8BA1;&#x7B97;&#x4E4B;&#x5E76;&#x884C;&#x7F16;&#x7A0B;&#x6280;&#x672F; &#x2014;&#x2014; MPI&#x5E76;&#x884C;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;</a></li>
-<li><a href="http://mpitutorial.com/tutorials/mpi-hello-world/" target="_blank">MPI Tutorial  </a></li>
-<li><a href="https://computing.llnl.gov/tutorials/mpi/" target="_blank">Message Passing Interface</a></li>
-<li><a href="http://mpi.deino.net/" target="_blank">DeinoMPI</a></li>
-</ul>
-<p>&#x5927;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x6458;&#x6284;&#x81EA; MPI&#x5E76;&#x884C;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#xFF0C;&#x540C;&#x65F6;&#x589E;&#x52A0;&#x4E86;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x4EE5;&#x53CA;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x4E9B;&#x7406;&#x89E3;&#x3002;&#x53E6;&#x5916;&#x4EE3;&#x7801;&#x5168;&#x90E8;&#x4F7F;&#x7528; c &#x8BED;&#x8A00;&#xFF0C;&#x5927;&#x90E8;&#x5206;&#x5728;&#x539F;&#x4E66;&#x4EE3;&#x7801;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x8FDB;&#x884C;&#x4E86;&#x4FEE;&#x6539;&#xFF0C;&#x4F7F;&#x4EE3;&#x7801;&#x66F4;&#x6613;&#x4E8E;&#x7406;&#x89E3;&#x3002;</p>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#pthreads-&#x5B66;&#x4E60;&#x7B14;&#x8BB0;">Pthreads &#x5B66;&#x4E60;&#x7B14;&#x8BB0;</a></li></ul></div><a href="#pthreads-&#x5B66;&#x4E60;&#x7B14;&#x8BB0;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="pthreads-&#x5B66;&#x4E60;&#x7B14;&#x8BB0;"><a name="pthreads-&#x5B66;&#x4E60;&#x7B14;&#x8BB0;" class="anchor-navigation-ex-anchor" href="#pthreads-&#x5B66;&#x4E60;&#x7B14;&#x8BB0;"><i class="fa fa-link" aria-hidden="true"></i></a>Pthreads &#x5B66;&#x4E60;&#x7B14;&#x8BB0;</h1>
+<p>&#x4E0E;OpenMP&#x76F8;&#x6BD4;&#xFF0C;Pthreads&#x7684;&#x4F7F;&#x7528;&#x76F8;&#x5BF9;&#x8981;&#x590D;&#x6742;&#x4E00;&#x4E9B;&#xFF0C;&#x9700;&#x8981;&#x6211;&#x4EEC;&#x663E;&#x5F0F;&#x7684;&#x521B;&#x5EFA;&#x3001;&#x7BA1;&#x7406;&#x3001;&#x9500;&#x6BC1;&#x7EBF;&#x7A0B;&#xFF0C;&#x4F46;&#x4E5F;&#x6B63;&#x56E0;&#x4E3A;&#x5982;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x5BF9;&#x4E8E;&#x7EBF;&#x7A0B;&#x6709;&#x66F4;&#x5F3A;&#x7684;&#x63A7;&#x5236;&#xFF0C;&#x53EF;&#x4EE5;&#x66F4;&#x52A0;&#x7075;&#x6D3B;&#x7684;&#x4F7F;&#x7528;&#x7EBF;&#x7A0B;&#x3002;&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x8BB0;&#x5F55;&#x4E00;&#x4E0B;Pthreads&#x7684;&#x57FA;&#x672C;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x662F;&#x5341;&#x5206;&#x590D;&#x6742;&#x7684;&#x4F7F;&#x7528;&#x73AF;&#x5883;&#xFF0C;&#x8FD9;&#x4E9B;&#x77E5;&#x8BC6;&#x5E94;&#x8BE5;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x672C;&#x6587;&#x5927;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x90FD;&#x662F;&#x53C2;&#x8003;&#x81EA; <a href="http://homes.di.unimi.it/~boccignone/GiuseppeBoccignone_webpage/MatDidatSOD2009_files/pthread-Tutorial.pdf" target="_blank">pthread Tutorial</a>&#xFF0C;&#x6709;&#x5174;&#x8DA3;&#x7684;&#x53EF;&#x4EE5;&#x770B;&#x4E00;&#x4E0B;&#x539F;&#x6587;&#x3002;</p>
 
                                 
                                 </section>
@@ -648,12 +642,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 前言">
+                <a href="更多指令和子句.html" class="navigation navigation-prev " aria-label="Previous page: 更多指令和子句">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="mpi-helloworld.html" class="navigation navigation-next " aria-label="Next page: MPI-HelloWorld">
+                <a href="Pthreads-使用.html" class="navigation navigation-next " aria-label="Next page: 语法">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -664,7 +658,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"MPI","level":"1.2","depth":1,"next":{"title":"MPI-HelloWorld","level":"1.2.1","depth":2,"path":"mpi-helloworld.md","ref":"mpi-helloworld.md","articles":[]},"previous":{"title":"前言","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","search","search-plus","simple-page-toc","baidu","sitemap","github","duoshuo","anchors","anchor-navigation-ex","expandable-chapters-small","katex","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"github":{"url":"https://github.com/zhangjikai/parallel"},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"zhangjkblog","theme":"default"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false},"favicon":"/favicon.ico","sitemap":{"hostname":"http://parallel.zhangjikai.com"},"prism-themes":{},"custom-favicon":{},"expandable-chapters-small":{},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"anchorjs":{"placement":"left"},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"parallel","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"http://zhangjikai.com"}},"gitbook":"3.2.2","description":"并行计算"},"file":{"path":"mpi.md","mtime":"2017-02-11T08:35:00.128Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-25T12:22:58.742Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Pthreads","level":"1.4","depth":1,"next":{"title":"语法","level":"1.4.1","depth":2,"path":"Pthreads-使用.md","ref":"Pthreads-使用.md","articles":[]},"previous":{"title":"更多指令和子句","level":"1.3.4","depth":2,"path":"更多指令和子句.md","ref":"更多指令和子句.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","search","search-plus","simple-page-toc","baidu","sitemap","github","duoshuo","anchors","anchor-navigation-ex","expandable-chapters-small","katex","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"github":{"url":"https://github.com/zhangjikai/parallel"},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"zhangjkblog","theme":"default"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false},"favicon":"/favicon.ico","sitemap":{"hostname":"http://parallel.zhangjikai.com"},"prism-themes":{},"custom-favicon":{},"expandable-chapters-small":{},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"anchorjs":{"placement":"left"},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"parallel","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"http://zhangjikai.com"}},"gitbook":"3.2.2","description":"并行计算"},"file":{"path":"pthread.md","mtime":"2017-02-25T11:25:22.111Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-25T12:22:58.742Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

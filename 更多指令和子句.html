@@ -1,0 +1,911 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>更多指令和子句 · parallel</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="zhangjikai">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="pthread.html" />
+    
+    
+    <link rel="prev" href="运行环境交互.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://zhangjikai.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="mpi.html">
+            
+                <a href="mpi.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    MPI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="mpi-helloworld.html">
+            
+                <a href="mpi-helloworld.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    MPI-HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="基础函数.html">
+            
+                <a href="基础函数.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    基础函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="通信类别.html">
+            
+                <a href="通信类别.html">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    通信类别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="通信模式.html">
+            
+                <a href="通信模式.html">
+            
+                    
+                        <b>1.2.4.</b>
+                    
+                    通信模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="编程模式.html">
+            
+                <a href="编程模式.html">
+            
+                    
+                        <b>1.2.5.</b>
+                    
+                    编程模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="非阻塞通信.html">
+            
+                <a href="非阻塞通信.html">
+            
+                    
+                        <b>1.2.6.</b>
+                    
+                    非阻塞通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="重复非阻塞通信.html">
+            
+                <a href="重复非阻塞通信.html">
+            
+                    
+                        <b>1.2.7.</b>
+                    
+                    重复非阻塞通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="组通信.html">
+            
+                <a href="组通信.html">
+            
+                    
+                        <b>1.2.8.</b>
+                    
+                    组通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="数据处理.html">
+            
+                <a href="数据处理.html">
+            
+                    
+                        <b>1.2.9.</b>
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="openmp.html">
+            
+                <a href="openmp.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    OpenMP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="openmp-基本使用.html">
+            
+                <a href="openmp-基本使用.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    OpenMP 基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="编译制导指令.html">
+            
+                <a href="编译制导指令.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    编译制导指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="运行环境交互.html">
+            
+                <a href="运行环境交互.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    运行环境交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.4" data-path="更多指令和子句.html">
+            
+                <a href="更多指令和子句.html">
+            
+                    
+                        <b>1.3.4.</b>
+                    
+                    更多指令和子句
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="pthread.html">
+            
+                <a href="pthread.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    Pthreads
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="Pthreads-使用.html">
+            
+                <a href="Pthreads-使用.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="Pipline-模型.html">
+            
+                <a href="Pipline-模型.html">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    流水线模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="mic.html">
+            
+                <a href="mic.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    MIC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="mic-helloworld.html">
+            
+                <a href="mic-helloworld.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="offload.html">
+            
+                <a href="offload.html">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    offload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="offload-详解.html">
+            
+                <a href="offload-详解.html">
+            
+                    
+                        <b>1.5.3.</b>
+                    
+                    in / out / inout 详细用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="offload-other.html">
+            
+                <a href="offload-other.html">
+            
+                    
+                        <b>1.5.4.</b>
+                    
+                    offload 其他函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="mic-共享虚拟内存模式.html">
+            
+                <a href="mic-共享虚拟内存模式.html">
+            
+                    
+                        <b>1.5.5.</b>
+                    
+                    共享虚拟内存模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="mic-异步计算和传输.html">
+            
+                <a href="mic-异步计算和传输.html">
+            
+                    
+                        <b>1.5.6.</b>
+                    
+                    异步计算和传输
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="mic-向量化.html">
+            
+                <a href="mic-向量化.html">
+            
+                    
+                        <b>1.5.7.</b>
+                    
+                    向量化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >更多指令和子句</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x66F4;&#x591A;&#x6307;&#x4EE4;&#x548C;&#x5B50;&#x53E5;">&#x66F4;&#x591A;&#x6307;&#x4EE4;&#x548C;&#x5B50;&#x53E5;</a></li><ul><li><a href="#&#x6307;&#x4EE4;">&#x6307;&#x4EE4;</a></li><ul><li><a href="#flush">flush</a></li><li><a href="#threadprivate">threadprivate</a></li></ul><li><a href="#&#x5B50;&#x53E5;">&#x5B50;&#x53E5;</a></li><ul><li><a href="#if">if</a></li><li><a href="#reduction">reduction</a></li><li><a href="#copyin">copyin</a></li><li><a href="#copyprivate">copyprivate</a></li></ul></ul></ul></div><a href="#&#x66F4;&#x591A;&#x6307;&#x4EE4;&#x548C;&#x5B50;&#x53E5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x66F4;&#x591A;&#x6307;&#x4EE4;&#x548C;&#x5B50;&#x53E5;"><a name="&#x66F4;&#x591A;&#x6307;&#x4EE4;&#x548C;&#x5B50;&#x53E5;" class="anchor-navigation-ex-anchor" href="#&#x66F4;&#x591A;&#x6307;&#x4EE4;&#x548C;&#x5B50;&#x53E5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x66F4;&#x591A;&#x6307;&#x4EE4;&#x548C;&#x5B50;&#x53E5;</h1>
+<!-- toc -->
+<ul>
+<li><a href="#&#x6307;&#x4EE4;">&#x6307;&#x4EE4;</a><ul>
+<li><a href="#flush">flush</a></li>
+<li><a href="#threadprivate">threadprivate</a></li>
+</ul>
+</li>
+<li><a href="#&#x5B50;&#x53E5;">&#x5B50;&#x53E5;</a><ul>
+<li><a href="#if">if</a></li>
+<li><a href="#reduction">reduction</a></li>
+<li><a href="#copyin">copyin</a></li>
+<li><a href="#copyprivate">copyprivate</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+<h2 id="&#x6307;&#x4EE4;"><a name="&#x6307;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x6307;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6307;&#x4EE4;</h2>
+<h3 id="flush"><a name="flush" class="anchor-navigation-ex-anchor" href="#flush"><i class="fa fa-link" aria-hidden="true"></i></a>flush</h3>
+<p>flush&#x6307;&#x4EE4;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x5185;&#x5B58;&#x4E00;&#x81F4;&#x6027;&#x95EE;&#x9898;. &#x6BCF;&#x4E2A;&#x5904;&#x7406;&#x5668;(processor)&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x672C;&#x5730;(local)&#x5B58;&#x50A8;&#x5355;&#x5143;:&#x5BC4;&#x5B58;&#x5668;&#x548C;&#x7F13;&#x5B58;, &#x5F53;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x66F4;&#x65B0;&#x4E86;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x4E4B;&#x540E;, &#x65B0;&#x7684;&#x503C;&#x4F1A;&#x9996;&#x5148;&#x5B58;&#x50A8;&#x5230;&#x5BC4;&#x5B58;&#x5668;&#x4E2D;, &#x7136;&#x540E;&#x66F4;&#x65B0;&#x5230;&#x672C;&#x5730;&#x7F13;&#x5B58;&#x4E2D;. &#x8FD9;&#x4E9B;&#x66F4;&#x65B0;&#x5E76;&#x975E;&#x7ACB;&#x523B;&#x5C31;&#x53EF;&#x4EE5;&#x88AB;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;&#x5F97;&#x77E5;, &#x56E0;&#x6B64;&#x5728;&#x5176;&#x5B83;&#x5904;&#x7406;&#x5668;&#x4E2D;&#x8FD0;&#x884C;&#x7684;&#x7EBF;&#x7A0B;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;&#x8FD9;&#x4E9B;&#x5B58;&#x50A8;&#x5355;&#x5143;. &#x5982;&#x679C;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x4E0D;&#x77E5;&#x9053;&#x8FD9;&#x4E9B;&#x66F4;&#x65B0;&#x800C;&#x4F7F;&#x7528;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x7684;&#x65E7;&#x503C;&#x5C31;&#x884C;&#x8FD0;&#x7B97;, &#x5C31;&#x53EF;&#x80FD;&#x4F1A;&#x5F97;&#x5230;&#x9519;&#x8BEF;&#x7684;&#x7ED3;&#x679C;.
+&#x901A;&#x8FC7;&#x4F7F;&#x7528;flush&#x6307;&#x4EE4;, &#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x7EBF;&#x7A0B;&#x8BFB;&#x53D6;&#x5230;&#x7684;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x7684;&#x6700;&#x65B0;&#x503C;. &#x4E0B;&#x9762;&#x662F;&#x8BED;&#x6CD5;&#x5F62;&#x5F0F;:</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">pragma</span> omp flush[(list)]</span>
+</code></pre>
+<!-- more -->
+<p>list&#x6307;&#x5B9A;&#x9700;&#x8981;flush&#x7684;&#x5171;&#x4EAB;&#x53D8;&#x91CF;, &#x5982;&#x679C;&#x4E0D;&#x6307;&#x5B9A;list, &#x5C06;flush&#x4F5C;&#x7528;&#x4E8E;&#x6240;&#x6709;&#x7684;&#x5171;&#x4EAB;&#x53D8;&#x91CF;. &#x5728;&#x4E0B;&#x9762;&#x7684;&#x51E0;&#x4E2A;&#x4F4D;&#x7F6E;&#x5DF2;&#x7ECF;&#x9690;&#x5F0F;&#x7684;&#x6DFB;&#x52A0;&#x4E86;&#x4E0D;&#x6307;&#x5B9A;list&#x7684;flush&#x6307;&#x4EE4;.</p>
+<ul>
+<li>&#x6240;&#x6709;&#x9690;&#x5F0F;&#x548C;&#x663E;&#x5F0F;&#x7684;&#x8DEF;&#x969C;(barrier)</li>
+<li>Entry to and exit from critical regions</li>
+<li>Entry to and exit from lock routines</li>
+</ul>
+<h3 id="threadprivate"><a name="threadprivate" class="anchor-navigation-ex-anchor" href="#threadprivate"><i class="fa fa-link" aria-hidden="true"></i></a>threadprivate</h3>
+<p>threadprivate&#x4F5C;&#x7528;&#x4E8E;&#x5168;&#x5C40;&#x53D8;&#x91CF;, &#x7528;&#x6765;&#x6307;&#x5B9A;&#x8BE5;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x88AB;&#x5404;&#x4E2A;&#x7EBF;&#x7A0B;&#x5404;&#x81EA;&#x590D;&#x5236;&#x4E00;&#x4EFD;&#x79C1;&#x6709;&#x7684;&#x62F7;&#x8D1D;, &#x5373;&#x5404;&#x4E2A;&#x7EBF;&#x7A0B;&#x5177;&#x6709;<strong>&#x5404;&#x81EA;&#x79C1;&#x6709;</strong>&#x3001;<strong>&#x7EBF;&#x7A0B;&#x8303;&#x56F4;</strong>&#x5185;&#x7684;<strong>&#x5168;&#x5C40;&#x5BF9;&#x8C61;</strong>, &#x8BED;&#x6CD5;&#x5F62;&#x5F0F;&#x5982;&#x4E0B;:</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">pragma</span> omp threadprivate(list)</span>
+</code></pre>
+<p>&#x5176;&#x4E0E;private&#x4E0D;&#x540C;&#x7684;&#x65F6;, threadprivate&#x53D8;&#x91CF;&#x662F;&#x5B58;&#x50A8;&#x5728;heap&#x6216;&#x8005;<a href="https://en.wikipedia.org/wiki/Thread-local_storage" target="_blank">Thread local storage</a>&#x5F53;&#x4E2D;, &#x53EF;&#x4EE5;&#x8DE8;&#x5E76;&#x884C;&#x57DF;&#x8BBF;&#x95EE;, &#x800C;private&#x7EDD;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x662F;&#x5B58;&#x50A8;&#x5728;stack&#x4E2D;, &#x53EA;&#x5728;&#x5F53;&#x524D;&#x5E76;&#x884C;&#x57DF;&#x4E2D;&#x8BBF;&#x95EE;, &#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x793A;&#x4F8B;:</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">int</span> counter<span class="token punctuation">;</span>
+<span class="token macro property">#<span class="token directive keyword">pragma</span> omp threadprivate(counter)</span>
+
+<span class="token keyword">void</span> <span class="token function">test_threadprivate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token macro property">#<span class="token directive keyword">pragma</span> omp parallel</span>
+    <span class="token punctuation">{</span>
+        counter <span class="token operator">=</span> <span class="token function">omp_get_thread_num</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;1: thread %d : counter is %d\n&quot;</span><span class="token punctuation">,</span> <span class="token function">omp_get_thread_num</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> counter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token macro property">#<span class="token directive keyword">pragma</span> omp parallel</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;2: thread %d : counter is %d\n&quot;</span><span class="token punctuation">,</span> <span class="token function">omp_get_thread_num</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> counter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x662F;&#x8F93;&#x51FA;&#x7ED3;&#x679C;</p>
+<pre class="language-"><code class="lang-html">1: thread 3 : counter is 3
+1: thread 0 : counter is 0
+1: thread 2 : counter is 2
+1: thread 1 : counter is 1
+
+2: thread 2 : counter is 2
+2: thread 0 : counter is 0
+2: thread 3 : counter is 3
+2: thread 1 : counter is 1
+</code></pre>
+<p>&#x4ECE;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;, &#x5728;&#x7B2C;&#x4E8C;&#x4E2A;&#x5E76;&#x884C;&#x57DF;&#x4E2D;, counter&#x4FDD;&#x5B58;&#x4E86;&#x5728;&#x7B2C;&#x4E00;&#x4E2A;&#x5E76;&#x884C;&#x57DF;&#x4E2D;&#x7684;&#x503C;. &#x5982;&#x679C;&#x8981;&#x4F7F;&#x4E24;&#x4E2A;&#x5E76;&#x884C;&#x57DF;&#x4E4B;&#x95F4;&#x53EF;&#x4EE5;&#x5171;&#x4EAB;threadprivate&#x53D8;&#x91CF;&#x7684;&#x503C;, &#x9700;&#x8981;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x6761;&#x4EF6;:</p>
+<ul>
+<li>&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x5E76;&#x884C;&#x57DF;&#x90FD;&#x4E0D;&#x80FD;&#x5D4C;&#x5957;&#x5728;&#x5176;&#x4ED6;&#x5E76;&#x884C;&#x57DF;&#x4E2D;(Neither parallel region is nested inside another explicit parallel region.)</li>
+<li>&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5E76;&#x884C;&#x57DF;&#x7684;&#x7EBF;&#x7A0B;&#x6570;&#x91CF;&#x8981;&#x76F8;&#x540C;(The number of threads used to execute both parallel regions is the same.)</li>
+<li>&#x6267;&#x884C;&#x4E24;&#x4E2A;&#x5E76;&#x884C;&#x57DF;&#x65F6;&#x7684;&#x7EBF;&#x7A0B;&#x4EB2;&#x548C;&#x5EA6;&#x7B56;&#x7565;&#x8981;&#x76F8;&#x540C;( The thread affinity policies used to execute both parallel regions are the same.)</li>
+<li>&#x5728;&#x8FDB;&#x5165;&#x5E76;&#x884C;&#x57DF;&#x4E4B;&#x524D;dyn-var&#x53D8;&#x91CF;&#x7684;&#x503C;&#x5FC5;&#x987B;&#x4E3A;false(0). (The value of the dyn-var internal control variable in the enclosing task region is false at entry to both parallel regions.)</li>
+</ul>
+<h2 id="&#x5B50;&#x53E5;"><a name="&#x5B50;&#x53E5;" class="anchor-navigation-ex-anchor" href="#&#x5B50;&#x53E5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B50;&#x53E5;</h2>
+<h3 id="if"><a name="if" class="anchor-navigation-ex-anchor" href="#if"><i class="fa fa-link" aria-hidden="true"></i></a>if</h3>
+<p>&#x7528;&#x6765;&#x63A7;&#x5236;&#x5E76;&#x884C;&#x57DF;&#x662F;&#x4E32;&#x884C;&#x6267;&#x884C;&#x8FD8;&#x662F;&#x5E76;&#x884C;&#x6267;&#x884C;, &#x53EA;&#x80FD;&#x4F5C;&#x7528;&#x4E8E;paralle&#x6307;&#x4EE4;, &#x4E0B;&#x9762;&#x662F;&#x5176;&#x8BED;&#x6CD5;&#x5F62;&#x5F0F;:</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">pragma</span> omp parallel if(scalar-logical-expression)</span>
+</code></pre>
+<p>&#x5982;&#x679C;if&#x7684;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x4E3A;true, &#x5219;&#x5E76;&#x884C;&#x6267;&#x884C;, &#x5426;&#x5219;&#x4E32;&#x884C;&#x6267;&#x884C;, &#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x793A;&#x4F8B;</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">void</span> <span class="token function">test_if</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> tid<span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;n = 1\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property">#<span class="token directive keyword">pragma</span> omp parallel if(n&gt;5) default(none) \
+    private(tid) shared(n)</span>
+    <span class="token punctuation">{</span>
+        tid <span class="token operator">=</span> <span class="token function">omp_get_thread_num</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;thread %d is running\n&quot;</span><span class="token punctuation">,</span> tid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    n <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;n = 10\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token macro property">#<span class="token directive keyword">pragma</span> omp parallel if(n&gt;5) default(none) \
+    private(tid) shared(n)</span>
+    <span class="token punctuation">{</span>
+        tid <span class="token operator">=</span> <span class="token function">omp_get_thread_num</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;thread %d is running\n&quot;</span><span class="token punctuation">,</span> tid<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x5982;&#x4E0B;</p>
+<pre class="language-"><code class="lang-html">n = 1
+thread 0 is running
+
+n = 10
+thread 0 is running
+thread 2 is running
+thread 3 is running
+thread 1 is running
+</code></pre>
+<h3 id="reduction"><a name="reduction" class="anchor-navigation-ex-anchor" href="#reduction"><i class="fa fa-link" aria-hidden="true"></i></a>reduction</h3>
+<p>&#x5982;&#x679C;&#x5229;&#x7528;&#x5FAA;&#x73AF;, &#x5C06;&#x67D0;&#x9879;&#x8BA1;&#x7B97;&#x7684;&#x6240;&#x6709;&#x7ED3;&#x679C;&#x8FDB;&#x884C;&#x6C42;&#x548C;(&#x6216;&#x8005;&#x51CF;&#x3001;&#x4E58;&#x7B49;&#x5176;&#x4ED6;&#x64CD;&#x4F5C;)&#x5F97;&#x51FA;&#x4E00;&#x4E2A;&#x6570;&#x503C;, &#x8FD9;&#x5728;&#x5E76;&#x884C;&#x8BA1;&#x7B97;&#x4E2D;&#x5341;&#x5206;&#x5E38;&#x89C1;, &#x901A;&#x5E38;&#x5C06;&#x5176;&#x79F0;&#x4E3A;&#x89C4;&#x7EA6;. OpenMP&#x63D0;&#x4F9B;&#x4E86;reduction&#x5B50;&#x53E5;&#x7531;&#x4E8E;&#x89C4;&#x7EA6;&#x64CD;&#x4F5C;, &#x5176;&#x8BED;&#x6CD5;&#x5F62;&#x5F0F;&#x4E3A;</p>
+<pre class="language-"><code class="lang-c"><span class="token function">reduction</span><span class="token punctuation">(</span>operator<span class="token punctuation">:</span>list<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x5B9E;&#x4F8B;:</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">void</span> <span class="token function">test_reduction</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> sum<span class="token punctuation">,</span> i<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> a<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token macro property">#<span class="token directive keyword">pragma</span> omp parallel for default(none) \
+    private(i) shared(a,n) reduction(+:sum)</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        sum <span class="token operator">+</span><span class="token operator">=</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;sum is %d\n&quot;</span><span class="token punctuation">,</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x89C4;&#x7EA6;&#x5B50;&#x53E5;&#x4E4B;&#x540E;, &#x65E0;&#x9700;&#x518D;&#x5BF9;sum&#x8FDB;&#x884C;&#x4FDD;&#x62A4;, &#x4E0B;&#x9762;&#x662F;reduction&#x652F;&#x6301;&#x7684;&#x64CD;&#x4F5C;&#x7B26;&#x4EE5;&#x53CA;&#x53D8;&#x91CF;&#x7684;&#x521D;&#x503C;
+<img src="images/openmp/reduction.png" alt="">
+&#x5728;&#x4F7F;&#x7528;&#x4E58;&#x6CD5;&#x65F6;&#x53D1;&#x73B0;&#x5176;&#x521D;&#x59CB;&#x503C;&#x540C;&#x6837;&#x4E3A;0, &#x53EF;&#x80FD;&#x548C;&#x5177;&#x4F53;&#x7684;&#x5B9E;&#x73B0;&#x6709;&#x5173;.</p>
+<h3 id="copyin"><a name="copyin" class="anchor-navigation-ex-anchor" href="#copyin"><i class="fa fa-link" aria-hidden="true"></i></a>copyin</h3>
+<p>&#x5C06;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E2D;threadprivate&#x53D8;&#x91CF;&#x7684;&#x503C;&#x590D;&#x5236;&#x5230;&#x6267;&#x884C;&#x5E76;&#x884C;&#x57DF;&#x7684;&#x5404;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;threadprivate&#x53D8;&#x91CF;&#x4E2D;, &#x4F5C;&#x4E3A;&#x5404;&#x7EBF;&#x7A0B;&#x4E2D;threadprivate&#x53D8;&#x91CF;&#x7684;&#x521D;&#x59CB;&#x503C;. &#x4F5C;&#x7528;&#x4E8E;parallel&#x6307;&#x4EE4;, &#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x793A;&#x4F8B;:</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">int</span> counter <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token macro property">#<span class="token directive keyword">pragma</span> omp threadprivate(counter)</span>
+
+<span class="token keyword">void</span> <span class="token function">test_copyin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;counter is %d\n&quot;</span><span class="token punctuation">,</span> counter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token macro property">#<span class="token directive keyword">pragma</span> omp parallel copyin(counter)</span>
+    <span class="token punctuation">{</span>
+        counter <span class="token operator">=</span> <span class="token function">omp_get_thread_num</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> counter <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot; thread %d : counter is %d\n&quot;</span><span class="token punctuation">,</span> <span class="token function">omp_get_thread_num</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> counter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;counter is %d\n&quot;</span><span class="token punctuation">,</span> counter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x662F;&#x8F93;&#x51FA;&#x7ED3;&#x679C;:</p>
+<pre class="language-"><code class="lang-html">counter is 10
+thread 0 : counter is 11
+thread 2 : counter is 13
+thread 3 : counter is 14
+thread 1 : counter is 12
+counter is 11
+</code></pre>
+<h3 id="copyprivate"><a name="copyprivate" class="anchor-navigation-ex-anchor" href="#copyprivate"><i class="fa fa-link" aria-hidden="true"></i></a>copyprivate</h3>
+<p>&#x5C06;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x79C1;&#x6709;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x5E7F;&#x64AD;&#x5230;&#x6267;&#x884C;&#x540C;&#x4E00;&#x5E76;&#x884C;&#x57DF;&#x7684;&#x5176;&#x4ED6;&#x7EBF;&#x7A0B;. &#x53EA;&#x80FD;&#x4F5C;&#x7528;&#x4E8E;single&#x6307;&#x4EE4;, &#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x793A;&#x4F8B;:</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">int</span> counter <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token macro property">#<span class="token directive keyword">pragma</span> omp threadprivate(counter)</span>
+
+<span class="token keyword">void</span> <span class="token function">test_copyprivate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+<span class="token macro property">#<span class="token directive keyword">pragma</span> omp parallel private(i)</span>
+    <span class="token punctuation">{</span>
+        <span class="token macro property">#<span class="token directive keyword">pragma</span> omp single copyprivate(i, counter)</span>
+        <span class="token punctuation">{</span>
+            i <span class="token operator">=</span> <span class="token number">50</span><span class="token punctuation">;</span>
+            counter <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;thread %d execute single\n&quot;</span><span class="token punctuation">,</span> <span class="token function">omp_get_thread_num</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;thread %d: i is %d and counter is %d\n&quot;</span><span class="token punctuation">,</span><span class="token function">omp_get_thread_num</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> counter<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x662F;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x7ED3;&#x679C;:</p>
+<pre class="language-"><code class="lang-html">thread 3 execute single
+thread 2: i is 50 and counter is 100
+thread 3: i is 50 and counter is 100
+thread 0: i is 50 and counter is 100
+thread 1: i is 50 and counter is 100
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x662F;&#x5C06;copyprivate(i, counter)&#x53BB;&#x6389;&#x7684;&#x8FD0;&#x884C;&#x7ED3;&#x679C;</p>
+<pre class="language-"><code class="lang-html">thread 0 execute single
+thread 2: i is 0 and counter is 10
+thread 0: i is 50 and counter is 100
+thread 3: i is 0 and counter is 10
+thread 1: i is 32750 and counter is 10
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="运行环境交互.html" class="navigation navigation-prev " aria-label="Previous page: 运行环境交互">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="pthread.html" class="navigation navigation-next " aria-label="Next page: Pthreads">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"更多指令和子句","level":"1.3.4","depth":2,"next":{"title":"Pthreads","level":"1.4","depth":1,"path":"pthread.md","ref":"pthread.md","articles":[{"title":"语法","level":"1.4.1","depth":2,"path":"Pthreads-使用.md","ref":"Pthreads-使用.md","articles":[]},{"title":"流水线模型","level":"1.4.2","depth":2,"path":"Pipline-模型.md","ref":"Pipline-模型.md","articles":[]}]},"previous":{"title":"运行环境交互","level":"1.3.3","depth":2,"path":"运行环境交互.md","ref":"运行环境交互.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","search","search-plus","simple-page-toc","baidu","sitemap","github","duoshuo","anchors","anchor-navigation-ex","expandable-chapters-small","katex","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"github":{"url":"https://github.com/zhangjikai/parallel"},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"zhangjkblog","theme":"default"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false},"favicon":"/favicon.ico","sitemap":{"hostname":"http://parallel.zhangjikai.com"},"prism-themes":{},"custom-favicon":{},"expandable-chapters-small":{},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"anchorjs":{"placement":"left"},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"parallel","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"http://zhangjikai.com"}},"gitbook":"3.2.2","description":"并行计算"},"file":{"path":"更多指令和子句.md","mtime":"2017-02-25T11:17:32.539Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-25T12:22:58.742Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-baidu/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-duoshuo/duoshuo.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

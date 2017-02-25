@@ -1,0 +1,898 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>共享虚拟内存模式 · parallel</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="zhangjikai">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mic-异步计算和传输.html" />
+    
+    
+    <link rel="prev" href="offload-other.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://zhangjikai.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="mpi.html">
+            
+                <a href="mpi.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    MPI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="mpi-helloworld.html">
+            
+                <a href="mpi-helloworld.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    MPI-HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="基础函数.html">
+            
+                <a href="基础函数.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    基础函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="通信类别.html">
+            
+                <a href="通信类别.html">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    通信类别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="通信模式.html">
+            
+                <a href="通信模式.html">
+            
+                    
+                        <b>1.2.4.</b>
+                    
+                    通信模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="编程模式.html">
+            
+                <a href="编程模式.html">
+            
+                    
+                        <b>1.2.5.</b>
+                    
+                    编程模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="非阻塞通信.html">
+            
+                <a href="非阻塞通信.html">
+            
+                    
+                        <b>1.2.6.</b>
+                    
+                    非阻塞通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="重复非阻塞通信.html">
+            
+                <a href="重复非阻塞通信.html">
+            
+                    
+                        <b>1.2.7.</b>
+                    
+                    重复非阻塞通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="组通信.html">
+            
+                <a href="组通信.html">
+            
+                    
+                        <b>1.2.8.</b>
+                    
+                    组通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="数据处理.html">
+            
+                <a href="数据处理.html">
+            
+                    
+                        <b>1.2.9.</b>
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="openmp.html">
+            
+                <a href="openmp.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    OpenMP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="openmp-基本使用.html">
+            
+                <a href="openmp-基本使用.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    OpenMP 基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="编译制导指令.html">
+            
+                <a href="编译制导指令.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    编译制导指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="运行环境交互.html">
+            
+                <a href="运行环境交互.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    运行环境交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="更多指令和子句.html">
+            
+                <a href="更多指令和子句.html">
+            
+                    
+                        <b>1.3.4.</b>
+                    
+                    更多指令和子句
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="pthread.html">
+            
+                <a href="pthread.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    Pthreads
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="Pthreads-使用.html">
+            
+                <a href="Pthreads-使用.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="Pipline-模型.html">
+            
+                <a href="Pipline-模型.html">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    流水线模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="mic.html">
+            
+                <a href="mic.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    MIC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="mic-helloworld.html">
+            
+                <a href="mic-helloworld.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="offload.html">
+            
+                <a href="offload.html">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    offload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="offload-详解.html">
+            
+                <a href="offload-详解.html">
+            
+                    
+                        <b>1.5.3.</b>
+                    
+                    in / out / inout 详细用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="offload-other.html">
+            
+                <a href="offload-other.html">
+            
+                    
+                        <b>1.5.4.</b>
+                    
+                    offload 其他函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.5" data-path="mic-共享虚拟内存模式.html">
+            
+                <a href="mic-共享虚拟内存模式.html">
+            
+                    
+                        <b>1.5.5.</b>
+                    
+                    共享虚拟内存模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="mic-异步计算和传输.html">
+            
+                <a href="mic-异步计算和传输.html">
+            
+                    
+                        <b>1.5.6.</b>
+                    
+                    异步计算和传输
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="mic-向量化.html">
+            
+                <a href="mic-向量化.html">
+            
+                    
+                        <b>1.5.7.</b>
+                    
+                    向量化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >共享虚拟内存模式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x5171;&#x4EAB;&#x865A;&#x62DF;&#x5185;&#x5B58;">&#x5171;&#x4EAB;&#x865A;&#x62DF;&#x5185;&#x5B58;</a></li><ul><li><a href="#&#x524D;&#x8A00;">&#x524D;&#x8A00;</a></li><li><a href="#&#x58F0;&#x660E;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;">&#x58F0;&#x660E;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;</a></li><li><a href="#&#x6307;&#x9488;&#x5185;&#x5B58;&#x7BA1;&#x7406;">&#x6307;&#x9488;&#x5185;&#x5B58;&#x7BA1;&#x7406;</a></li><li><a href="#&#x4E8C;&#x7EF4;&#x6307;&#x9488;&#x793A;&#x4F8B;">&#x4E8C;&#x7EF4;&#x6307;&#x9488;&#x793A;&#x4F8B;</a></li></ul></ul></div><a href="#&#x5171;&#x4EAB;&#x865A;&#x62DF;&#x5185;&#x5B58;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5171;&#x4EAB;&#x865A;&#x62DF;&#x5185;&#x5B58;"><a name="&#x5171;&#x4EAB;&#x865A;&#x62DF;&#x5185;&#x5B58;" class="anchor-navigation-ex-anchor" href="#&#x5171;&#x4EAB;&#x865A;&#x62DF;&#x5185;&#x5B58;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5171;&#x4EAB;&#x865A;&#x62DF;&#x5185;&#x5B58;</h1>
+<!-- toc -->
+<ul>
+<li><a href="#&#x524D;&#x8A00;">&#x524D;&#x8A00;</a></li>
+<li><a href="#&#x58F0;&#x660E;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;">&#x58F0;&#x660E;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;</a></li>
+<li><a href="#&#x6307;&#x9488;&#x5185;&#x5B58;&#x7BA1;&#x7406;">&#x6307;&#x9488;&#x5185;&#x5B58;&#x7BA1;&#x7406;</a></li>
+<li><a href="#&#x4E8C;&#x7EF4;&#x6307;&#x9488;&#x793A;&#x4F8B;">&#x4E8C;&#x7EF4;&#x6307;&#x9488;&#x793A;&#x4F8B;</a></li>
+</ul>
+<!-- tocstop -->
+<h2 id="&#x524D;&#x8A00;"><a name="&#x524D;&#x8A00;" class="anchor-navigation-ex-anchor" href="#&#x524D;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x524D;&#x8A00;</h2>
+<p>&#x4F7F;&#x7528; #pragma offload target(mic) &#x65B9;&#x5F0F;&#x5C06;&#x7A0B;&#x5E8F;&#x5206;&#x8F7D;&#x5230;MIC&#x4E0A;&#x8BA1;&#x7B97;&#x662F;&#x6BD4;&#x8F83;&#x5E38;&#x7528;&#x7684;&#x65B9;&#x5F0F;, &#x4F46;&#x662F;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x53EA;&#x652F;&#x6301;&#x4E00;&#x7EF4;&#x6307;&#x9488;, &#x5982;&#x679C;&#x6709;&#x8F83;&#x4E3A;&#x590D;&#x6742;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;, &#x6BD4;&#x5982;&#x4E8C;&#x7EF4;&#x6307;&#x9488;, &#x6811;, &#x94FE;&#x8868;&#x7B49;&#x7ED3;&#x6784;&#x5219;&#x9700;&#x8981;&#x5C06;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x7EF4;&#x7ED3;&#x6784;(&#x5982;&#x679C;&#x53EF;&#x4EE5;), &#x5426;&#x5219;&#x4E0D;&#x80FD;&#x5C06;&#x6570;&#x636E;&#x4F20;&#x5230;MIC&#x4E0A;&#x53BB;. &#x4E3A;&#x4E86;&#x6EE1;&#x8DB3;&#x590D;&#x6742;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;, mic&#x63D0;&#x4F9B;&#x4E86;&#x5171;&#x4EAB;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x7684;&#x65B9;&#x5F0F;, &#x5373;&#x5C06;mic&#x7684;&#x5185;&#x5B58;&#x548C;cpu&#x7684;&#x5185;&#x5B58;&#x770B;&#x505A;&#x5171;&#x4EAB;&#x540C;&#x4E00;&#x5757;&#x865A;&#x62DF;&#x5185;&#x5B58;, &#x5728;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x88AB;cpu&#x548C;mic&#x5171;&#x4EAB;, &#x4E0D;&#x9700;&#x8981;&#x4F7F;&#x7528;offload&#x5C06;&#x6570;&#x636E;&#x5728;cpu&#x548C;mic&#x4E4B;&#x95F4;&#x76F8;&#x4E92;&#x4F20;&#x9012;.
+<!-- more --></p>
+<h2 id="&#x58F0;&#x660E;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;"><a name="&#x58F0;&#x660E;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x58F0;&#x660E;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x58F0;&#x660E;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;</h2>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>_Cilk_shared</code>&#x6765;&#x58F0;&#x660E;mic&#x548C;cpu&#x5171;&#x4EAB;&#x7684;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;, &#x4F7F;&#x7528;<code>_Cilk_offload</code>&#x5728;mic&#x7AEF;&#x8FD0;&#x884C;&#x5171;&#x4EAB;&#x51FD;&#x6570;.</p>
+<pre class="language-"><code class="lang-c">_Cilk_shared <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+
+_Cilk_shared <span class="token keyword">void</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x5730;&#x5740;&#x5728;cpu&#x548C;mic&#x4E0A;&#x662F;&#x76F8;&#x540C;&#x7684;, &#x5E76;&#x4E14;&#x5B83;&#x4EEC;&#x7684;&#x503C;&#x4F1A;&#x5728;cpu&#x548C;mic&#x4E4B;&#x95F4;&#x540C;&#x6B65;. &#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;:</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+
+<span class="token comment" spellcheck="true">// &#x58F0;&#x660E;CPU&#x548C;MIC&#x5171;&#x4EAB;&#x7684;&#x53D8;&#x91CF;</span>
+_Cilk_shared <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// &#x58F0;&#x660E;CPU&#x548C;MIC&#x5171;&#x4EAB;&#x7684;&#x51FD;&#x6570;</span>
+_Cilk_shared <span class="token keyword">void</span> <span class="token function">run_onmic</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    x <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;mic: the value of x is %d and the address of mic is %p\n&quot;</span><span class="token punctuation">,</span> x<span class="token punctuation">,</span> <span class="token operator">&amp;</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// &#x786E;&#x8BA4;&#x662F;&#x5426;&#x5728;mic&#x4E0A;&#x6267;&#x884C;</span>
+<span class="token macro property">#<span class="token directive keyword">ifdef</span> __MIC__</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;this is onmic\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token macro property">#<span class="token directive keyword">endif</span></span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">run_oncpu</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;cpu: the value of x is %d and the address of mic is %p\n&quot;</span><span class="token punctuation">,</span> x<span class="token punctuation">,</span> <span class="token operator">&amp;</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// &#x4F7F;&#x7528;_Cilk_offload &#x4EE3;&#x66FF;#pragma offload target(mic)</span>
+    _Cilk_offload <span class="token function">run_onmic</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">run_oncpu</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x6307;&#x9488;&#x5185;&#x5B58;&#x7BA1;&#x7406;"><a name="&#x6307;&#x9488;&#x5185;&#x5B58;&#x7BA1;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x6307;&#x9488;&#x5185;&#x5B58;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6307;&#x9488;&#x5185;&#x5B58;&#x7BA1;&#x7406;</h2>
+<p>&#x9996;&#x5148;&#x8BF4;&#x4E0B;&#x5171;&#x4EAB;&#x6307;&#x9488;&#x7684;&#x58F0;&#x660E;&#x65B9;&#x5F0F;:</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">int</span> <span class="token operator">*</span>_Cilk_shared share_pointer<span class="token punctuation">;</span>
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x662F;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x5171;&#x4EAB;&#x6307;&#x9488;, &#x6CE8;&#x610F;<code>*</code>&#x53F7;&#x5728;<code>_Cilk_shared</code>&#x7684;&#x524D;&#x9762;, &#x4E0B;&#x9762;&#x7684;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#x90FD;&#x4E0D;&#x662F;&#x5171;&#x4EAB;&#x6307;&#x9488;&#x6B63;&#x786E;&#x7684;&#x58F0;&#x660E;&#x65B9;&#x5F0F;</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">int</span> _Cilk_shared <span class="token operator">*</span>share_pointer<span class="token punctuation">;</span>
+
+_Cilk_shared <span class="token keyword">int</span> <span class="token operator">*</span>share_pointer<span class="token punctuation">;</span>
+</code></pre>
+<p>&#x5171;&#x4EAB;&#x5185;&#x914D;&#x7684;&#x5206;&#x914D;&#x548C;&#x91CA;&#x653E;&#x5E94;&#x8BE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x51FD;&#x6570;</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">void</span> <span class="token operator">*</span><span class="token function">_Offload_shared_malloc</span><span class="token punctuation">(</span>size_t size<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token operator">*</span><span class="token function">_Offload_shared_aligned_malloc</span><span class="token punctuation">(</span>size_t size<span class="token punctuation">,</span> size_t alignment<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function">_Offload_shared_free</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">_Offload_shared_aligned_free</span><span class="token punctuation">(</span><span class="token keyword">void</span> <span class="token operator">*</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>&#x5176;&#x4E2D;<code>_Offload_shared_aligned_malloc</code> &#x548C; <code>_Offload_shared_aligned_free</code> &#x7528;&#x4E8E;&#x5904;&#x7406;&#x9700;&#x8981;&#x5185;&#x5B58;&#x5BF9;&#x9F50;&#x65F6;&#x7684;&#x60C5;&#x51B5;. &#x4E0D;&#x8FC7;&#x597D;&#x50CF;&#x5728;&#x5171;&#x4EAB;&#x51FD;&#x6570;&#x4E2D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;malloc&#x4E3A;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x5206;&#x914D;&#x5185;&#x5B58;, &#x4F46;&#x662F;&#x4E0D;&#x6E05;&#x695A;&#x662F;&#x5426;&#x4F1A;&#x6709;&#x4EC0;&#x4E48;&#x526F;&#x4F5C;&#x7528;. &#x8FD8;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x4E00;&#x70B9;&#x662F;<code>_Offload_shared_malloc</code>&#x548C;<code>free</code> , <code>malloc</code>&#x548C;<code>_Offload_shared_free</code> &#x4E0D;&#x80FD;&#x6DF7;&#x7528;, &#x5426;&#x5219;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x610F;&#x60F3;&#x4E0D;&#x5230;&#x7684;&#x7ED3;&#x679C;, &#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#x4EE3;&#x7801;:</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+
+<span class="token comment" spellcheck="true">// int _Cilk_shared *p &#x662F;&#x672C;&#x5730;&#x6307;&#x9488;, &#x53EF;&#x4EE5;&#x6307;&#x5411;&#x5171;&#x4EAB;&#x6570;&#x636E;, &#x5982;&#x679C;&#x76F4;&#x63A5;p = _Offload_share_malloc() &#x4F1A;&#x62A5;warning</span>
+<span class="token comment" spellcheck="true">// &#x800C;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x65B9;&#x5F0F;&#x5B9A;&#x4E49;&#x5219;&#x6CA1;&#x6709;&#x95EE;&#x9898;</span>
+<span class="token comment" spellcheck="true">// typedef int *fp;</span>
+<span class="token comment" spellcheck="true">// _Cilk_shared fp p;</span>
+<span class="token comment" spellcheck="true">// p = (fp)_Offload_shared_malloc(sizeof(int) * n);</span>
+<span class="token comment" spellcheck="true">// _Offload_shared_free(p);</span>
+<span class="token keyword">int</span> <span class="token operator">*</span>_Cilk_shared share_pointer<span class="token punctuation">;</span>
+
+_Cilk_shared <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// &#x5728;&#x5171;&#x4EAB;&#x51FD;&#x6570;&#x5185;, &#x4F7F;&#x7528;malloc&#x548C;free&#x4E3A;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x5206;&#x914D;&#x548C;&#x91CA;&#x653E;&#x5185;&#x5B58;</span>
+_Cilk_shared <span class="token keyword">void</span> <span class="token function">cilk_malloc</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    share_pointer <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token operator">*</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        share_pointer<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;cilk_malloc: share_pointer[%d] is %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> share_pointer<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>share_pointer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment" spellcheck="true">// &#x5728;mic&#x4E0A;&#x6267;&#x884C;&#x4E0B;&#x9762;&#x51FD;&#x6570;&#x4F1A;&#x62A5;&#x9519;</span>
+<span class="token comment" spellcheck="true">// CARD--ERROR:1 thread:3 myoArenaFree: It is not supported to free shared memory from the MIC side!</span>
+_Cilk_shared <span class="token keyword">void</span> <span class="token function">cilk_sharedfree</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    share_pointer <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">_Offload_shared_malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token operator">*</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        share_pointer<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;cilk_sharedfree: share_pointer[%d] is %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> share_pointer<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">_Offload_shared_free</span><span class="token punctuation">(</span>share_pointer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+_Cilk_shared <span class="token keyword">void</span> <span class="token function">cilk_pointer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        share_pointer<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;cilk_pointer: share_pointer[%d] is %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> share_pointer<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token comment" spellcheck="true">//_Cilk_offload cilk_malloc();</span>
+
+    <span class="token comment" spellcheck="true">//_Cilk_offload cilk_sharedfree();</span>
+
+    <span class="token comment" spellcheck="true">// &#x4E0B;&#x9762;&#x4E09;&#x6761;&#x8BED;&#x53E5;&#x6267;&#x884C;&#x65F6;&#x4F1A;&#x9519;&#x8BEF;</span>
+    <span class="token comment" spellcheck="true">//share_pointer =(int *) malloc(sizeof(int) * n);</span>
+    <span class="token comment" spellcheck="true">//_Cilk_offload cilk_pointer();</span>
+    <span class="token comment" spellcheck="true">//free(share_pointer);</span>
+
+    <span class="token comment" spellcheck="true">// &#x4E0B;&#x9762;&#x4E09;&#x6761;&#x8BED;&#x53E5;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x6267;&#x884C;</span>
+    share_pointer <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span> <span class="token function">_Offload_shared_malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token operator">*</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _Cilk_offload <span class="token function">cilk_pointer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">_Offload_shared_free</span><span class="token punctuation">(</span>share_pointer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5F53;&#x5728;mic&#x4E0A;&#x6267;&#x884C;cilk_share_free&#x65F6;&#x4F1A;&#x62A5;&#x9519;&#x8BEF;, &#x539F;&#x56E0;&#x662F;&#x53EA;&#x80FD;&#x5728;cpu&#x7AEF;&#x8C03;&#x7528;<code>_Offload_shared_free</code>&#x51FD;&#x6570;&#x91CA;&#x653E;&#x5185;&#x5B58;.</p>
+<h2 id="&#x4E8C;&#x7EF4;&#x6307;&#x9488;&#x793A;&#x4F8B;"><a name="&#x4E8C;&#x7EF4;&#x6307;&#x9488;&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x4E8C;&#x7EF4;&#x6307;&#x9488;&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E8C;&#x7EF4;&#x6307;&#x9488;&#x793A;&#x4F8B;</h2>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x4F7F;&#x7528;&#x5171;&#x4EAB;&#x4E8C;&#x7EF4;&#x6307;&#x9488;&#x7684;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token keyword">int</span> <span class="token operator">*</span><span class="token operator">*</span>_Cilk_shared p<span class="token punctuation">;</span>
+_Cilk_shared <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span> m <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">init_p</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> j<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> m<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> index<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+_Cilk_shared <span class="token keyword">void</span> <span class="token function">print_p</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">,</span> j<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;print_p: p[%d][%d] is %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    p <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token function">_Offload_shared_malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span> <span class="token operator">*</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n <span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        p<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span> <span class="token function">_Offload_shared_malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token operator">*</span> m<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">init_p</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    _Cilk_offload <span class="token function">print_p</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">_Offload_shared_free</span><span class="token punctuation">(</span>p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">_Offload_shared_free</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="offload-other.html" class="navigation navigation-prev " aria-label="Previous page: offload 其他函数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mic-异步计算和传输.html" class="navigation navigation-next " aria-label="Next page: 异步计算和传输">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"共享虚拟内存模式","level":"1.5.5","depth":2,"next":{"title":"异步计算和传输","level":"1.5.6","depth":2,"path":"mic-异步计算和传输.md","ref":"mic-异步计算和传输.md","articles":[]},"previous":{"title":"offload 其他函数","level":"1.5.4","depth":2,"path":"offload-other.md","ref":"offload-other.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","search","search-plus","simple-page-toc","baidu","sitemap","github","duoshuo","anchors","anchor-navigation-ex","expandable-chapters-small","katex","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"github":{"url":"https://github.com/zhangjikai/parallel"},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"zhangjkblog","theme":"default"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false},"favicon":"/favicon.ico","sitemap":{"hostname":"http://parallel.zhangjikai.com"},"prism-themes":{},"custom-favicon":{},"expandable-chapters-small":{},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"anchorjs":{"placement":"left"},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"parallel","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"http://zhangjikai.com"}},"gitbook":"3.2.2","description":"并行计算"},"file":{"path":"mic-共享虚拟内存模式.md","mtime":"2017-02-25T12:08:34.832Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-25T12:22:58.742Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-baidu/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-duoshuo/duoshuo.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

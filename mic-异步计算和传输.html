@@ -1,0 +1,895 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>异步计算和传输 · parallel</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="zhangjikai">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mic-向量化.html" />
+    
+    
+    <link rel="prev" href="mic-共享虚拟内存模式.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://zhangjikai.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="mpi.html">
+            
+                <a href="mpi.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    MPI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="mpi-helloworld.html">
+            
+                <a href="mpi-helloworld.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    MPI-HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="基础函数.html">
+            
+                <a href="基础函数.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    基础函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="通信类别.html">
+            
+                <a href="通信类别.html">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    通信类别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="通信模式.html">
+            
+                <a href="通信模式.html">
+            
+                    
+                        <b>1.2.4.</b>
+                    
+                    通信模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="编程模式.html">
+            
+                <a href="编程模式.html">
+            
+                    
+                        <b>1.2.5.</b>
+                    
+                    编程模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="非阻塞通信.html">
+            
+                <a href="非阻塞通信.html">
+            
+                    
+                        <b>1.2.6.</b>
+                    
+                    非阻塞通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="重复非阻塞通信.html">
+            
+                <a href="重复非阻塞通信.html">
+            
+                    
+                        <b>1.2.7.</b>
+                    
+                    重复非阻塞通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="组通信.html">
+            
+                <a href="组通信.html">
+            
+                    
+                        <b>1.2.8.</b>
+                    
+                    组通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="数据处理.html">
+            
+                <a href="数据处理.html">
+            
+                    
+                        <b>1.2.9.</b>
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="openmp.html">
+            
+                <a href="openmp.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    OpenMP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="openmp-基本使用.html">
+            
+                <a href="openmp-基本使用.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    OpenMP 基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="编译制导指令.html">
+            
+                <a href="编译制导指令.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    编译制导指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="运行环境交互.html">
+            
+                <a href="运行环境交互.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    运行环境交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="更多指令和子句.html">
+            
+                <a href="更多指令和子句.html">
+            
+                    
+                        <b>1.3.4.</b>
+                    
+                    更多指令和子句
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="pthread.html">
+            
+                <a href="pthread.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    Pthreads
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="Pthreads-使用.html">
+            
+                <a href="Pthreads-使用.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="Pipline-模型.html">
+            
+                <a href="Pipline-模型.html">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    流水线模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="mic.html">
+            
+                <a href="mic.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    MIC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="mic-helloworld.html">
+            
+                <a href="mic-helloworld.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="offload.html">
+            
+                <a href="offload.html">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    offload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="offload-详解.html">
+            
+                <a href="offload-详解.html">
+            
+                    
+                        <b>1.5.3.</b>
+                    
+                    in / out / inout 详细用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="offload-other.html">
+            
+                <a href="offload-other.html">
+            
+                    
+                        <b>1.5.4.</b>
+                    
+                    offload 其他函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="mic-共享虚拟内存模式.html">
+            
+                <a href="mic-共享虚拟内存模式.html">
+            
+                    
+                        <b>1.5.5.</b>
+                    
+                    共享虚拟内存模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.6" data-path="mic-异步计算和传输.html">
+            
+                <a href="mic-异步计算和传输.html">
+            
+                    
+                        <b>1.5.6.</b>
+                    
+                    异步计算和传输
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="mic-向量化.html">
+            
+                <a href="mic-向量化.html">
+            
+                    
+                        <b>1.5.7.</b>
+                    
+                    向量化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >异步计算和传输</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x5F02;&#x6B65;&#x8BA1;&#x7B97;&#x548C;&#x4F20;&#x8F93;">&#x5F02;&#x6B65;&#x8BA1;&#x7B97;&#x548C;&#x4F20;&#x8F93;</a></li><ul><li><a href="#&#x5F02;&#x6B65;&#x8BA1;&#x7B97;">&#x5F02;&#x6B65;&#x8BA1;&#x7B97;</a></li><li><a href="#&#x5F02;&#x6B65;&#x4F20;&#x8F93;">&#x5F02;&#x6B65;&#x4F20;&#x8F93;</a></li></ul></ul></div><a href="#&#x5F02;&#x6B65;&#x8BA1;&#x7B97;&#x548C;&#x4F20;&#x8F93;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x5F02;&#x6B65;&#x8BA1;&#x7B97;&#x548C;&#x4F20;&#x8F93;"><a name="&#x5F02;&#x6B65;&#x8BA1;&#x7B97;&#x548C;&#x4F20;&#x8F93;" class="anchor-navigation-ex-anchor" href="#&#x5F02;&#x6B65;&#x8BA1;&#x7B97;&#x548C;&#x4F20;&#x8F93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F02;&#x6B65;&#x8BA1;&#x7B97;&#x548C;&#x4F20;&#x8F93;</h1>
+<!-- toc -->
+<ul>
+<li><a href="#&#x5F02;&#x6B65;&#x8BA1;&#x7B97;">&#x5F02;&#x6B65;&#x8BA1;&#x7B97;</a></li>
+<li><a href="#&#x5F02;&#x6B65;&#x4F20;&#x8F93;">&#x5F02;&#x6B65;&#x4F20;&#x8F93;</a></li>
+</ul>
+<!-- tocstop -->
+<h2 id="&#x5F02;&#x6B65;&#x8BA1;&#x7B97;"><a name="&#x5F02;&#x6B65;&#x8BA1;&#x7B97;" class="anchor-navigation-ex-anchor" href="#&#x5F02;&#x6B65;&#x8BA1;&#x7B97;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F02;&#x6B65;&#x8BA1;&#x7B97;</h2>
+<p>&#x5F53;&#x4F7F;&#x7528;#pragma offload target(mic) &#x65B9;&#x5F0F;&#x5206;&#x8F7D;&#x65F6;, cpu&#x4F1A;&#x7B49;&#x5F85;offload&#x7684;&#x4EE3;&#x7801;&#x5757;&#x6267;&#x884C;&#x5B8C;&#x518D;&#x7EE7;&#x7EED;&#x5F80;&#x4E0B;&#x6267;&#x884C;, &#x5982;&#x679C;&#x4E0D;&#x5E0C;&#x671B;&#x7B49;&#x5F85;offload, &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;cpu&#x548C;mic&#x5F02;&#x6B65;&#x8BA1;&#x7B97;&#x7684;&#x65B9;&#x5F0F;. &#x5177;&#x4F53;&#x65B9;&#x6CD5;&#x4E3A;&#x5728;offload&#x7684;&#x65F6;&#x5019;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x91CF;, &#x5982;&#x4E0B;&#x9762;&#x7684;&#x5F62;&#x5F0F;:</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">char</span> signal_var<span class="token punctuation">;</span>
+
+<span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic:0)signal(&amp;signal_var)</span>
+<span class="token punctuation">{</span>
+    <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>    
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x6B64;&#x65F6;offload &#x7684;&#x4EE3;&#x7801;&#x5C31;&#x4F1A;&#x5F02;&#x6B65;&#x6267;&#x884C;, &#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x4E00;&#x70B9;&#x662F;&#x8981;&#x5236;&#x5B9A;mic&#x7684;&#x7F16;&#x53F7;(&#x5982;&#x4E0A;&#x9762;&#x7684;<code>target(mic:0)</code>), &#x5982;&#x679C;&#x9700;&#x8981;&#x7B49;&#x5F85;offload&#x6267;&#x884C;&#x5B8C;&#x540E;&#x5728;&#x5F80;&#x4E0B;&#x6267;&#x884C;, &#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>offload_wait</code>, &#x5982;&#x4E0B;&#x9762;&#x7684;&#x5F62;&#x5F0F;</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">pragma</span> offload_wait target(mic:0) wait(&amp;signal_var)</span>
+</code></pre>
+<!-- more -->
+<p>&#x5F53;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x5230;&#x8FD9;&#x4E00;&#x53E5;&#x65F6;&#x5982;&#x679C;offload&#x6CA1;&#x6709;&#x6267;&#x884C;&#x5B8C;&#x5C31;&#x4F1A;&#x5904;&#x4E8E;&#x7B49;&#x5F85;&#x72B6;&#x6001;, &#x76F4;&#x5230;offload&#x6267;&#x884C;&#x5B8C;&#x518D;&#x5F80;&#x4E0B;&#x6267;&#x884C;. &#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x793A;&#x4F8B;, test1&#x662F;&#x5F02;&#x6B65;&#x6267;&#x884C;, test2&#x662F;&#x540C;&#x6B65;&#x6267;&#x884C;.</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;offload.h&gt;</span></span>
+
+<span class="token keyword">void</span> <span class="token function">test1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">char</span> signal_var<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//&#x9700;&#x8981;&#x6307;&#x5B9A;mic&#x5361;&#x7684;&#x7F16;&#x53F7;</span>
+<span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic:0)signal(&amp;signal_var)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">long</span> <span class="token keyword">long</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">long</span> <span class="token keyword">long</span> t<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">1000000000</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            t <span class="token operator">+</span><span class="token operator">=</span> i<span class="token punctuation">;</span>
+            t <span class="token operator">+</span><span class="token operator">=</span> i <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+            t <span class="token operator">+</span><span class="token operator">=</span> i <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">;</span>
+            t <span class="token operator">+</span><span class="token operator">=</span>i <span class="token operator">%</span><span class="token number">2</span><span class="token punctuation">;</span>
+            t <span class="token operator">+</span><span class="token operator">=</span> i <span class="token operator">%</span><span class="token number">3</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;t is %lld\n&quot;</span><span class="token punctuation">,</span> t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">100000</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;j is %d\n&quot;</span><span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token macro property">#<span class="token directive keyword">pragma</span> offload_wait target(mic:0) wait(&amp;signal_var)</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;after wait\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+<span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic:0)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">long</span> <span class="token keyword">long</span> i<span class="token punctuation">;</span>
+        <span class="token keyword">long</span> <span class="token keyword">long</span> t<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">1000000000</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            t <span class="token operator">+</span><span class="token operator">=</span> i<span class="token punctuation">;</span>
+            t <span class="token operator">+</span><span class="token operator">=</span> i <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+            t <span class="token operator">+</span><span class="token operator">=</span> i <span class="token operator">*</span> <span class="token number">3</span><span class="token punctuation">;</span>
+            t <span class="token operator">+</span><span class="token operator">=</span>i <span class="token operator">%</span><span class="token number">2</span><span class="token punctuation">;</span>
+            t <span class="token operator">+</span><span class="token operator">=</span> i <span class="token operator">%</span><span class="token number">3</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;t is %lld\n&quot;</span><span class="token punctuation">,</span> t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">100000</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;j is %d\n&quot;</span><span class="token punctuation">,</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;after wait\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">test1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//test2();</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x5F02;&#x6B65;&#x4F20;&#x8F93;"><a name="&#x5F02;&#x6B65;&#x4F20;&#x8F93;" class="anchor-navigation-ex-anchor" href="#&#x5F02;&#x6B65;&#x4F20;&#x8F93;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5F02;&#x6B65;&#x4F20;&#x8F93;</h2>
+<p>&#x5982;&#x679C;&#x6570;&#x636E;&#x91CF;&#x5F88;&#x5927;, &#x90A3;&#x4E48;cpu&#x548C;mic&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x4E5F;&#x8981;&#x82B1;&#x8D39;&#x4E00;&#x4E9B;&#x65F6;&#x95F4;, &#x5982;&#x679C;&#x4E0D;&#x5E0C;&#x671B;&#x7B49;&#x5F85;&#x6570;&#x636E;&#x4F20;&#x8F93;, &#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>offload_transfer</code>&#x8FDB;&#x884C;&#x5F02;&#x6B65;&#x6570;&#x636E;&#x4F20;&#x8F93;, &#x5982;&#x4E0B;&#x9762;&#x7684;&#x65B9;&#x5F0F;</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">pragma</span> offload_transfer target(mic:0) signal(f1) \
+    in (f1:length(n) alloc_if(1) free_if(0))</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x540E;&#x9762;&#x7684;offload&#x9700;&#x8981;&#x4F7F;&#x7528;&#x672C;&#x6B21;offload&#x4E0A;&#x4F20;&#x7684;&#x6570;&#x636E;, &#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;wait&#x6765;&#x7B49;&#x5F85;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x5B8C;&#x6BD5;&#x518D;&#x6267;&#x884C;</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic:0) wait(f1)</span>
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684;&#x793A;&#x4F8B;:</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">define</span> __ONMIC__ __attribute__((target(mic)))</span>
+
+__ONMIC__ <span class="token keyword">void</span> <span class="token function">add_inputs</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">,</span> <span class="token keyword">float</span> <span class="token operator">*</span>f1<span class="token punctuation">,</span> <span class="token keyword">float</span> <span class="token operator">*</span>f2<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span> i <span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        f2<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span><span class="token operator">=</span> f1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">display_vals</span><span class="token punctuation">(</span> <span class="token keyword">int</span> id<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">,</span>  <span class="token keyword">float</span> <span class="token operator">*</span>f2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;\nResults after Offload #%d:\n&quot;</span><span class="token punctuation">,</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;f2[%d] is %f\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> f2<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;====================\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">float</span> <span class="token operator">*</span>f1 <span class="token punctuation">,</span> <span class="token operator">*</span>f2<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">10000</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">,</span> j<span class="token punctuation">;</span>
+    f1 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span> <span class="token operator">*</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    f2 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">float</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">float</span><span class="token punctuation">)</span> <span class="token operator">*</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        f1<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+        f2<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0.0</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// &#x8FD9;&#x91CC;&#x53EA;&#x4E0A;&#x4F20;&#x6570;&#x636E;</span>
+<span class="token macro property">#<span class="token directive keyword">pragma</span> offload_transfer target(mic:0) signal(f1) \
+    in (f1:length(n) alloc_if(1) free_if(0))\
+    in (f2:length(n) alloc_if(1) free_if(0))</span>
+
+    <span class="token comment" spellcheck="true">// wait(f1)&#x7B49;&#x5F85;&#x4E0A;&#x9762;&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x5B8C;&#x6BD5;, &#x518D;&#x6267;&#x884C;&#x8BE5;&#x64CD;&#x4F5C;</span>
+<span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic:0) wait(f1) signal(f2) \
+    in(n) \
+    nocopy(f1:alloc_if (0) free_if(1))\
+    out(f2:length(n) alloc_if(0) free_if(1))</span>
+    <span class="token function">add_inputs</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> f1<span class="token punctuation">,</span> f2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// &#x7B49;&#x8BE5;f2&#x6267;&#x884C;&#x5B8C;</span>
+<span class="token macro property">#<span class="token directive keyword">pragma</span> offload_wait target(mic:0) wait(f2)</span>
+
+    <span class="token comment" spellcheck="true">// &#x5982;&#x679C;&#x4E0D;&#x52A0;wait, &#x5C31;&#x4F1A;&#x5168;&#x90E8;&#x6253;&#x5370;&#x51FA;0</span>
+    <span class="token function">display_vals</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> f2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// &#x591A;&#x4E2A;&#x6570;&#x636E;&#x5F02;&#x6B65;&#x4E0A;&#x4F20;</span>
+<span class="token macro property">#<span class="token directive keyword">pragma</span> offload_transfer target(mic:0) signal(f1) \
+    in(f1:length(n) alloc_if(1) free_if(0))</span>
+
+<span class="token macro property">#<span class="token directive keyword">pragma</span> offload_transfer target(mic:0) signal(f2) \
+    in(f2:length(n) alloc_if(1) free_if(0))</span>
+
+    <span class="token comment" spellcheck="true">// &#x540C;&#x65F6;&#x7B49;&#x5F85;&#x4E24;&#x4E2A;&#x4FE1;&#x53F7;&#x91CF;</span>
+<span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic:0) wait(f1, f2) \
+    in (n) \
+    nocopy (f1:alloc_if(0) free_if(1)) \
+    out (f2:length(n) alloc_if(0) free_if(1))</span>
+    <span class="token function">add_inputs</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> f1<span class="token punctuation">,</span> f2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">display_vals</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> f2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">// &#x5F02;&#x6B65;&#x4F20;&#x8F93;&#x548C;&#x540C;&#x6B65;&#x4F20;&#x8F93;&#x7ED3;&#x5408;</span>
+<span class="token macro property">#<span class="token directive keyword">pragma</span> offload_transfer target(mic:0) signal(f2)\
+    in(f2:length(n) alloc_if(1) free_if(0))</span>
+
+<span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic:0) wait(f2) \
+    in(n) \
+    in(f1:length(n) alloc_if(1) free_if(0))\
+    nocopy(f2)</span>
+    <span class="token function">add_inputs</span><span class="token punctuation">(</span>n <span class="token punctuation">,</span>f1<span class="token punctuation">,</span> f2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token macro property">#<span class="token directive keyword">pragma</span> offload_transfer target(mic:0) signal(f2) \
+    out(f2:length(n) alloc_if(0) free_if(1))</span>
+
+<span class="token macro property">#<span class="token directive keyword">pragma</span> offload_wait target(mic:0) wait(f2)</span>
+
+    <span class="token function">display_vals</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> f2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">free</span><span class="token punctuation">(</span>f1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>f2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="mic-共享虚拟内存模式.html" class="navigation navigation-prev " aria-label="Previous page: 共享虚拟内存模式">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mic-向量化.html" class="navigation navigation-next " aria-label="Next page: 向量化">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"异步计算和传输","level":"1.5.6","depth":2,"next":{"title":"向量化","level":"1.5.7","depth":2,"path":"mic-向量化.md","ref":"mic-向量化.md","articles":[]},"previous":{"title":"共享虚拟内存模式","level":"1.5.5","depth":2,"path":"mic-共享虚拟内存模式.md","ref":"mic-共享虚拟内存模式.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","search","search-plus","simple-page-toc","baidu","sitemap","github","duoshuo","anchors","anchor-navigation-ex","expandable-chapters-small","katex","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"github":{"url":"https://github.com/zhangjikai/parallel"},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"zhangjkblog","theme":"default"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false},"favicon":"/favicon.ico","sitemap":{"hostname":"http://parallel.zhangjikai.com"},"prism-themes":{},"custom-favicon":{},"expandable-chapters-small":{},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"anchorjs":{"placement":"left"},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"parallel","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"http://zhangjikai.com"}},"gitbook":"3.2.2","description":"并行计算"},"file":{"path":"mic-异步计算和传输.md","mtime":"2017-02-25T12:10:11.869Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-25T12:22:58.742Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-baidu/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-duoshuo/duoshuo.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

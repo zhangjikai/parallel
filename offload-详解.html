@@ -1,0 +1,1258 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>in / out / inout 详细用法 · parallel</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        <meta name="author" content="zhangjikai">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="offload-other.html" />
+    
+    
+    <link rel="prev" href="offload.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://zhangjikai.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="mpi.html">
+            
+                <a href="mpi.html">
+            
+                    
+                        <b>1.2.</b>
+                    
+                    MPI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="mpi-helloworld.html">
+            
+                <a href="mpi-helloworld.html">
+            
+                    
+                        <b>1.2.1.</b>
+                    
+                    MPI-HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="基础函数.html">
+            
+                <a href="基础函数.html">
+            
+                    
+                        <b>1.2.2.</b>
+                    
+                    基础函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="通信类别.html">
+            
+                <a href="通信类别.html">
+            
+                    
+                        <b>1.2.3.</b>
+                    
+                    通信类别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="通信模式.html">
+            
+                <a href="通信模式.html">
+            
+                    
+                        <b>1.2.4.</b>
+                    
+                    通信模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="编程模式.html">
+            
+                <a href="编程模式.html">
+            
+                    
+                        <b>1.2.5.</b>
+                    
+                    编程模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="非阻塞通信.html">
+            
+                <a href="非阻塞通信.html">
+            
+                    
+                        <b>1.2.6.</b>
+                    
+                    非阻塞通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="重复非阻塞通信.html">
+            
+                <a href="重复非阻塞通信.html">
+            
+                    
+                        <b>1.2.7.</b>
+                    
+                    重复非阻塞通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="组通信.html">
+            
+                <a href="组通信.html">
+            
+                    
+                        <b>1.2.8.</b>
+                    
+                    组通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="数据处理.html">
+            
+                <a href="数据处理.html">
+            
+                    
+                        <b>1.2.9.</b>
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="openmp.html">
+            
+                <a href="openmp.html">
+            
+                    
+                        <b>1.3.</b>
+                    
+                    OpenMP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="openmp-基本使用.html">
+            
+                <a href="openmp-基本使用.html">
+            
+                    
+                        <b>1.3.1.</b>
+                    
+                    OpenMP 基本使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="编译制导指令.html">
+            
+                <a href="编译制导指令.html">
+            
+                    
+                        <b>1.3.2.</b>
+                    
+                    编译制导指令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="运行环境交互.html">
+            
+                <a href="运行环境交互.html">
+            
+                    
+                        <b>1.3.3.</b>
+                    
+                    运行环境交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="更多指令和子句.html">
+            
+                <a href="更多指令和子句.html">
+            
+                    
+                        <b>1.3.4.</b>
+                    
+                    更多指令和子句
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="pthread.html">
+            
+                <a href="pthread.html">
+            
+                    
+                        <b>1.4.</b>
+                    
+                    Pthreads
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="Pthreads-使用.html">
+            
+                <a href="Pthreads-使用.html">
+            
+                    
+                        <b>1.4.1.</b>
+                    
+                    语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="Pipline-模型.html">
+            
+                <a href="Pipline-模型.html">
+            
+                    
+                        <b>1.4.2.</b>
+                    
+                    流水线模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="mic.html">
+            
+                <a href="mic.html">
+            
+                    
+                        <b>1.5.</b>
+                    
+                    MIC
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="mic-helloworld.html">
+            
+                <a href="mic-helloworld.html">
+            
+                    
+                        <b>1.5.1.</b>
+                    
+                    HelloWorld
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="offload.html">
+            
+                <a href="offload.html">
+            
+                    
+                        <b>1.5.2.</b>
+                    
+                    offload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="offload-详解.html">
+            
+                <a href="offload-详解.html">
+            
+                    
+                        <b>1.5.3.</b>
+                    
+                    in / out / inout 详细用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="offload-other.html">
+            
+                <a href="offload-other.html">
+            
+                    
+                        <b>1.5.4.</b>
+                    
+                    offload 其他函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="mic-共享虚拟内存模式.html">
+            
+                <a href="mic-共享虚拟内存模式.html">
+            
+                    
+                        <b>1.5.5.</b>
+                    
+                    共享虚拟内存模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="mic-异步计算和传输.html">
+            
+                <a href="mic-异步计算和传输.html">
+            
+                    
+                        <b>1.5.6.</b>
+                    
+                    异步计算和传输
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="mic-向量化.html">
+            
+                <a href="mic-向量化.html">
+            
+                    
+                        <b>1.5.7.</b>
+                    
+                    向量化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >in / out / inout 详细用法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#in--out--inout-&#x8BE6;&#x7EC6;&#x7528;&#x6CD5;">in / out / inout &#x8BE6;&#x7EC6;&#x7528;&#x6CD5;</a></li><ul><li><a href="#&#x9759;&#x6001;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;">&#x9759;&#x6001;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;</a></li><li><a href="#&#x9759;&#x6001;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;">&#x9759;&#x6001;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;</a></li><li><a href="#&#x4E00;&#x4E2A;&#x5C0F;&#x95EE;&#x9898;">&#x4E00;&#x4E2A;&#x5C0F;&#x95EE;&#x9898;</a></li><li><a href="#&#x4E00;&#x7EF4;&#x52A8;&#x6001;&#x6570;&#x7EC4;">&#x4E00;&#x7EF4;&#x52A8;&#x6001;&#x6570;&#x7EC4;</a></li><li><a href="#&#x4F7F;&#x7528;&#x6307;&#x9488;&#x5B9E;&#x73B0;&#x7684;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;">&#x4F7F;&#x7528;&#x6307;&#x9488;&#x5B9E;&#x73B0;&#x7684;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;</a></li><li><a href="#&#x5305;&#x542B;&#x6307;&#x9488;&#x7684;struct">&#x5305;&#x542B;&#x6307;&#x9488;&#x7684;struct</a></li><li><a href="#&#x6CE8;&#x610F;&#x4E8B;&#x9879;">&#x6CE8;&#x610F;&#x4E8B;&#x9879;</a></li></ul></ul></div><a href="#in--out--inout-&#x8BE6;&#x7EC6;&#x7528;&#x6CD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="in--out--inout-&#x8BE6;&#x7EC6;&#x7528;&#x6CD5;"><a name="in--out--inout-&#x8BE6;&#x7EC6;&#x7528;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#in--out--inout-&#x8BE6;&#x7EC6;&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>in / out / inout &#x8BE6;&#x7EC6;&#x7528;&#x6CD5;</h1>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E3B;&#x8981;&#x4F7F;&#x7528;in&#x4F5C;&#x4E3A;&#x6D4B;&#x8BD5;, out&#x548C;inout&#x7684;&#x7528;&#x6CD5;&#x5E94;&#x8BE5;&#x662F;&#x7C7B;&#x4F3C;&#x7684;&#xFF0C; &#x4E0B;&#x9762;&#x4E3B;&#x8981;&#x4EE5;&#x4EE3;&#x7801;&#x4E3A;&#x4E3B;&#xFF0C; &#x5E76;&#x4E14;&#x9644;&#x5E26;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x3002;</p>
+<!-- toc -->
+<ul>
+<li><a href="#&#x9759;&#x6001;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;">&#x9759;&#x6001;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;</a></li>
+<li><a href="#&#x9759;&#x6001;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;">&#x9759;&#x6001;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;</a></li>
+<li><a href="#&#x4E00;&#x4E2A;&#x5C0F;&#x95EE;&#x9898;">&#x4E00;&#x4E2A;&#x5C0F;&#x95EE;&#x9898;</a></li>
+<li><a href="#&#x4E00;&#x7EF4;&#x52A8;&#x6001;&#x6570;&#x7EC4;">&#x4E00;&#x7EF4;&#x52A8;&#x6001;&#x6570;&#x7EC4;</a></li>
+<li><a href="#&#x4F7F;&#x7528;&#x6307;&#x9488;&#x5B9E;&#x73B0;&#x7684;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;">&#x4F7F;&#x7528;&#x6307;&#x9488;&#x5B9E;&#x73B0;&#x7684;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;</a></li>
+<li><a href="#&#x5305;&#x542B;&#x6307;&#x9488;&#x7684;struct">&#x5305;&#x542B;&#x6307;&#x9488;&#x7684;struct</a></li>
+<li><a href="#&#x6CE8;&#x610F;&#x4E8B;&#x9879;">&#x6CE8;&#x610F;&#x4E8B;&#x9879;</a></li>
+</ul>
+<!-- tocstop -->
+<h2 id="&#x9759;&#x6001;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;"><a name="&#x9759;&#x6001;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x9759;&#x6001;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9759;&#x6001;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;</h2>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+
+<span class="token keyword">void</span> <span class="token function">offload_one_dim_array</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> arr<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> arr2<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> arr3<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+        arr2<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> n <span class="token operator">+</span> i<span class="token punctuation">;</span>
+        arr3<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> n <span class="token operator">+</span> i<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">//&#x4E0A;&#x4F20;arr&#x7684;&#x5168;&#x90E8;&#x5143;&#x7D20;,&#x4E0A;&#x4F20;arr2&#x7684;&#x524D;0-4&#x5171;5(&#x957F;&#x5EA6;&#x4E3A;5)&#x4E2A;&#x5143;&#x7D20;,&#x4E0A;&#x4F20;arr3&#x7684;&#x4ECE;&#x7D22;&#x5F15;2&#x5F00;&#x59CB;&#x7684;5&#x4E2A;&#x5143;&#x7D20;(&#x5373;&#x7D22;&#x5F15;2-6)&#x5230;mic&#x4E0A;</span>
+    <span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic) in(arr) in(arr2:length(5)) in(arr3[1:5])</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot; arr[%d] is %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;==========================\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr2[%d] is %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;==========================\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr3[%d] is %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr3<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">offload_one_dim_array</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E3A;:</p>
+<pre class="language-"><code class="lang-bash"> arr<span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 0
+ arr<span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 1
+ arr<span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 2
+ arr<span class="token punctuation">[</span>3<span class="token punctuation">]</span> is 3
+ arr<span class="token punctuation">[</span>4<span class="token punctuation">]</span> is 4
+ arr<span class="token punctuation">[</span>5<span class="token punctuation">]</span> is 5
+ arr<span class="token punctuation">[</span>6<span class="token punctuation">]</span> is 6
+ arr<span class="token punctuation">[</span>7<span class="token punctuation">]</span> is 7
+ arr<span class="token punctuation">[</span>8<span class="token punctuation">]</span> is 8
+ arr<span class="token punctuation">[</span>9<span class="token punctuation">]</span> is 9
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+arr2<span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 10
+arr2<span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 11
+arr2<span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 12
+arr2<span class="token punctuation">[</span>3<span class="token punctuation">]</span> is 13
+arr2<span class="token punctuation">[</span>4<span class="token punctuation">]</span> is 14
+arr2<span class="token punctuation">[</span>5<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>6<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>7<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>8<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>9<span class="token punctuation">]</span> is 0
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+arr3<span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 0
+arr3<span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 0
+arr3<span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 22
+arr3<span class="token punctuation">[</span>3<span class="token punctuation">]</span> is 23
+arr3<span class="token punctuation">[</span>4<span class="token punctuation">]</span> is 24
+arr3<span class="token punctuation">[</span>5<span class="token punctuation">]</span> is 25
+arr3<span class="token punctuation">[</span>6<span class="token punctuation">]</span> is 26
+arr3<span class="token punctuation">[</span>7<span class="token punctuation">]</span> is 0
+arr3<span class="token punctuation">[</span>8<span class="token punctuation">]</span> is 0
+arr3<span class="token punctuation">[</span>9<span class="token punctuation">]</span> is 0
+</code></pre>
+<h2 id="&#x9759;&#x6001;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;"><a name="&#x9759;&#x6001;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x9759;&#x6001;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9759;&#x6001;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;</h2>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+
+<span class="token keyword">void</span> <span class="token function">offload_two_dim_array</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> arr<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> arr2<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> arr3<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> arr4<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> index<span class="token punctuation">;</span>
+            arr2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> n <span class="token operator">*</span> n <span class="token operator">+</span> index<span class="token punctuation">;</span>
+            arr3<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> n <span class="token operator">*</span> n <span class="token operator">+</span> index<span class="token punctuation">;</span>
+            arr4<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">3</span> <span class="token operator">*</span> n <span class="token operator">*</span> n <span class="token operator">+</span> index<span class="token punctuation">;</span>
+            index<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">//&#x4E0A;&#x4F20;arr&#x7684;&#x5168;&#x90E8;&#x503C;,&#x4E0A;&#x4F20;arr2&#x7684;&#x524D;5&#x4E2A;&#x503C;(&#x6574;&#x4F53;&#x770B;&#x4E3A;&#x957F;&#x5EA6;&#x4E3A;n*n&#x7684;&#x4E00;&#x7EF4;&#x6570;&#x7EC4;,&#x53D6;&#x524D;5&#x4E2A;&#x503C;),&#x4E0A;&#x4F20;arr3&#x4E2D;[0-1][0-(n-1)]&#x7684;&#x503C;,</span>
+    <span class="token comment" spellcheck="true">//&#x4E0D;&#x52A0;&#x540E;&#x9762;&#x7684;y&#x7684;&#x7EF4;&#x5EA6;,&#x9ED8;&#x8BA4;y&#x7684;&#x662F;1-(n-1), &#x4E0A;&#x4F20;arr4&#x4E2D;[0-1][0-1]&#x7684;&#x503C;</span>
+    <span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic) in(arr) in(arr2:length(5)) in(arr3[0:2]) in(arr4[0:2][0:2])</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot; arr[%d][%d] is %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;==========================\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr2[%d][%d] is %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> arr2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;==========================\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr3[%d][%d] is %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> j<span class="token punctuation">,</span>  arr3<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;==========================\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr4[%d][%d] is %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> arr4<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">offload_two_dim_array</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x662F;&#x8F93;&#x51FA;&#x7ED3;&#x679C;</p>
+<pre class="language-"><code class="lang-bash"> arr<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 0
+ arr<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 1
+ arr<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 2
+ arr<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 3
+ arr<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 4
+ arr<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 5
+ arr<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 6
+ arr<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 7
+ arr<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 8
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+arr2<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 9
+arr2<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 10
+arr2<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 11
+arr2<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 12
+arr2<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 13
+arr2<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 0
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+arr3<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 18
+arr3<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 19
+arr3<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 20
+arr3<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 21
+arr3<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 22
+arr3<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 23
+arr3<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 0
+arr3<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 0
+arr3<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 0
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+arr4<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 27
+arr4<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 28
+arr4<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 0
+arr4<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 30
+arr4<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 31
+arr4<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 0
+arr4<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 0
+arr4<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 0
+arr4<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 0
+</code></pre>
+<h2 id="&#x4E00;&#x4E2A;&#x5C0F;&#x95EE;&#x9898;"><a name="&#x4E00;&#x4E2A;&#x5C0F;&#x95EE;&#x9898;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x4E2A;&#x5C0F;&#x95EE;&#x9898;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x4E2A;&#x5C0F;&#x95EE;&#x9898;</h2>
+<p>&#x5F53;&#x6570;&#x7EC4;(&#x975E;&#x6307;&#x9488;)&#x88AB;offload&#x4E00;&#x6B21;&#x4E4B;&#x540E;&#x4F1A;&#x5728;mic&#x4E0A;&#x4FDD;&#x5B58;,&#x5E76;&#x6CA1;&#x6709;&#x7ACB;&#x5373;&#x91CA;&#x653E;,&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x4F5C;&#x7528;&#x57DF;&#x4E0B;,&#x518D;&#x6B21;offload&#x65F6;,
+&#x5982;&#x679C;&#x503C;&#x6539;&#x53D8;&#x4F1A;&#x66F4;&#x6539;&#x4E3A;&#x65B0;&#x503C;,&#x5982;&#x679C;&#x6CA1;&#x6709;offload&#x67D0;&#x4E9B;&#x4F4D;&#x7F6E;&#x7684;&#x503C;,&#x8FD9;&#x4E9B;&#x4F4D;&#x7F6E;&#x4F1A;&#x4F7F;&#x7528;&#x4E0A;&#x4E00;&#x6B21;&#x7684;&#x65E7;&#x503C;<br>&#x4E0B;&#x9762;&#x662F;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x6D4B;&#x8BD5;</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+
+<span class="token keyword">void</span> <span class="token function">offload_array_test</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> arr<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic) in(arr)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr[%d] in first offload is %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span>  arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// &#x8FD9;&#x91CC;&#x4FEE;&#x6539;&#x4E86;&#x5E76;&#x6CA1;&#x6709;&#x4F20;&#x56DE;&#x5230;CPU&#x4E0A;, &#x4F46;&#x662F;&#x4F1A;&#x4FDD;&#x5B58;&#x5728;MIC&#x4E0A;</span>
+        arr<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1111</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;==========================\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+    arr<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">2000</span><span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true">//&#x8FD9;&#x6B21;&#x7684;offload&#x53EA;&#x4E0A;&#x4F20;&#x4E86;0-2&#x5171;3&#x4E2A;&#x503C;,mic&#x4E0A;arr[1]&#x7684;&#x503C;&#x4F1A;&#x66F4;&#x6539;&#x4E3A;1000,arr[3-(n-1)]&#x7684;&#x503C;&#x4F1A;&#x4F7F;&#x7528;MIC&#x4E0A;&#x4FDD;&#x5B58;&#x7684;&#x503C;, &#x6CE8;&#x610F;arr[9]&#x7684;&#x503C;</span>
+    <span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic) in(arr:length(3))</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr[%d] in second offload is %d\n&quot;</span><span class="token punctuation">,</span>i<span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr[%d] without offload is %d\n&quot;</span><span class="token punctuation">,</span>i<span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;==========================\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">offload_array_test</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E3A;:</p>
+<pre class="language-"><code class="lang-c">arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> without offload is <span class="token number">0</span>
+arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> without offload is <span class="token number">1000</span>
+arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> without offload is <span class="token number">2</span>
+arr<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> without offload is <span class="token number">3</span>
+arr<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> without offload is <span class="token number">4</span>
+arr<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> without offload is <span class="token number">5</span>
+arr<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span> without offload is <span class="token number">6</span>
+arr<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span> without offload is <span class="token number">7</span>
+arr<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span> without offload is <span class="token number">2000</span>
+arr<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span> without offload is <span class="token number">9</span>
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> in first offload is <span class="token number">0</span>
+arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> in first offload is <span class="token number">1</span>
+arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> in first offload is <span class="token number">2</span>
+arr<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> in first offload is <span class="token number">3</span>
+arr<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> in first offload is <span class="token number">4</span>
+arr<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> in first offload is <span class="token number">5</span>
+arr<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span> in first offload is <span class="token number">6</span>
+arr<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span> in first offload is <span class="token number">7</span>
+arr<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span> in first offload is <span class="token number">8</span>
+arr<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span> in first offload is <span class="token number">9</span>
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> in second offload is <span class="token number">0</span>
+arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> in second offload is <span class="token number">1000</span>
+arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> in second offload is <span class="token number">2</span>
+arr<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> in second offload is <span class="token number">3</span>
+arr<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> in second offload is <span class="token number">4</span>
+arr<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> in second offload is <span class="token number">5</span>
+arr<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span> in second offload is <span class="token number">6</span>
+arr<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span> in second offload is <span class="token number">7</span>
+arr<span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">]</span> in second offload is <span class="token number">8</span>
+arr<span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">]</span> in second offload is <span class="token number">1111</span>
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x662F;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x6D4B;&#x8BD5;:</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+
+<span class="token macro property">#<span class="token directive keyword">define</span> __ONMIC__ __attribute__((target(mic)))</span>
+
+__ONMIC__ <span class="token keyword">int</span> gArr<span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">test1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        gArr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;gArr[%d] in test1 is %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> gArr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;==========================\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    gArr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    gArr<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    <span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic) in(gArr[0:2])</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;gArr[%d] in test2 is %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> gArr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">test1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x4E0B;&#x9762;&#x662F;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;:</p>
+<pre class="language-"><code class="lang-bash">gArr<span class="token punctuation">[</span>0<span class="token punctuation">]</span> <span class="token keyword">in</span> test1 is 0
+gArr<span class="token punctuation">[</span>1<span class="token punctuation">]</span> <span class="token keyword">in</span> test1 is 1
+gArr<span class="token punctuation">[</span>2<span class="token punctuation">]</span> <span class="token keyword">in</span> test1 is 2
+gArr<span class="token punctuation">[</span>3<span class="token punctuation">]</span> <span class="token keyword">in</span> test1 is 3
+gArr<span class="token punctuation">[</span>4<span class="token punctuation">]</span> <span class="token keyword">in</span> test1 is 4
+gArr<span class="token punctuation">[</span>5<span class="token punctuation">]</span> <span class="token keyword">in</span> test1 is 5
+gArr<span class="token punctuation">[</span>6<span class="token punctuation">]</span> <span class="token keyword">in</span> test1 is 6
+gArr<span class="token punctuation">[</span>7<span class="token punctuation">]</span> <span class="token keyword">in</span> test1 is 7
+gArr<span class="token punctuation">[</span>8<span class="token punctuation">]</span> <span class="token keyword">in</span> test1 is 8
+gArr<span class="token punctuation">[</span>9<span class="token punctuation">]</span> <span class="token keyword">in</span> test1 is 9
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+gArr<span class="token punctuation">[</span>0<span class="token punctuation">]</span> <span class="token keyword">in</span> test2 is 10
+gArr<span class="token punctuation">[</span>1<span class="token punctuation">]</span> <span class="token keyword">in</span> test2 is 1
+gArr<span class="token punctuation">[</span>2<span class="token punctuation">]</span> <span class="token keyword">in</span> test2 is 2
+gArr<span class="token punctuation">[</span>3<span class="token punctuation">]</span> <span class="token keyword">in</span> test2 is 3
+gArr<span class="token punctuation">[</span>4<span class="token punctuation">]</span> <span class="token keyword">in</span> test2 is 4
+gArr<span class="token punctuation">[</span>5<span class="token punctuation">]</span> <span class="token keyword">in</span> test2 is 5
+gArr<span class="token punctuation">[</span>6<span class="token punctuation">]</span> <span class="token keyword">in</span> test2 is 6
+gArr<span class="token punctuation">[</span>7<span class="token punctuation">]</span> <span class="token keyword">in</span> test2 is 7
+gArr<span class="token punctuation">[</span>8<span class="token punctuation">]</span> <span class="token keyword">in</span> test2 is 8
+gArr<span class="token punctuation">[</span>9<span class="token punctuation">]</span> <span class="token keyword">in</span> test2 is 9
+</code></pre>
+<h2 id="&#x4E00;&#x7EF4;&#x52A8;&#x6001;&#x6570;&#x7EC4;"><a name="&#x4E00;&#x7EF4;&#x52A8;&#x6001;&#x6570;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x4E00;&#x7EF4;&#x52A8;&#x6001;&#x6570;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E00;&#x7EF4;&#x52A8;&#x6001;&#x6570;&#x7EC4;</h2>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+
+<span class="token keyword">void</span> <span class="token function">offload_point</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> <span class="token operator">*</span>arr <span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token function">calloc</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> <span class="token operator">*</span>arr2 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token function">calloc</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> <span class="token operator">*</span>arr3 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token function">calloc</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+        arr2<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> n <span class="token operator">+</span> i<span class="token punctuation">;</span>
+        arr3<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> n <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">+</span> i<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">//&#x9700;&#x8981;&#x6CE8;&#x610F;:&#x4E0A;&#x4F20;&#x6307;&#x9488;&#x5B9A;&#x4E49;&#x7684;&#x6570;&#x7EC4;&#x65F6; 1:&#x8981;&#x6307;&#x5B9A;length&#x6216;&#x8005;[start:length]&#x5C5E;&#x6027; 2:&#x8981;&#x663E;&#x793A;&#x7528;in</span>
+    <span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic) in(arr:length(n)) in (arr2[2:3]) in (arr3:length(3))</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot; arr[%d] is  %d\n&quot;</span><span class="token punctuation">,</span>i<span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;==========================\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr2[%d] is %d \n&quot;</span><span class="token punctuation">,</span>i<span class="token punctuation">,</span> arr2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;==========================\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr3[%d] is %d \n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr3<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">free</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>arr2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>arr3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">offload_point</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x7A0B;&#x5E8F;&#x8F93;&#x51FA;&#x5982;&#x4E0B;:</p>
+<pre class="language-"><code class="lang-bash"> arr<span class="token punctuation">[</span>0<span class="token punctuation">]</span> is  0
+ arr<span class="token punctuation">[</span>1<span class="token punctuation">]</span> is  1
+ arr<span class="token punctuation">[</span>2<span class="token punctuation">]</span> is  2
+ arr<span class="token punctuation">[</span>3<span class="token punctuation">]</span> is  3
+ arr<span class="token punctuation">[</span>4<span class="token punctuation">]</span> is  4
+ arr<span class="token punctuation">[</span>5<span class="token punctuation">]</span> is  5
+ arr<span class="token punctuation">[</span>6<span class="token punctuation">]</span> is  6
+ arr<span class="token punctuation">[</span>7<span class="token punctuation">]</span> is  7
+ arr<span class="token punctuation">[</span>8<span class="token punctuation">]</span> is  8
+ arr<span class="token punctuation">[</span>9<span class="token punctuation">]</span> is  9
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+arr2<span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 12
+arr2<span class="token punctuation">[</span>3<span class="token punctuation">]</span> is 13
+arr2<span class="token punctuation">[</span>4<span class="token punctuation">]</span> is 14
+arr2<span class="token punctuation">[</span>5<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>6<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>7<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>8<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>9<span class="token punctuation">]</span> is 0
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+arr3<span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 20
+arr3<span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 21
+arr3<span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 22
+arr3<span class="token punctuation">[</span>3<span class="token punctuation">]</span> is 0
+arr3<span class="token punctuation">[</span>4<span class="token punctuation">]</span> is 0
+arr3<span class="token punctuation">[</span>5<span class="token punctuation">]</span> is 0
+arr3<span class="token punctuation">[</span>6<span class="token punctuation">]</span> is 0
+arr3<span class="token punctuation">[</span>7<span class="token punctuation">]</span> is 0
+arr3<span class="token punctuation">[</span>8<span class="token punctuation">]</span> is 0
+arr3<span class="token punctuation">[</span>9<span class="token punctuation">]</span> is 0
+</code></pre>
+<h2 id="&#x4F7F;&#x7528;&#x6307;&#x9488;&#x5B9E;&#x73B0;&#x7684;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;"><a name="&#x4F7F;&#x7528;&#x6307;&#x9488;&#x5B9E;&#x73B0;&#x7684;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x6307;&#x9488;&#x5B9E;&#x73B0;&#x7684;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;&#x6307;&#x9488;&#x5B9E;&#x73B0;&#x7684;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;</h2>
+<p>&#x9996;&#x5148;&#x7528;typedef&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x4E00;&#x7EF4;&#x9759;&#x6001;&#x6570;&#x7EC4;&#x7684;&#x7C7B;&#x578B;, &#x7136;&#x540E;&#x4E3A;&#x8BE5;&#x7C7B;&#x578B;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x52A8;&#x6001;&#x6570;&#x7EC4;</p>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">int</span> ARRAY<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//&#x4E0B;&#x9762;&#x76F8;&#x5F53;&#x4E8E;&#x4E0A;&#x4F20;&#x4E86;&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;&#x6570;&#x7EC4;</span>
+<span class="token keyword">void</span> <span class="token function">offload_point2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    ARRAY <span class="token operator">*</span>arr <span class="token operator">=</span> <span class="token punctuation">(</span>ARRAY<span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">calloc</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>ARRAY<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ARRAY <span class="token operator">*</span>arr2 <span class="token operator">=</span> <span class="token punctuation">(</span>ARRAY<span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">calloc</span><span class="token punctuation">(</span>n<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>ARRAY<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> index<span class="token punctuation">;</span>
+            arr2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> n <span class="token operator">*</span>n <span class="token operator">+</span> index<span class="token punctuation">;</span>
+            index<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic) in(arr:length(n))  in (arr2[0:2][0:2])</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot; arr[%d][%d] is %d \n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> j <span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;==========================\n&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr2[%d][%d] is %d \n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> j <span class="token punctuation">,</span> arr2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">free</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>arr2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">offload_point2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#x4E3A;:</p>
+<pre class="language-"><code class="lang-bash"> arr<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 0
+ arr<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 1
+ arr<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 2
+ arr<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>3<span class="token punctuation">]</span> is 3
+ arr<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>4<span class="token punctuation">]</span> is 4
+ arr<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 5
+ arr<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 6
+ arr<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 7
+ arr<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>3<span class="token punctuation">]</span> is 8
+ arr<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>4<span class="token punctuation">]</span> is 9
+ arr<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 10
+ arr<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 11
+ arr<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 12
+ arr<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>3<span class="token punctuation">]</span> is 13
+ arr<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>4<span class="token punctuation">]</span> is 14
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span>
+arr2<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 9
+arr2<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 10
+arr2<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>3<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>0<span class="token punctuation">]</span><span class="token punctuation">[</span>4<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 14
+arr2<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 15
+arr2<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>3<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>1<span class="token punctuation">]</span><span class="token punctuation">[</span>4<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>0<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>1<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>2<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>3<span class="token punctuation">]</span> is 0
+arr2<span class="token punctuation">[</span>2<span class="token punctuation">]</span><span class="token punctuation">[</span>4<span class="token punctuation">]</span> is 0
+</code></pre>
+<h2 id="&#x5305;&#x542B;&#x6307;&#x9488;&#x7684;struct"><a name="&#x5305;&#x542B;&#x6307;&#x9488;&#x7684;struct" class="anchor-navigation-ex-anchor" href="#&#x5305;&#x542B;&#x6307;&#x9488;&#x7684;struct"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5305;&#x542B;&#x6307;&#x9488;&#x7684;struct</h2>
+<pre class="language-"><code class="lang-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+
+<span class="token keyword">struct</span> my_struct <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> y<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> <span class="token operator">*</span>a<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">offload_struct</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">struct</span> my_struct m<span class="token punctuation">;</span>
+    m<span class="token punctuation">.</span>y <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    m<span class="token punctuation">.</span>a <span class="token operator">=</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token function">calloc</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        m<span class="token punctuation">.</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment" spellcheck="true">//struct&#x4E2D;&#x6709;&#x6307;&#x9488;&#x53D8;&#x91CF;&#x65F6;&#x8981;&#x5355;&#x72EC;&#x4F20;&#x6307;&#x9488;&#x53D8;&#x91CF;</span>
+    <span class="token macro property">#<span class="token directive keyword">pragma</span> offload target(mic) in(m) in(m.a:length(10))</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;offload_struct: the struct.y is %d\n&quot;</span><span class="token punctuation">,</span> m<span class="token punctuation">.</span>y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;offload_struct: the struct.a is %d\n&quot;</span><span class="token punctuation">,</span> m<span class="token punctuation">.</span>a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>m<span class="token punctuation">.</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">offload_struct</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><a name="&#x6CE8;&#x610F;&#x4E8B;&#x9879;" class="anchor-navigation-ex-anchor" href="#&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6CE8;&#x610F;&#x4E8B;&#x9879;</h2>
+<p>&#x4F7F;&#x7528;offload&#x4E0D;&#x80FD;&#x4E0A;&#x4F20;&#x6307;&#x9488;&#x6570;&#x7EC4;, &#x5373;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x662F;&#x4E00;&#x4E2A;&#x6307;&#x9488;, &#x6216;&#x8005;&#x5143;&#x7D20;&#x4E2D;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#xFF0C; &#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x5F62;&#x5F0F;</p>
+<pre class="language-"><code class="lang-c"><span class="token keyword">int</span> <span class="token operator">*</span><span class="token operator">*</span>p
+
+
+<span class="token keyword">struct</span> mystruct <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> <span class="token operator">*</span>i<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">struct</span> mystruct <span class="token operator">*</span>m<span class="token punctuation">;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="offload.html" class="navigation navigation-prev " aria-label="Previous page: offload">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="offload-other.html" class="navigation navigation-next " aria-label="Next page: offload 其他函数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"in / out / inout 详细用法","level":"1.5.3","depth":2,"next":{"title":"offload 其他函数","level":"1.5.4","depth":2,"path":"offload-other.md","ref":"offload-other.md","articles":[]},"previous":{"title":"offload","level":"1.5.2","depth":2,"path":"offload.md","ref":"offload.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","search","search-plus","simple-page-toc","baidu","sitemap","github","duoshuo","anchors","anchor-navigation-ex","expandable-chapters-small","katex","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"github":{"url":"https://github.com/zhangjikai/parallel"},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"zhangjkblog","theme":"default"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false},"favicon":"/favicon.ico","sitemap":{"hostname":"http://parallel.zhangjikai.com"},"prism-themes":{},"custom-favicon":{},"expandable-chapters-small":{},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"anchorjs":{"placement":"left"},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"parallel","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"http://zhangjikai.com"}},"gitbook":"3.2.2","description":"并行计算"},"file":{"path":"offload-详解.md","mtime":"2017-02-25T12:00:38.997Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-25T12:22:58.742Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-baidu/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-duoshuo/duoshuo.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

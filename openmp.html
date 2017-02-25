@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>MPI · parallel</title>
+        <title>OpenMP · parallel</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -79,10 +79,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="mpi-helloworld.html" />
+    <link rel="next" href="openmp-基本使用.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="数据处理.html" />
     
 
     </head>
@@ -135,7 +135,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="mpi.html">
+        <li class="chapter " data-level="1.2" data-path="mpi.html">
             
                 <a href="mpi.html">
             
@@ -291,7 +291,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="openmp.html">
+        <li class="chapter active" data-level="1.3" data-path="openmp.html">
             
                 <a href="openmp.html">
             
@@ -579,7 +579,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >MPI</a>
+        <a href="." >OpenMP</a>
     </h1>
 </div>
 
@@ -597,14 +597,12 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;">MPI &#x5B66;&#x4E60;&#x8BB0;&#x5F55;</a></li></ul></div><a href="#mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;"><a name="mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#mpi-&#x5B66;&#x4E60;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>MPI &#x5B66;&#x4E60;&#x8BB0;&#x5F55;</h1>
+                                <h2 id="openmp-&#x5B66;&#x4E60;&#x7B14;&#x8BB0;"><a name="openmp-&#x5B66;&#x4E60;&#x7B14;&#x8BB0;" class="anchor-navigation-ex-anchor" href="#openmp-&#x5B66;&#x4E60;&#x7B14;&#x8BB0;"><i class="fa fa-link" aria-hidden="true"></i></a>OpenMP &#x5B66;&#x4E60;&#x7B14;&#x8BB0;</h2>
 <ul>
-<li><a href="http://hpclab.cs.tsinghua.edu.cn/~duzh/book/mpi.pdf" target="_blank">&#x9AD8;&#x6027;&#x80FD;&#x8BA1;&#x7B97;&#x4E4B;&#x5E76;&#x884C;&#x7F16;&#x7A0B;&#x6280;&#x672F; &#x2014;&#x2014; MPI&#x5E76;&#x884C;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;</a></li>
-<li><a href="http://mpitutorial.com/tutorials/mpi-hello-world/" target="_blank">MPI Tutorial  </a></li>
-<li><a href="https://computing.llnl.gov/tutorials/mpi/" target="_blank">Message Passing Interface</a></li>
-<li><a href="http://mpi.deino.net/" target="_blank">DeinoMPI</a></li>
+<li><a href="http://download.csdn.net/detail/zhangjk1993/9416811" target="_blank">Using OpenMP: Portable Shared Memory Parallel Programming</a></li>
+<li><a href="http://download.csdn.net/detail/zhangjk1993/9417153" target="_blank">OpenMP &#x7F16;&#x8BD1;&#x539F;&#x7406;&#x53CA;&#x5B9E;&#x73B0;&#x6280;&#x672F;</a>  </li>
 </ul>
-<p>&#x5927;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x6458;&#x6284;&#x81EA; MPI&#x5E76;&#x884C;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#xFF0C;&#x540C;&#x65F6;&#x589E;&#x52A0;&#x4E86;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x4EE5;&#x53CA;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x4E9B;&#x7406;&#x89E3;&#x3002;&#x53E6;&#x5916;&#x4EE3;&#x7801;&#x5168;&#x90E8;&#x4F7F;&#x7528; c &#x8BED;&#x8A00;&#xFF0C;&#x5927;&#x90E8;&#x5206;&#x5728;&#x539F;&#x4E66;&#x4EE3;&#x7801;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x8FDB;&#x884C;&#x4E86;&#x4FEE;&#x6539;&#xFF0C;&#x4F7F;&#x4EE3;&#x7801;&#x66F4;&#x6613;&#x4E8E;&#x7406;&#x89E3;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x53C2;&#x8003; Using OpenMP &#x8FD9;&#x672C;&#x4E66;&#x3002;</p>
 
                                 
                                 </section>
@@ -648,12 +646,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 前言">
+                <a href="数据处理.html" class="navigation navigation-prev " aria-label="Previous page: 数据类型">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="mpi-helloworld.html" class="navigation navigation-next " aria-label="Next page: MPI-HelloWorld">
+                <a href="openmp-基本使用.html" class="navigation navigation-next " aria-label="Next page: OpenMP 基本使用">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -664,7 +662,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"MPI","level":"1.2","depth":1,"next":{"title":"MPI-HelloWorld","level":"1.2.1","depth":2,"path":"mpi-helloworld.md","ref":"mpi-helloworld.md","articles":[]},"previous":{"title":"前言","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","search","search-plus","simple-page-toc","baidu","sitemap","github","duoshuo","anchors","anchor-navigation-ex","expandable-chapters-small","katex","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"github":{"url":"https://github.com/zhangjikai/parallel"},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"zhangjkblog","theme":"default"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false},"favicon":"/favicon.ico","sitemap":{"hostname":"http://parallel.zhangjikai.com"},"prism-themes":{},"custom-favicon":{},"expandable-chapters-small":{},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"anchorjs":{"placement":"left"},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"parallel","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"http://zhangjikai.com"}},"gitbook":"3.2.2","description":"并行计算"},"file":{"path":"mpi.md","mtime":"2017-02-11T08:35:00.128Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-25T12:22:58.742Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"OpenMP","level":"1.3","depth":1,"next":{"title":"OpenMP 基本使用","level":"1.3.1","depth":2,"path":"openmp-基本使用.md","ref":"openmp-基本使用.md","articles":[]},"previous":{"title":"数据类型","level":"1.2.9","depth":2,"path":"数据处理.md","ref":"数据处理.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-highlight","prism","prism-themes","search","search-plus","simple-page-toc","baidu","sitemap","github","duoshuo","anchors","anchor-navigation-ex","expandable-chapters-small","katex","custom-favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"github":{"url":"https://github.com/zhangjikai/parallel"},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"duoshuo":{"short_name":"zhangjkblog","theme":"default"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false},"favicon":"/favicon.ico","sitemap":{"hostname":"http://parallel.zhangjikai.com"},"prism-themes":{},"custom-favicon":{},"expandable-chapters-small":{},"baidu":{"token":"ff100361cdce95dd4c8fb96b4009f7bc"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true},"anchors":{},"anchorjs":{"placement":"left"},"search-plus":{}},"theme":"default","author":"zhangjikai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"parallel","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":"http://zhangjikai.com"}},"gitbook":"3.2.2","description":"并行计算"},"file":{"path":"openmp.md","mtime":"2017-02-25T11:25:36.523Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-25T12:22:58.742Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
