@@ -1,5 +1,29 @@
 # 并行计算
 
 记录并行计算的相关知识，目前主要包括下面的内容
-* MPI
-
+* [MPI](mpi.md)
+    * [MPI-HelloWorld](mpi-helloworld.md)
+    * [基础函数](基础函数.md)
+    * [通信类别](通信类别.md)
+    * [通信模式](通信模式.md)
+    * [编程模式](编程模式.md)
+    * [非阻塞通信](非阻塞通信.md)
+    * [重复非阻塞通信](重复非阻塞通信.md)
+    * [组通信](组通信.md)
+    * [数据类型](数据处理.md)
+* [OpenMP](openmp.md)
+    * [OpenMP 基本使用](openmp-基本使用.md)
+    * [编译制导指令](编译制导指令.md)
+    * [运行环境交互](运行环境交互.md)
+    * [更多指令和子句](更多指令和子句.md)
+* [Pthreads](pthread.md)
+    * [语法](Pthreads-使用.md)
+    * [流水线模型](Pipline-模型.md)
+* [MIC](mic.md)
+    * [HelloWorld](mic-helloworld.md)
+    * [offload](offload.md)
+    * [in / out / inout 详细用法](offload-详解.md)
+    * [offload 其他函数](offload-other.md)
+    * [共享虚拟内存模式](mic-共享虚拟内存模式.md)
+    * [异步计算和传输](mic-异步计算和传输.md)
+    * [向量化](mic-向量化.md)

@@ -65,3 +65,5 @@ mpirun ./helloworld
 * `-n` - sets the number of MPI processes to launch; if the option is not specified, the process manager pulls the host list from a job scheduler, or uses the number of cores on the machine.
 * `-ppn` - sets the number of processes to launch on each node; if the option is not specified, processes are assigned to the physical cores on the first node; if the number of cores is exceeded, the next node is used.
 * `-f` - specifies the path to the host file listing the cluster nodes; alternatively, you can use the -hosts option to specify a comma-separated list of nodes; if hosts are not specified, the local node is used.
+
+如果需要在多个节点上运行运行，可以参考 [无需超级用户mpi多机执行](http://blog.csdn.net/bendanban/article/details/40710217)
